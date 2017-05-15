@@ -38,7 +38,7 @@ OpenGym is a web application inspired by Yelp built using Ruby on Rails and Reac
 
 **Objective**: Functioning rails project with front-end Authentication
 
-### Phase 2: Gym Models, API, and Components (2 days)
+### Phase 2: Gym Models, API, Gym Detail Page, and Components (3 days)
 
 **Objective**: Gyms can be created, read, edited through the API
 
@@ -46,7 +46,7 @@ OpenGym is a web application inspired by Yelp built using Ruby on Rails and Reac
 
 **Objective**: Be able to create reviews for gyms that can be created, read, edited by owner, and deleted through the API
 
-### Phase 4: Home Page, Gym Detail Page, and search function (2 days)
+### Phase 4: Home Page and search function (1 days)
 
 **Objective**: Generate a functional home page that can search to Gym Detail Page
 

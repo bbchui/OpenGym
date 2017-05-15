@@ -25,6 +25,6 @@
 ### Reviews
 * `GET /api/gyms/:id/reviews`
 * `POST /api/gyms/:id/reviews`
-* `GET /api/reviews/:id`
-* `PATCH /api/reviews/:id`
-* `DELETE /api/reviews/:id`
+* `GET /api/gyms/:id/reviews/:id`
+* `PATCH /api/gyms/:id/reviews/:id`
+* `DELETE /api/gyms/:id/reviews/:id`
