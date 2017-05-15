@@ -1,6 +1,6 @@
-#Schema Information
+# Schema Information
 
-##users
+## users
 
 column name | data type | details
 ----------- | --------- | -------
@@ -11,7 +11,7 @@ password_digest | string | not null
 session_token | string | not null, indexed, unique
 
 
-##gyms
+## gyms
 
 column name | data type | details
 ----------- | --------- | -------
@@ -28,7 +28,7 @@ level | string | not null
 price | string | not null
 hours | string | not null
 
-##reviews
+## reviews
 
 column name | data type | details
 ----------- | --------- | -------
@@ -38,7 +38,7 @@ gym_id | integer | not null
 rating | string | not null
 review | string | not null
 
-##photos
+## photos
 
 column name | data type | details
 ----------- | --------- | -------
