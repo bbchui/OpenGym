@@ -18,11 +18,17 @@ OpenGym is a web application inspired by Yelp built using Ruby on Rails and Reac
 
 ## Design Docs
 
-* View Wireframes
-* React Components
-* API endpoints
-* DB schema
-* Sample State
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
+
+[wireframes]: docs/wireframes
+[components]: docs/component-hierarchy.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
+[sample-state]: docs/sample-state.md
 
 ## Implementation Timeline
 
