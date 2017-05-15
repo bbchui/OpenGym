@@ -1,8 +1,10 @@
 # OpenGym
 
-Heroku link
+Heroku link (opengymvolleyball.herokuapp.com)
 
-Trello link
+[Trello link][trello]
+
+[trello]: https://trello.com/b/DPTQUAzY/opengym-fullstack-project
 
 ## Minimum Viable Product
 
