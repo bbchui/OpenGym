@@ -10,7 +10,7 @@ OpenGym is a web application inspired by Yelp built using Ruby on Rails and Reac
 
 * Hosting on Heroku
 * New account creation, login, and guest/demo login
-* Business Page
+* Gym Page
 * Search / Filters
 * Reviews / Ratings
 * Map
