@@ -13,13 +13,11 @@ export const receiveCurrentUser = currentUser => ({
   currentUser
 })
 
-export const login = user => dispatch => {
-  debugger
-return(
+export const login = user => dispatch => (
   APIUtil.login(user)
     .then(_user => dispatch(receiveCurrentUser(_user)),
     err => dispatch(receiveErrors(err.responseJSON)))
-);}
+);
 
 export const signup = user => dispatch => (
   APIUtil.signup(user)
