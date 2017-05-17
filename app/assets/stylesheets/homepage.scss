@@ -1,9 +1,9 @@
-.header {
+// .header {
   // display: flex;
   // justify-content: flex-end;
   // height: 70px;
   // background: #1071C9;
-}
+// }
 
 .homepage {
   background-image: url("https://cdn.shutterstock.com/shutterstock/videos/9861461/thumb/1.jpg?i10c=img.resize(height:72)");
@@ -12,14 +12,16 @@
   height: 600px;
 }
 
+
 div.login {
-  display: flex;
-  justify-content: flex-end;
+  // display: flex;
+  // justify-content: flex-end;
   height: 70px;
-  background: #00A6FF;
+  // background: #00A6FF;
+  background: transparent;
 }
 
-button {
+// button {
   // display: flex;
   // -webkit-appearance: none;
   // background: transparent;
@@ -27,8 +29,7 @@ button {
   // border-spacing: 0;
   // font-size: 16px;
   // text-decoration: none;
-
-}
+// }
 
 button.signup {
   display: flex;
@@ -39,19 +40,14 @@ button.signup {
   border-color: white;
 }
 
-.login-buttons {
-  // display: flex;
-  // justify-content: flex-end;
-  // margin: auto;
-  // background-color: inherit;
-}
-
 .login-buttons button {
   padding: 15px;
   border-radius: 5px;
   margin: 10px;
+  margin-right: 20px;
+  margin-top: 20px;
   background: transparent;
-  // background-color: #1071C9;
+  background-color: #1071C9;
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
@@ -98,6 +94,17 @@ div.modal-formtype {
   font-size: 20px;
 }
 
+div.searchbar {
+  position: fixed;
+  top: 350px;
+  right: 33%;
+  border: 1px solid black;
+  background: white;
+  width: 30%;
+}
 
-// extra stuff
-// <div className="modal-formtype"> {this.state.formType}!</div>
+nav.login-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 25px;
+}

@@ -8,13 +8,14 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = { username: "",
 			 						 password: "",
-									 modalOpen: true,
+									 modalOpen: false,
 									 formType: "Log In"};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
 		this.onModalOpen = this.onModalOpen.bind(this);
 		this.onModalClose = this.onModalClose.bind(this);
 		this.onTransition = this.onTransition.bind(this);
+		this.renderErrors = this.renderErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -61,8 +62,13 @@ class SessionForm extends React.Component {
     return(
 			<div className="login">
 			  <nav className="login-buttons">
-			    <button onClick={this.onModalOpen('Log In')} >Log In</button>
-			    <button onClick={this.onModalOpen('Sign Up')}>Sign Up</button>
+					<div>
+						<button className="home-review">Write a Review</button>
+					</div>
+					<div>
+				    <button onClick={this.onModalOpen('Log In')} >Log In</button>
+				    <button onClick={this.onModalOpen('Sign Up')}>Sign Up</button>
+					</div>
 			  </nav>
 
 			  <Modal
@@ -94,7 +100,11 @@ class SessionForm extends React.Component {
 								placeholder="Password"
 			          onChange={this.update("password")} />
 			      </label>
+						<div>
+							{this.renderErrors()}
+						</div>
 			      <br/>
+
 			      <button className="signup"
 							onClick={this.handleSubmit}>
 							{this.state.formType}

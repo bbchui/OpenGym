@@ -17,23 +17,32 @@ class Greeting extends React.Component {
 
   greeting(currentUser, logout) {
     return (
-      <div>
-        <h3>Welcome to OpenGym {this.props.currentUser.username}</h3>
-        <button onClick={logout}>Log Out</button>
+      <div className="login">
+          <nav className="login-buttons">
+            <div>
+              <button className="home-review">Write a Review</button>
+            </div>
+            <div>
+              <button onClick={logout}>Log Out</button>
+            </div>
+          </nav>
       </div>
     );
   }
 
   render() {
     return(
-      <main className='header'>
+      <div className='header'>
 
+        <div className="searchbar">
+          Search Bar
+        </div>
         <div className='homepage'>
           {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
         </div>
 
 
-      </main>
+      </div>
     )
   }
 
