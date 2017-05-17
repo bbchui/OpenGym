@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
+import SessionFormContainer from '../session/session_form_container';
+import {withRouter} from 'react-router-dom';
 
 class Greeting extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
-  loginLinks() {
-    return (
-      <div>
-        <Link to="/login">Login</Link>
-        &nbsp;
-        <Link to="/signup">Sign Up</Link>
-      </div>
+  sessionForm() {
+    return(
+      <SessionFormContainer />
     );
   }
 
@@ -26,18 +25,9 @@ class Greeting extends React.Component {
   }
 
   render() {
-    let header;
-    let currentUser = this.props.currentUser
-
-    if (currentUser) {
-      header = this.greeting(this.props.currentUser, this.props.logout)
-    } else {
-      header = this.loginLinks()
-    }
-
     return(
       <div>
-        { header }
+        {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
       </div>
     )
   }
