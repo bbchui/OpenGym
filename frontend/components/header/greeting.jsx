@@ -26,9 +26,14 @@ class Greeting extends React.Component {
 
   render() {
     return(
-      <div>
-        {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
-      </div>
+      <main className='header'>
+
+        <div className='homepage'>
+          {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
+        </div>
+
+
+      </main>
     )
   }
 

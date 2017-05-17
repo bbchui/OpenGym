@@ -7,7 +7,6 @@ import { AuthRoute } from '../util/route_util'
 const App = () => (
   <div>
     <header>
-      <h1>Welcome to OpenGym!</h1>
       <GreetingContainer />
     </header>
 
