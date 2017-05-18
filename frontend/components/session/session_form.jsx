@@ -16,6 +16,7 @@ class SessionForm extends React.Component {
 		this.onModalClose = this.onModalClose.bind(this);
 		this.onTransition = this.onTransition.bind(this);
 		this.renderErrors = this.renderErrors.bind(this);
+		this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
   handleSubmit(e) {
@@ -40,11 +41,32 @@ class SessionForm extends React.Component {
 
 	onModalClose() {
 		this.setState({modalOpen: false});
+		this.props.clearErrors();
 		ModalStyle.content.opacity = 0;
 	}
 
 	onTransition() {
 		ModalStyle.content.opacity = 100;
+	}
+
+	handleGuestLogin(e) {
+		e.preventDefault();
+		this.props.guestLogin();
+	}
+
+	loginGuest() {
+		if (this.state.formType === 'Sign Up') {
+			return(
+				<div>
+					<button className="signup"
+						onClick={this.handleGuestLogin}>
+						Log in as Guest
+					</button>
+				</div>
+			)
+		} else {
+			return <div></div>
+		}
 	}
 
   renderErrors() {
@@ -110,6 +132,8 @@ class SessionForm extends React.Component {
 							{this.state.formType}
 						</button>
 						<br/>
+						{this.loginGuest()}
+						<br />
 						<button className="signup" onClick={this.onModalClose}>Close
 						</button>
 			    </form>

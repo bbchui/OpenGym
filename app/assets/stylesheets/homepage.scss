@@ -40,14 +40,18 @@ button.signup {
   border-color: white;
 }
 
+button.signup:hover {
+  background-color: #00C8F8;
+}
+
 .login-buttons button {
   padding: 15px;
   border-radius: 5px;
   margin: 10px;
   margin-right: 20px;
   margin-top: 20px;
-  background: transparent;
-  background-color: #1071C9;
+  // background: transparent;
+  background-color: #59C4C5;
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;

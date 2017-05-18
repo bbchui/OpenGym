@@ -15,6 +15,14 @@ class Greeting extends React.Component {
     );
   }
 
+  currUser() {
+    if (this.props.currentUser) {
+      return ` ${this.props.currentUser.username}!`
+    } else {
+      return "!"
+    }
+  }
+
   greeting(currentUser, logout) {
     return (
       <div className="login">
@@ -35,7 +43,7 @@ class Greeting extends React.Component {
       <div className='header'>
 
         <div className="searchbar">
-          Search Bar
+          Welcome{this.currUser()} Searchbar goes here!
         </div>
         <div className='homepage'>
           {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}

@@ -14,7 +14,7 @@ const ModalStyle = {
     right                      : 'auto',
     bottom                     : 'auto',
     border                     : '1px solid #ccc',
-    background                 : '#00A6FF',
+    background                 : '#59C4C5',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '25px',
