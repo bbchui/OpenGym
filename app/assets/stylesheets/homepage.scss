@@ -31,6 +31,7 @@ div.login {
   // text-decoration: none;
 // }
 
+
 button.signup {
   display: flex;
   background: transparent;
@@ -56,6 +57,10 @@ button.signup:hover {
   font-weight: 500;
   color: #ffffff;
   // border: 1px, solid, #ffffff;
+}
+
+.login-buttons button:hover {
+  background-color: #00C8F8;
 }
 
 
