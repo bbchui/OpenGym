@@ -1,0 +1,29 @@
+h2.featured {
+  text-align: center;
+  margin-top: 35px;
+}
+
+ul.featured-gyms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 10%;
+}
+
+li.gym-info-featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #d3d3d3;
+  margin: 20px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+img.featured {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}

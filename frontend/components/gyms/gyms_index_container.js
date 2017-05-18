@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { getAllGyms } from '../../actions/gym_actions';
-import { GymsIndex } from './gyms_index';
+import GymsIndex from './gyms_index';
 import { allGyms } from '../../reducers/selector';
 
 const mapStateToProps = state => ({

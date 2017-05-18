@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import SessionFormContainer from '../session/session_form_container';
 import {withRouter} from 'react-router-dom';
+import GymIndexContainer from '../gyms/gyms_index_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -47,6 +48,9 @@ class Greeting extends React.Component {
         </div>
         <div className='homepage'>
           {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
+        </div>
+
+        <div>
         </div>
 
 
