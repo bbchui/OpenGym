@@ -1,6 +1,8 @@
 h2.featured {
   text-align: center;
   margin-top: 35px;
+  color: #59C4C5;
+  font-weight: bold;
 }
 
 ul.featured-gyms {
@@ -8,7 +10,7 @@ ul.featured-gyms {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 10px 10%;
+  margin: 10px 8%;
 }
 
 li.gym-info-featured {
@@ -26,4 +28,20 @@ img.featured {
   height: 200px;
   object-fit: cover;
   border-radius: 5px;
+}
+
+.featured-gym-name {
+  font-weight: bold;
+  color: #59C4C5;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.featured-gym-name:visited {
+  color: #59C4C5;
+}
+
+.featured-text {
+
 }
