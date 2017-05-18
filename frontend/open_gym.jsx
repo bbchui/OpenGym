@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import Modal from 'react-modal';
 
-import { login, signup, logout} from './actions/session_actions';
+import { getAllGyms, getSingleGym } from './actions/gym_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,8 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  window.store = store
+  // delete later
+  window.store = store;
+  window.getAllGyms = getAllGyms;
+  window.getSingleGym = getSingleGym;
+
   const root = document.getElementById('root');
-   Modal.setAppElement(document.body)
+
+  Modal.setAppElement(document.body)
   ReactDOM.render(<Root store={ store }/>, root);
 });
