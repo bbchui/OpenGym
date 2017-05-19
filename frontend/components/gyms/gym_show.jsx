@@ -3,27 +3,22 @@ import GymSearchItem from './gyms_search_item';
 import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
 
-class GymsIndex extends React.Component {
+class GymShow extends React.Component {
   constructor(props) {
     super(props);
-    this.noSearchInput = this.noSearchInput.bind(this);
   }
 
   componentDidMount() {
-    this.props.getAllGyms();
+    this.props.getSingleGym(this.props.match.params.gymId);
   }
 
-  //function for filter gyms
-
-  sessionForm() { //header function
+  sessionFrom() {
     return(
       <SessionFormContainer />
     );
   }
 
-
   greeting(currentUser, logout) {
-
     return (
       <div className="login">
           <nav className="other-login-buttons">
@@ -34,26 +29,19 @@ class GymsIndex extends React.Component {
     );
   }
 
-  noSearchInput() {
-    const { gyms } = this.props;
-    return (
-      <section className="search-results-section">
-        <h2 className="search-results-header">
-          Browsing Gyms in San Francisco</h2>
-        <div className="index-map">
-          <ul className="search-results-list">
-            {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
-          </ul>
-          <div className="map">Map Goes Here</div>
-        </div>
-      </section>
-    )
-  }
+  //map function?
+
+  //review function?
+
+  //rating function?
+
+
 
   render() {
-    const { gyms } = this.props
-    return (
+    let { gym } = this.props;
+    return(
       <div>
+        //need to DRY same top-of-page as index
         <section className="top-of-page">
           <div className="width-check">
             <div>
@@ -69,14 +57,12 @@ class GymsIndex extends React.Component {
           </div>
         </section>
 
-        <div>
-          {this.noSearchInput()}
-        </div>
+        
 
       </div>
-    );
+    )
   }
 
 }
 
-export default GymsIndex;
+export default GymShow;
