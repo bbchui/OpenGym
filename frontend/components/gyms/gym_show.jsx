@@ -12,7 +12,7 @@ class GymShow extends React.Component {
     this.props.getSingleGym(this.props.match.params.gymId);
   }
 
-  sessionFrom() {
+  sessionForm() {
     return(
       <SessionFormContainer />
     );
@@ -37,11 +37,11 @@ class GymShow extends React.Component {
 
 
 
+  //need to DRY same top-of-page as index
   render() {
     let { gym } = this.props;
     return(
       <div>
-        //need to DRY same top-of-page as index
         <section className="top-of-page">
           <div className="width-check">
             <div>
@@ -57,10 +57,42 @@ class GymShow extends React.Component {
           </div>
         </section>
 
-        
+        <section className="show-header">
+          <div className="show-title">
+            <h1 className="show-gym-name"> { gym.name } </h1>
+            <span> ***** # of Reviews </span>
+            <span> Price: { gym.price } </span>
+          </div>
+
+          <div className="show-buttons">
+            <button className="show-review"> * Write a Review </button>
+            <button className="add-photo"> Add Photos </button>
+          </div>
+        </section>
+
+        <section className="show-images">
+          <div className="map-area">
+            <img className="map-photo" src="http://res.cloudinary.com/bbchui/image/upload/v1495220103/Screen_Shot_2017-05-19_at_11.54.06_AM_kn6xuw.png"/>
+            <span className="address"> { gym.address } </span>
+            <span className="address"> { gym.city }, { gym.state } { gym.zip } </span>
+            <span> { gym.phone } </span>
+            <a href={`${gym.website_url}`} className="show-link">
+              {gym.website_url}
+            </a>
+          </div>
+          <div className="show-photos-section">
+            <div className="show-photos">photo here</div>
+            <div className="show-photos">photo here</div>
+            <div className="show-photos">photo here</div>
+          </div>
+
+
+
+        </section>
+
 
       </div>
-    )
+    );
   }
 
 }

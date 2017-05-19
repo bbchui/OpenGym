@@ -1,0 +1,101 @@
+section.show-header {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  margin: auto;
+}
+
+div.show-title {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+h1.show-gym-name {
+  color: #59C4C5;
+}
+
+div.show-title * {
+  padding-bottom: 10px;
+}
+
+div.show-buttons {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+
+button.show-review {
+  width: 150px;
+  height: 36px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  background: #59C4C5;
+  color: white;
+}
+
+button.add-photo {
+  width: 110px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 25%;
+}
+
+section.show-images {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  width: 900px;
+}
+
+img.map-photo {
+  object-fit: cover;
+  height: 200px;
+  width: 286px;
+  margin-bottom: 10px;
+  border: 1px solid #d3d3d3;
+}
+
+div.map-area {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 1px solid #d3d3d3;
+  height: 310px;
+  justify-content: space-around;
+  font-size: 15px;
+}
+
+div.map-area span {
+  padding: 2px;
+}
+
+span.address {
+  font-weight: bold;
+}
+
+div.show-photos-section {
+  flex: 5;
+}
+
+a.show-link {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div.show-photos-section {
+  display: flex;
+}
+
+div.show-photos {
+  height: 200px;
+  width: 200px;
+  border: 1px solid #d3d3d3;
+}
