@@ -94,8 +94,36 @@ div.show-photos-section {
   display: flex;
 }
 
-div.show-photos {
+.show-photos {
   height: 200px;
   width: 200px;
   border: 1px solid #d3d3d3;
+}
+
+.showpage-photo {
+  width: 200px;
+  height: 200px;
+}
+
+div.review-hours {
+  display: flex;
+  width: 900px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+
+section.review-section {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #d3d3d3;
+  margin: auto
+}
+
+section.hours-section {
+  width: 300px;
+  border: 1px solid #d3d3d3;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
 }

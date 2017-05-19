@@ -81,14 +81,25 @@ class GymShow extends React.Component {
             </a>
           </div>
           <div className="show-photos-section">
-            <div className="show-photos">photo here</div>
+            <img className="showpage-photo" src={gym.image_url} alt="Image Not Working" />
             <div className="show-photos">photo here</div>
             <div className="show-photos">photo here</div>
           </div>
-
-
-
         </section>
+
+        <div className="review-hours">
+          <section className="review-section">
+            <h2>Review Section</h2>
+          </section>
+          <section className="hours-section">
+            <span> { gym.price } </span>
+            <span> { gym.level } </span>
+            <span> { gym.hours } </span>
+          </section>
+
+
+        </div>
+
 
 
       </div>
