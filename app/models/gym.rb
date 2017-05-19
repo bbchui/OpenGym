@@ -8,4 +8,6 @@ class Gym < ApplicationRecord
             :price,
             :hours,
             presence: true
+
+  has_many :reviews
 end
