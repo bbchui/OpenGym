@@ -1,0 +1,26 @@
+.top-of-page {
+  display: flex;
+  justify-content: space-between;
+  background-color: #59C4C5;
+}
+
+nav.other-login-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 25px;
+  align-items: baseline;
+}
+
+.other-login-buttons button {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #59C4C5;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.other-login-buttons button:hover {
+  background-color: #00C8F8;
+}

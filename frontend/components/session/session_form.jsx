@@ -79,14 +79,29 @@ class SessionForm extends React.Component {
     );
   }
 
-  render() {
+	writeReview() {
+		if (this.props.match.path === "/") {
+			return(
+				<div>
+					<button className="home-review">Write a Review</button>
+				</div>
+			)
+		}
+	}
 
+	getPath() {
+		if (this.props.match.path === "/") {
+			return "login-buttons"
+		} else {
+			return "other-login-buttons"
+		}
+	}
+
+  render() {
     return(
 			<div className="login">
-			  <nav className="login-buttons">
-					<div>
-						<button className="home-review">Write a Review</button>
-					</div>
+			  <nav className={this.getPath()}>
+					{this.writeReview()}
 					<div>
 				    <button onClick={this.onModalOpen('Log In')} >Log In</button>
 				    <button onClick={this.onModalOpen('Sign Up')}>Sign Up</button>

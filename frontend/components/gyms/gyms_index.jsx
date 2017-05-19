@@ -13,6 +13,8 @@ class GymsIndex extends React.Component {
     this.props.getAllGyms();
   }
 
+  //function for filter gyms
+
   sessionForm() { //header function
     return(
       <SessionFormContainer />
@@ -31,8 +33,8 @@ class GymsIndex extends React.Component {
 
     return (
       <div className="login">
-          <div>Welcome {this.props.currentUser.username}</div>
-          <nav className="login-buttons">
+          <nav className="other-login-buttons">
+            <div>Welcome {this.props.currentUser.username}!</div>
             <button onClick={logout}>Log Out</button>
           </nav>
       </div>
@@ -52,10 +54,6 @@ class GymsIndex extends React.Component {
     )
   }
 
-  //function for filter gyms
-
-
-
   render() {
     const { gyms } = this.props
     return (
@@ -63,15 +61,15 @@ class GymsIndex extends React.Component {
         <section className="top-of-page">
           <div>
             <Link to={`/`}>HomePage</Link>
+              <div>
+                Searchbar
+              </div>
           </div>
-          <div>
-            Searchbar
-          </div>
+
           <div className='search-page'>
             {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
           </div>
         </section>
-
 
         <div>
           {this.noSearchInput()}
