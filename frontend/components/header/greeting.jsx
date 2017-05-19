@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import SessionFormContainer from '../session/session_form_container';
 import {withRouter} from 'react-router-dom';
-import GymIndexContainer from '../gyms/gyms_index_container';
+import FeaturedGymsIndex from './featured_gyms_index';
 
 class Greeting extends React.Component {
   constructor(props) {

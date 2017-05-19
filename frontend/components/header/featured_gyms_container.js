@@ -1,18 +1,17 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
 import { getAllGyms } from '../../actions/gym_actions';
-import Greeting from './greeting';
+import FeaturedGymsIndex from './featured_gyms_index';
+import { allGyms } from '../../reducers/selector';
 
-const mapStateToProps = (state) => ({
-  currentUser: state.session.currentUser
+const mapStateToProps = state => ({
+  gyms: allGyms(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
   getAllGyms: () => dispatch(getAllGyms())
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps)
-  (Greeting);
+  (FeaturedGymsIndex);
