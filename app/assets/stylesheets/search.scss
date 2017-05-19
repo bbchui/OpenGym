@@ -2,6 +2,27 @@
   display: flex;
   justify-content: space-between;
   background-color: #59C4C5;
+  align-items: baseline;
+  height: 65px;
+}
+
+div.width-check {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+div.index-map {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.map {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
 }
 
 nav.other-login-buttons {
@@ -9,6 +30,10 @@ nav.other-login-buttons {
   justify-content: space-between;
   padding: 0px 25px;
   align-items: baseline;
+}
+
+nav.other-login-buttons > div {
+  padding-top: 5px;
 }
 
 .other-login-buttons button {
@@ -23,4 +48,9 @@ nav.other-login-buttons {
 
 .other-login-buttons button:hover {
   background-color: #00C8F8;
+}
+
+.search-results-header {
+  padding-top: 15px;
+  padding-left: 40px;
 }

@@ -1,0 +1,48 @@
+section.search-results-section {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+ul.search-results-list {
+  display: flex;
+  flex-direction: column;
+}
+
+ul.featured-gyms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 8%;
+}
+
+li.gym-info-featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #d3d3d3;
+  margin: 20px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+img.featured {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.featured-gym-name {
+  font-weight: bold;
+  color: #59C4C5;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.featured-gym-name:visited {
+  color: #59C4C5;
+}

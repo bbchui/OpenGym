@@ -1,5 +1,5 @@
 import React from 'react';
-import GymIndexItem from '../gyms/gyms_index_item';
+import GymFeatureItem from '../gyms/gyms_feature_item';
 
 class FeaturedGymsIndex extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class FeaturedGymsIndex extends React.Component {
       <section>
         <h2 className='featured'>Featured Gyms</h2>
         <ul className='featured-gyms'>
-          {gyms.map(gym => <GymIndexItem key={gym.id} gym={gym}/>)}
+          {gyms.map(gym => <GymFeatureItem key={gym.id} gym={gym}/>)}
         </ul>
       </section>
     )

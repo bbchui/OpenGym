@@ -1,5 +1,5 @@
 import React from 'react';
-import GymIndexItem from './gyms_index_item';
+import GymSearchItem from './gyms_search_item';
 import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
 
@@ -47,9 +47,12 @@ class GymsIndex extends React.Component {
       <section className="search-results-section">
         <h2 className="search-results-header">
           Browsing Gyms in San Francisco</h2>
-        <ul className="search-results-list">
-          {gyms.map(gym => <GymIndexItem key={gym.id} gym={gym}/>)}
-        </ul>
+        <div className="index-map">
+          <ul className="search-results-list">
+            {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
+          </ul>
+          <div className="map">Map Goes Here</div>
+        </div>
       </section>
     )
   }
@@ -59,21 +62,24 @@ class GymsIndex extends React.Component {
     return (
       <div>
         <section className="top-of-page">
-          <div>
-            <Link to={`/`}>HomePage</Link>
-              <div>
-                Searchbar
-              </div>
-          </div>
+          <div className="width-check">
+            <div>
+              <Link to={`/`}>HomePage</Link>
+                <div>
+                  Searchbar
+                </div>
+            </div>
 
-          <div className='search-page'>
-            {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
+            <div className='search-page'>
+              {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
+            </div>
           </div>
         </section>
 
         <div>
           {this.noSearchInput()}
         </div>
+
       </div>
     );
   }
