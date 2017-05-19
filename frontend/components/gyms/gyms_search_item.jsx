@@ -6,23 +6,25 @@ const GymSearchItem = ({gym}) => (
     <img className="searched" src={gym.image_url} alt="Image Not Working" />
 
     <div className="gym-index-info">
-      <div>
+      <div className="left-search">
         <Link className="searched-gym-name" to={`/gyms/${gym.id}`}>
           { gym.name }
         </Link>
+        <br/>
         <span> Rating *****
          </span>
+         <br/>
          <span> { gym.price } </span>
       </div>
 
-      <div>
+      <div className="right-search">
         <span className="feature-text">
           { gym.address }
           <br/>
         { gym.city }, { gym.state } { gym.zip }
          </span>
+         <br/>
         <span className="feature-text"> { gym.phone } </span>
-        <span className="feature-text"> { gym.website} </span>
         </div>
     </div>
   </li>

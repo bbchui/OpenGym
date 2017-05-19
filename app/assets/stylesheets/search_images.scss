@@ -14,14 +14,24 @@ li.gym-info-searched{
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
   margin: 20px 0px;
   width: 600px;
-  border-radius: 5px;
+  padding-bottom: 30px;
+}
+
+div.left-search {
+  width: 300px;
+  text-align: left;
+}
+
+div.right-search {
+  width: 300px;
+  text-align: left;
 }
 
 div.gym-index-info {
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
   width: 600px;
   justify-content: space-between;

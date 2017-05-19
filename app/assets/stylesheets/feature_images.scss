@@ -11,6 +11,8 @@ ul.featured-gyms {
   align-items: center;
   flex-wrap: wrap;
   margin: 10px 8%;
+  // width: 900px;
+  // margin: auto;
 }
 
 li.gym-info-featured {
@@ -18,8 +20,8 @@ li.gym-info-featured {
   flex-direction: column;
   align-items: center;
   border: 1px solid #d3d3d3;
-  margin: 20px;
-  width: 300px;
+  margin: 20px; //15px
+  width: 300px; //268px
   border-radius: 5px;
 }
 

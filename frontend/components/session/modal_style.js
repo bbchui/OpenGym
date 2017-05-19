@@ -21,7 +21,7 @@ const ModalStyle = {
     outline                    : 'none',
     padding                    : '17px',
     opacity                    : "0",
-    transition                 : 'opacity 1s',
+    transition                 : 'opacity 0.75s',
     transform                  : 'translate(-50%, -50%)'
   }
 }
