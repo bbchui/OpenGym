@@ -20,11 +20,11 @@ class Api::ReviewsController < ApplicationController
   end
 
   def show
-    @review = Review.find_by(id: id)
+    @review = Review.find(params[:id])
   end
 
   def update
-    @review = Review.find_by(id: id)
+    @review = Review.find(params[:id])
     if @review.update_attributes(review_params)
       render :show
     else
@@ -34,7 +34,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find_by(id: id)
+    @review = Review.find(params[:id])
     @review.destroy
     render :show
   end
