@@ -1,7 +1,7 @@
-export const getAllReviews = () => (
+export const getAllReviews = (id) => (
   $.ajax({
     method: "GET",
-    url: `api/reviews`
+    url: `api/gyms/${id}/reviews`
   })
 );
 

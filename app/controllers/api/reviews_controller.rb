@@ -16,7 +16,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.all
+    @reviews = Gym.find_by(id: params[:gym_id]).reviews
   end
 
   def show

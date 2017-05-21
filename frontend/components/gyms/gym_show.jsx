@@ -2,6 +2,8 @@ import React from 'react';
 import GymSearchItem from './gyms_search_item';
 import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
+import ReviewShowContainer from '../reviews/reviews_show_container';
+
 
 class GymShow extends React.Component {
   constructor(props) {
@@ -40,6 +42,10 @@ class GymShow extends React.Component {
   //need to DRY same top-of-page as index
   render() {
     let { gym } = this.props;
+    let gymId = parseInt(this.props.match.params.gymId);
+    if (!gymId) {
+      return null;
+    }
     return(
       <div>
         <section className="top-of-page">
@@ -90,17 +96,18 @@ class GymShow extends React.Component {
         <div className="review-hours">
           <section className="review-section">
             <h2>Review Section</h2>
+            <ReviewShowContainer gymId={gymId}/>
           </section>
           <section className="hours-section">
             <span> { gym.price } </span>
             <span> { gym.level } </span>
             <span> { gym.hours } </span>
           </section>
-
-
         </div>
 
+        <div>
 
+        </div>
 
       </div>
     );

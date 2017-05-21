@@ -1,7 +1,9 @@
 import merge from 'lodash/merge';
 import { RECEIVE_ALL_REVIEWS, RECEIVE_ONE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
 
-const ReviewReducer = (oldState = {}, action) => {
+const _defaultReview = { body: "" };
+
+const ReviewReducer = (oldState = _defaultReview, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_ALL_REVIEWS:

@@ -19,8 +19,8 @@ export const removeReview = review => ({
   review
 })
 
-export const getAllReviews = () => dispatch => (
-  ReviewApiUtil.getAllReviews()
+export const getAllReviews = (id) => dispatch => (
+  ReviewApiUtil.getAllReviews(id)
     .then(_reviews => dispatch(receiveAllReviews(_reviews)))
 );
 

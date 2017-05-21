@@ -94,3 +94,18 @@
 
 
 # Review.create({user_id: 1, gym_id: 1, body: "Two courts and 6 to 8 teams usually show. Some experience recommended, but lots of friendly people!", rating: 4})
+
+
+# Review.create({user_id: 1, gym_id: 1, body: "Test1", rating: 4})
+#
+# Review.create({user_id: 2, gym_id: 1, body: "Test2", rating: 4})
+#
+# Review.create({user_id: 3, gym_id: 1, body: "Test3", rating: 4})
+#
+# Review.create({user_id: 1, gym_id: 2, body: "Test4", rating: 4})
+#
+# Review.create({user_id: 2, gym_id: 2, body: "Test5", rating: 4})
+#
+# Review.create({user_id: 3, gym_id: 2, body: "Test6", rating: 4})
+# 
+# Review.create({user_id: 1, gym_id: 2, body: "Test7", rating: 4})
