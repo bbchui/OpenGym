@@ -10,12 +10,15 @@ const GymFeatureItem = ({gym}) => {
         <Link className="featured-gym-name" to={`/gyms/${gym.id}`}>
           { gym.name }
         </Link>
-        <Rating
+        <span>
+          <Rating
+          className="stars"
           initialRate={averageRating}
           readonly
-          empty="fa fa-star-o fa-2x"
-          full="fa fa-star fa-2x"
+          empty="fa fa-star-o fa-lg"
+          full="fa fa-star fa-lg"
           fractions={2}/>
+        </span>
         <span className="feature-text"> { gym.level } </span>
         <span className="feature-text"> { gym.city } </span>
       </li>

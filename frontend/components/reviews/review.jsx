@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Rating from 'react-rating';
 
 const Review = (props) => {
   if (props.gymId === props.review.gym_id) {
@@ -10,6 +11,13 @@ const Review = (props) => {
           <div> { props.review.username } </div>
         </div>
         <div className="review-body">
+          <Rating
+          className="stars"
+          initialRate={props.review.rating}
+          readonly
+          empty="fa fa-star-o fa-lg"
+          full="fa fa-star fa-lg"
+          fractions={2}/> {props.review.date}
           <div>{props.review.body}</div>
         </div>
       </li>

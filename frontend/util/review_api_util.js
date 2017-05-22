@@ -8,7 +8,7 @@ export const getAllReviews = (id) => (
 export const createReview = (review) => (
   $.ajax({
     method: "POST",
-    url: `api/reviews/`,
+    url: `api/gyms/${review.gym_id}/reviews/`,
     data: {review}
   })
 );
@@ -16,7 +16,7 @@ export const createReview = (review) => (
 export const updateReview = (review) => (
   $.ajax({
     method: "PATCH",
-    url: `api/reviews/${review.id}`,
+    url: `api/gyms/${review.gym_id}/reviews/${review.id}`,
     data: {review}
   })
 );
