@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import ReviewShowContainer from '../reviews/reviews_show_container';
 import FontAwesome from 'react-fontawesome';
 
-
 class GymShow extends React.Component {
   constructor(props) {
     super(props);
@@ -40,8 +39,6 @@ class GymShow extends React.Component {
     e.preventDefault();
     this.props.history.push(`/gyms/${this.props.gym.id}/reviews/new`);
   }
-
-
 
   //need to DRY same top-of-page as index
   render() {
@@ -132,7 +129,6 @@ class GymShow extends React.Component {
       </div>
     );
   }
-
 }
 
 export default GymShow;

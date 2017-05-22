@@ -3,7 +3,7 @@ import { Link, Redirect, withRouter } from 'react-router-dom';
 import Rating from 'react-rating';
 import SessionFormContainer from '../session/session_form_container';
 import GymReview from '../gyms/gym_review';
-
+import SampleReviews from './sample_reviews';
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class ReviewForm extends React.Component {
 
   componentDidMount() {
     this.props.getSingleGym(this.props.match.params.gymId);
+    this.props.getAllReviews(this.props.match.params.gymId);
   }
 
   handleSubmit(e) {
@@ -43,7 +44,6 @@ class ReviewForm extends React.Component {
     );
   }
 
-
   greeting(currentUser, logout) {
     return (
       <div className="login">
@@ -56,6 +56,10 @@ class ReviewForm extends React.Component {
   }
 
   render() {
+    const { reviews } = this.props;
+    if (this.props.reviews === "") {
+      return (<div>Here</div>)
+    }
     return(
       <div className='review-form-page'>
         <section className="top-of-page">
@@ -112,7 +116,10 @@ class ReviewForm extends React.Component {
               Cancel</Link>
           </div>
           <div className="other-reviews">
-            Other reviews
+            <h4>Reviews for {this.props.gym.name}</h4>
+            <ul>
+              {reviews.map((review, idx) => <SampleReviews key={idx} review={review} /> )}
+            </ul>
           </div>
         </section>
       </div>

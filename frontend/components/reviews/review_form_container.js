@@ -3,10 +3,12 @@ import { getAllReviews, updateReview, createReview, deleteReview } from '../../a
 import { logout } from '../../actions/session_actions';
 import ReviewForm from './review_form';
 import { getSingleGym } from '../../actions/gym_actions';
+import { allReviews } from '../../reducers/selector';
 
 const mapStateToProps = (state, ownProps) => ({
   gym: state.gym,
   gymId: ownProps.gymId,
+  reviews: allReviews(state),
   currentUser: state.session.currentUser
 });
 

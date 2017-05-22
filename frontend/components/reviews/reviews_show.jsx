@@ -11,13 +11,6 @@ class ReviewShow extends React.Component {
     this.props.getAllReviews(this.props.gymId);
   }
 
-  // gymReviews() {
-  //   let gym = this.props.match.params.gymId
-  //   if (true) {
-  //
-  //   }
-  // }
-
   render() {
     const { reviews } = this.props;
     let currentUser;
