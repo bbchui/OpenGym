@@ -7,7 +7,7 @@ const Review = (props) => {
     return(
       <li className="review-list">
         <div className="review-profile">
-          <img className="review-profile-pic" src={props.currentUser.image_url} alt="Image Not Working" />
+          <img className="review-profile-pic" src={props.review.image_url} alt="Image Not Working" />
           <div> { props.review.username } </div>
         </div>
         <div className="review-body">

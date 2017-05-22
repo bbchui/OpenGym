@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Redirect, withRouter } from 'react-router-dom';
 import Rating from 'react-rating';
 import SessionFormContainer from '../session/session_form_container';
+import GymReview from '../gyms/gym_review';
 
 
 class ReviewForm extends React.Component {
@@ -14,6 +15,10 @@ class ReviewForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateRating = this.updateRating.bind(this);
     this.update = this.update.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.getSingleGym(this.props.match.params.gymId);
   }
 
   handleSubmit(e) {
@@ -71,10 +76,14 @@ class ReviewForm extends React.Component {
         <section className="review-form">
           <div>
           <h3>Write a Review</h3>
-            <form className='review-form'> Your review
+          <ul>
+            <GymReview gym={this.props.gym} />
+          </ul>
+          <h4>Your review</h4>
+            <form className='review-form'>
               <label>
                 <Rating
-                  className="stars"
+                  className="new-stars"
                   initialRate={this.state.rating}
                   onChange={ this.updateRating }
                   start={0}
@@ -92,19 +101,22 @@ class ReviewForm extends React.Component {
                   placeholder="Your review helps others learn about great open gyms!"
                   />
               </label>
-
-              <button className="review"
-                onClick={this.handleSubmit}>
-                Post Review
-              </button>
             </form>
+            <button className="review"
+              onClick={this.handleSubmit}>
+              Post Review
+            </button>
+            <Link
+              to={`/gyms/${this.state.gym_id}`}
+              className="cancel">
+              Cancel</Link>
           </div>
-          <div className="other-reviews">Other reviews</div>
+          <div className="other-reviews">
+            Other reviews
+          </div>
         </section>
-
-
       </div>
-    )
+    );
   }
 }
 

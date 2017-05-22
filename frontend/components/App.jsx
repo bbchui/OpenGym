@@ -18,3 +18,4 @@ const App = () => (
 );
 
 export default App;
+// <Route path="/" component={oopsthispage doesnt exist}

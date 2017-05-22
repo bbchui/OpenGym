@@ -27,13 +27,15 @@ div.show-buttons {
 }
 
 button.show-review {
-  width: 150px;
+  width: 160px;
   height: 36px;
-  text-align: center;
+  align-items: center;
   font-size: 16px;
   font-weight: bold;
   background: #59C4C5;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 button.add-photo {

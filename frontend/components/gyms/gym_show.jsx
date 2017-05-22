@@ -3,11 +3,14 @@ import GymSearchItem from './gyms_search_item';
 import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
 import ReviewShowContainer from '../reviews/reviews_show_container';
+import FontAwesome from 'react-fontawesome';
 
 
 class GymShow extends React.Component {
   constructor(props) {
     super(props);
+    this.handleCreate = this.handleCreate.bind(this);
+    this.sessionForm = this.sessionForm.bind(this);
   }
 
   componentDidMount() {
@@ -33,9 +36,10 @@ class GymShow extends React.Component {
 
   //map function?
 
-  //review function?
-
-  //rating function?
+  handleCreate(e) {
+    e.preventDefault();
+    this.props.history.push(`/gyms/${this.props.gym.id}/reviews/new`);
+  }
 
 
 
@@ -75,7 +79,17 @@ class GymShow extends React.Component {
           </div>
 
           <div className="show-buttons">
-            <button className="show-review"> * Write a Review </button>
+            <button
+              onClick={this.handleCreate}
+              className="show-review">
+              <FontAwesome
+                className="fa fa-star"
+                name="star"
+                size='lg'
+                spin
+                  />
+               Write a Review
+            </button>
             <button className="add-photo"> Add Photos </button>
           </div>
         </section>
@@ -86,7 +100,7 @@ class GymShow extends React.Component {
             <span className="address"> { gym.address } </span>
             <span className="address"> { gym.city }, { gym.state } { gym.zip } </span>
             <span> { gym.phone } </span>
-            <a href={`${gym.website_url}`} className="show-link">
+            <a href={`http://${gym.website_url}`} className="show-link">
               {gym.website_url}
             </a>
           </div>
