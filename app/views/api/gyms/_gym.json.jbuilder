@@ -11,3 +11,4 @@ json.extract! gym,
                   :phone,
                   :website_url,
                   :image_url
+json.reviews gym.reviews

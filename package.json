@@ -35,6 +35,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-modal": "^1.7.7",
+    "react-rating": "^0.7.1",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",

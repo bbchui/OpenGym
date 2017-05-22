@@ -12,7 +12,7 @@ class FeaturedGymsIndex extends React.Component {
 
 
   render() {
-    const { gyms } = this.props
+    const { gyms } = this.props;
     return (
       <section>
         <h2 className='featured'>Featured Gyms</h2>
