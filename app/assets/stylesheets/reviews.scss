@@ -1,0 +1,44 @@
+.review-profile-pic {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #d3d3d3;
+}
+
+.review-section h2 {
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.review-section strong {
+  color: #59C4C5;
+}
+
+li.review-list {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: solid 1px #d3d3d3;
+  width: 550px;
+}
+
+.review-profile {
+  display: flex;
+  width: 200px;
+}
+
+.review-profile div {
+  padding-left: 10px;
+  padding-top: 7px;
+  color: #59C4C5;
+  font-weight: 500;
+}
+
+.review-body {
+  width: 350px
+}
+
+li:last-child {
+  border-bottom: none;
+}

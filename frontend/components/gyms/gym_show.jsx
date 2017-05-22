@@ -99,7 +99,9 @@ class GymShow extends React.Component {
 
         <div className="review-hours">
           <section className="review-section">
-            <h2>Review Section</h2>
+            <h2>
+              <strong>Recommended Reviews</strong> for { gym.name }
+            </h2>
             <ReviewShowContainer gymId={gymId}/>
           </section>
           <section className="hours-section">

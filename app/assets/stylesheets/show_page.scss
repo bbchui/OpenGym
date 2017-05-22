@@ -114,10 +114,10 @@ div.review-hours {
 
 
 section.review-section {
-  width: 600px;
+  width: 550px;
   height: 600px;
-  border: 1px solid #d3d3d3;
-  margin: auto
+  // border: 1px solid #d3d3d3;
+  margin: auto;
 }
 
 section.hours-section {
@@ -126,10 +126,4 @@ section.hours-section {
   height: 600px;
   display: flex;
   flex-direction: column;
-}
-
-.review-profile-pic {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #d3d3d3;
 }
