@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Review = (props) => {
-
-
   if (props.gymId === props.review.gym_id) {
     return(
       <li className="review-list">
+        <img className="review-profile-pic" src={props.currentUser.image_url} alt="Image Not Working" />
         <div className="review-username">
-          <div> {props.review.user_id } </div>
+          <div> {props.review.username } </div>
         </div>
         <div className="review-body">
           <div>{props.review.body}</div>

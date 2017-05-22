@@ -22,20 +22,17 @@ class ReviewShow extends React.Component {
     const { reviews } = this.props;
     let currentUser;
     if (this.props.currentUser !== null) {
-      currentUser = this.props.currentUser.id;
+      currentUser = this.props.currentUser;
     }
     if (this.props.reviews === "") {
       return (<div>Here</div>)
     }
-    return (
 
+    return (
       <div>
         <ul>
           {reviews.map(review => <Review key={`0 + ${review.id}`} review={review} gymId={this.props.gymId} currentUser={currentUser}/>)}
         </ul>
-
-
-
 
       </div>
     );

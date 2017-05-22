@@ -43,6 +43,10 @@ class GymShow extends React.Component {
   render() {
     let { gym } = this.props;
     let gymId = parseInt(this.props.match.params.gymId);
+    // let currentUser;
+    // if (this.props.currentUser !== null) {
+    //   currentUser = this.props.currentUser;
+    // }
     if (!gymId) {
       return null;
     }
