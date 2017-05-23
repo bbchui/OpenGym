@@ -11,12 +11,18 @@ const Review = (props) => {
   } else {
     link = null;
   }
+  let pic;
+  if (props.review.profile_pic_url) {
+    pic = props.review.profile_pic_url;
+  } else {
+    pic = props.review.image_url;
+  }
 
   if (props.gymId === props.review.gym_id) {
     return(
       <li className="review-list">
         <div className="review-profile">
-          <img className="review-profile-pic" src={props.review.image_url} alt="Image Not Working" />
+          <img className="review-profile-pic" src={pic} alt="Image Not Working" />
           <div> { props.review.username } </div>
           {link}
         </div>

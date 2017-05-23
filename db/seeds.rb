@@ -93,9 +93,10 @@ Gym.create({
     })
 
 
-User.create({username: "brandon", password: "password"})
+User.create({username: "brandon", password: "password", profile_pic_url: "http://res.cloudinary.com/bbchui/image/upload/v1495515243/IMG_2662_raa2dq.png"})
 User.create({username: "Guest", password: "password"})
 User.create({username: "Brandon", password: "password"})
+User.create({username: "Chubs", password: "password", profile_pic_url: "http://res.cloudinary.com/bbchui/image/upload/v1495517450/IMG_2443_znrmig.jpg"})
 
 
 Review.create({user_id: 1, gym_id: 1, body: "Two courts and 6 to 8 teams usually show. Some experience recommended, but lots of friendly people!", rating: 4})
