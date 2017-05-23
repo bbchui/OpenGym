@@ -26,7 +26,7 @@ export const getAllReviews = (id) => dispatch => (
 
 export const updateReview = (review) => dispatch => (
   ReviewApiUtil.updateReview(review)
-    .then(_review => dispatch(receiveOneReview(_review)))
+    .then(_review => dispatch(receiveAllReviews(_review)))
 );
 
 export const createReview = (review) => dispatch => (

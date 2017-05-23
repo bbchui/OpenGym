@@ -8,13 +8,17 @@ import SampleReviews from './sample_reviews';
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { rating: 0,
-                   body: "",
+    const { reviewId } = props.match.params;
+    const review = props.reviews[reviewId];
+    this.state = { rating: review && review.rating || 0,
+                   body: review && review.body || "",
                    gym_id: parseInt(this.props.match.params.gymId),
-                   user_id: this.props.currentUser.id};
+                   user_id: this.props.currentUser.id,
+                   id: reviewId };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateRating = this.updateRating.bind(this);
     this.update = this.update.bind(this);
+    this.getPath = this.getPath.bind(this);
   }
 
   componentDidMount() {
@@ -22,10 +26,24 @@ class ReviewForm extends React.Component {
     this.props.getAllReviews(this.props.match.params.gymId);
   }
 
+  // componentWillReceiveProps(nextProps) {
+  //   const {reviews} = this.props;
+  //   const {match} = this.props;
+  // }
+
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createReview(this.state)
+    if (this.getPath() === "Edit") {
+      this.props.updateReview(this.state)
       .then((res) => this.props.history.push(`/gyms/${this.state.gym_id}`));
+    } else {
+      this.props.createReview(this.state)
+      .then((res) => this.props.history.push(`/gyms/${this.state.gym_id}`));
+    }
+  }
+
+  getPath() {
+    return this.props.location.pathname.split("/").includes("edit") ? "Edit" : "Post";
   }
 
   updateRating(rating) {
@@ -108,7 +126,7 @@ class ReviewForm extends React.Component {
             </form>
             <button className="review"
               onClick={this.handleSubmit}>
-              Post Review
+              {this.getPath()} Review
             </button>
             <Link
               to={`/gyms/${this.state.gym_id}`}
@@ -118,7 +136,7 @@ class ReviewForm extends React.Component {
           <div className="other-reviews">
             <h4>Reviews for {this.props.gym.name}</h4>
             <ul>
-              {reviews.map((review, idx) => <SampleReviews key={idx} review={review} /> )}
+              {Object.keys(reviews).map((key, idx) => <SampleReviews key={idx} review={reviews[key]} /> )}
             </ul>
           </div>
         </section>

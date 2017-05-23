@@ -14,6 +14,7 @@ const App = () => (
     <Route exact path='/gyms' component={GymIndexContainer} />
     <Route exact path='/gyms/:gymId' component={GymShowContainer} />
     <ProtectedRoute path='/gyms/:gymId/reviews/new' component={ReviewFormContainer} />
+    <ProtectedRoute path='/gyms/:gymId/reviews/:reviewId/edit' component={ReviewFormContainer} />
   </div>
 );
 

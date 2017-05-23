@@ -8,7 +8,7 @@ import { allReviews } from '../../reducers/selector';
 const mapStateToProps = (state, ownProps) => ({
   gym: state.gym,
   gymId: ownProps.gymId,
-  reviews: allReviews(state),
+  reviews: state.reviews,
   currentUser: state.session.currentUser
 });
 

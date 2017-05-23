@@ -9,6 +9,9 @@ const Review = (props) => {
         <div className="review-profile">
           <img className="review-profile-pic" src={props.review.image_url} alt="Image Not Working" />
           <div> { props.review.username } </div>
+          <Link to={`/gyms/${props.gymId}/reviews/${props.review.id}/edit`}>
+            Edit Review
+          </Link>
         </div>
         <div className="review-body">
           <Rating

@@ -121,11 +121,6 @@ class GymShow extends React.Component {
             <span> { gym.hours } </span>
           </section>
         </div>
-
-        <div>
-
-        </div>
-
       </div>
     );
   }
