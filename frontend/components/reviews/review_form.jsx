@@ -22,6 +22,7 @@ class ReviewForm extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0,0);
     this.props.getSingleGym(this.props.match.params.gymId);
     this.props.getAllReviews(this.props.match.params.gymId);
   }

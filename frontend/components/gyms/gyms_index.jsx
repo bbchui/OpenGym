@@ -10,8 +10,16 @@ class GymsIndex extends React.Component {
     this.noSearchInput = this.noSearchInput.bind(this);
   }
 
-  componentDidMount() {
-    this.props.getAllGyms(this.props.query);
+  // componentDidMount() {
+  //   this.props.getAllGyms(this.props.query);
+  //   console.log(this.props.query)
+  // }
+
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    if (nextProps == this.props) {
+      this.props.getAllGyms(nextProps.query)
+    }
   }
 
   //function for filter gyms

@@ -13,6 +13,7 @@ class GymShow extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0,0);
     this.props.getSingleGym(this.props.match.params.gymId);
   }
 

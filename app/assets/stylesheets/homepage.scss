@@ -80,13 +80,41 @@ div.modal-formtype {
   font-size: 20px;
 }
 
-div.searchbar {
-  position: absolute;
-  top: 350px;
-  right: 33%;
-  border: 1px solid black;
+form.home-search {
+  position: relative;
+  top: 40%;
+  width: 600px;
+  margin: auto;
+  display: flex;
+  font-weight: 800;
+  font-size: 18px;
+  color: rgba(47, 79, 79, 0.84);
+  align-items: center;
+  border-radius: 3px;
   background: white;
-  width: 30%;
+  padding-left: 10px;
+}
+
+.home-search button {
+  flex: 0.25;
+  height: 41px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #59C4C5;
+  .fa-2x {
+    font-size: 25px;
+    color: white;
+  }
+}
+
+input.home-search {
+  font-size: 18px;
+  height: 2.25em;
+  border: 1px solid white;
+  width: 50%;
+  padding: 10px 15px;
+  flex-grow: 1;
+  outline: none;
 }
 
 nav.login-buttons {

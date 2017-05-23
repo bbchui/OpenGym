@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import SessionFormContainer from '../session/session_form_container';
 import {withRouter} from 'react-router-dom';
 import FeaturedGymsIndex from './featured_gyms_index';
+import SearchContainer from '../search/search_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -39,21 +40,21 @@ class Greeting extends React.Component {
     );
   }
 
+
+          // <div className="searchbar">
+          //   Welcome{this.currUser()} Searchbar goes here!
+          //   <Link to='/gyms'>Search...Not Really</Link>
+          //   <SearchContainer />
+          // </div>
+
   render() {
     return(
       <div className='header'>
 
-        <div className="searchbar">
-          Welcome{this.currUser()} Searchbar goes here!
-          <Link to='/gyms'>Search...Not Really</Link>
-        </div>
         <div className='homepage'>
-          {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()}
+          {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()};
+          <SearchContainer />
         </div>
-
-        <div>
-        </div>
-
 
       </div>
     )
