@@ -7,7 +7,7 @@ class FeaturedGymsIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getAllGyms();
+    this.props.getAllGyms(this.props.query);
   }
 
 

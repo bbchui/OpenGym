@@ -2,6 +2,7 @@ import React from 'react';
 import GymSearchItem from './gyms_search_item';
 import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
+import SearchContainer from '../search/search_container';
 
 class GymsIndex extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class GymsIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getAllGyms();
+    this.props.getAllGyms(this.props.query);
   }
 
   //function for filter gyms
@@ -23,7 +24,6 @@ class GymsIndex extends React.Component {
 
 
   greeting(currentUser, logout) {
-
     return (
       <div className="login">
           <nav className="other-login-buttons">
@@ -59,7 +59,7 @@ class GymsIndex extends React.Component {
             <div>
               <Link to={`/`}>HomePage</Link>
                 <div>
-                  Searchbar
+                  <SearchContainer />
                 </div>
             </div>
 

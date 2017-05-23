@@ -5,9 +5,10 @@ export const getSingleGym = id => (
   })
 );
 
-export const getAllGyms = () => (
+export const getAllGyms = (query) => (
   $.ajax({
     method: "GET",
-    url: "api/gyms"
+    url: "api/gyms",
+    data: {query}
   })
 );
