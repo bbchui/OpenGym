@@ -3,15 +3,22 @@ import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 
 const Review = (props) => {
+  let link;
+  if (props.currentUser && props.currentUser.id === props.review.user_id) {
+    link = <Link  to={`/gyms/${props.gymId}/reviews/${props.review.id}/edit`} className="edit">
+      Edit Review
+    </Link>
+  } else {
+    link = null;
+  }
+
   if (props.gymId === props.review.gym_id) {
     return(
       <li className="review-list">
         <div className="review-profile">
           <img className="review-profile-pic" src={props.review.image_url} alt="Image Not Working" />
           <div> { props.review.username } </div>
-          <Link to={`/gyms/${props.gymId}/reviews/${props.review.id}/edit`}>
-            Edit Review
-          </Link>
+          {link}
         </div>
         <div className="review-body">
           <Rating

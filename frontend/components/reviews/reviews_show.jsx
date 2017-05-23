@@ -24,7 +24,7 @@ class ReviewShow extends React.Component {
     return (
       <div>
         <ul>
-          {reviews.map(review => <Review key={`0 + ${review.id}`} review={review} gymId={this.props.gymId} currentUser={currentUser}/>)}
+          {reviews.map((review, idx) => <Review key={`0 + ${idx}`} review={review} gymId={this.props.gymId} currentUser={currentUser}/>)}
         </ul>
 
       </div>

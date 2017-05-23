@@ -21,11 +21,21 @@ li.review-list {
   padding: 20px 0;
   border-bottom: solid 1px #d3d3d3;
   width: 575px;
+  height: 70px;
 }
 
 .review-profile {
   display: flex;
   width: 200px;
+  position: relative;
+}
+
+.edit {
+  font-size: 12px;
+  text-decoration: none;
+  color: #59C4C5;
+  position: absolute;
+  top: 60px;
 }
 
 .review-profile div {
