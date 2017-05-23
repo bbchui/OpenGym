@@ -85,7 +85,7 @@ Gym.create({
     state: "CA",
     zip: "94025",
     level: "Intermediate-Expert",
-    price: "$3 a day",
+    price: "$3 per visit",
     hours: "Sunday 6:30 - 9:30pm",
     phone: "(650) 330-2200",
     website_url: "",
@@ -115,3 +115,8 @@ Review.create({user_id: 2, gym_id: 2, body: "Friendly people but wait time is ve
 Review.create({user_id: 3, gym_id: 2, body: "Great place to go if you have membership!", rating: 4})
 
 Review.create({user_id: 1, gym_id: 2, body: "Great place!", rating: 4})
+
+Review.create({user_id: 4, gym_id: 3, body: "*boing boing* *nibble nibble*", rating: 5})
+Review.create({user_id: 4, gym_id: 4, body: "*boing boing* *nibble nibble*", rating: 5})
+Review.create({user_id: 4, gym_id: 5, body: "*boing boing* *nibble nibble*", rating: 5})
+Review.create({user_id: 4, gym_id: 6, body: "*boing boing* *nibble nibble*", rating: 5})

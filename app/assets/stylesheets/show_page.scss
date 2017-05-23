@@ -124,8 +124,16 @@ section.review-section {
 
 section.hours-section {
   width: 300px;
-  border: 1px solid #d3d3d3;
+  border-left: 1px solid #d3d3d3;
   height: 600px;
   display: flex;
   flex-direction: column;
+
+  span {
+    padding: 10px;
+
+    strong {
+      color: #59C4C5;
+    }
+  }
 }

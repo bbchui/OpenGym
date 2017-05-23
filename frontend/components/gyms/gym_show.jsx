@@ -116,9 +116,12 @@ class GymShow extends React.Component {
             <ReviewShowContainer gymId={gymId}/>
           </section>
           <section className="hours-section">
-            <span> { gym.price } </span>
-            <span> { gym.level } </span>
-            <span> { gym.hours } </span>
+            <span> <strong>Price:</strong> { gym.price } </span>
+            <span> <strong>Level:</strong> { gym.level } </span>
+            <span> <strong>Gym Hours:</strong>
+              <br/>
+              { gym.hours }
+            </span>
           </section>
         </div>
       </div>
