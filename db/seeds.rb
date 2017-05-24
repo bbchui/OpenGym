@@ -18,7 +18,9 @@ Gym.create({
   hours: "Wednesday: 6pm - 8:30pm, Friday: 6pm - 8:30pm",
   phone: "(415) 970-8061",
   website_url: "www.noevalleyreccenter.com",
-  image_url: "http://res.cloudinary.com/bbchui/image/upload/v1495154268/noevallyreccenter_taj19i.jpg"
+  lat: 37.742782,
+  lng: -122.428548,
+  image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154268/noevallyreccenter_taj19i.jpg"
   })
 
 Gym.create({
@@ -31,8 +33,10 @@ Gym.create({
   price: "Membership Required",
   hours: "Wednesday: 6pm - 9pm",
   phone: "(415) 957-9622",
+  lat: 37.792512,
+  lng: -122.392094,
   website_url: "https://www.ymcasf.org/locations/embarcadero-ymca",
-  image_url: "http://res.cloudinary.com/bbchui/image/upload/v1495154315/YMCA-Embarcadero_einwv7.jpg"
+  image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154315/YMCA-Embarcadero_einwv7.jpg"
   })
 
 Gym.create({
@@ -45,8 +49,10 @@ Gym.create({
   price: "Free",
   hours: "Thursday: 6pm - 8:30pm",
   phone: "(415) 666-7020",
-  website_url: "http://sfrecpark.org/destination/richmond-rec-center/",
-  image_url: "http://res.cloudinary.com/bbchui/image/upload/v1495154403/RichmondRC_exfdnb.jpg"
+  lat: 37.783499,
+  lng: -122.477945,
+  website_url: "https://sfrecpark.org/destination/richmond-rec-center/",
+  image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154403/RichmondRC_exfdnb.jpg"
   })
 
 Gym.create({
@@ -59,8 +65,10 @@ Gym.create({
   price: "$7 one-day pass, monthly membership available",
   hours: "Everyday 7pm - 11pm",
   phone: "(520) 752-1730",
+  lat: 38.542989,
+  lng: -121.759205,
   website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
-  image_url: "http://res.cloudinary.com/bbchui/image/upload/v1495154404/UC_Davis_Arc_inmzz9.jpg"
+  image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154404/UC_Davis_Arc_inmzz9.jpg"
   })
 
 
@@ -74,8 +82,10 @@ Gym.create({
     price: "Free",
     hours: "Wednesday 6:30 - 9pm",
     phone: "(415) 359-9103",
+    lat: 37.794500,
+    lng: -122.411657,
     website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
-    image_url: "http://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg"
+    image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg"
     })
 
   Gym.create({
@@ -88,15 +98,16 @@ Gym.create({
     price: "$3 per visit",
     hours: "Sunday 6:30 - 9:30pm",
     phone: "(650) 330-2200",
-    website_url: "",
-    image_url: "http://res.cloudinary.com/bbchui/image/upload/v1495154492/MenloPark_rntth6.jpg"
+    lat: 37.453286,
+    lng: -122.177768,
+    image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154492/MenloPark_rntth6.jpg"
     })
 
 
-User.create({username: "brandon", password: "password", profile_pic_url: "http://res.cloudinary.com/bbchui/image/upload/v1495515243/IMG_2662_raa2dq.png"})
+User.create({username: "brandon", password: "password", profile_pic_url: "https://res.cloudinary.com/bbchui/image/upload/v1495515243/IMG_2662_raa2dq.png"})
 User.create({username: "Guest", password: "password"})
 User.create({username: "Brandon", password: "password"})
-User.create({username: "Chubs", password: "password", profile_pic_url: "http://res.cloudinary.com/bbchui/image/upload/v1495517450/IMG_2443_znrmig.jpg"})
+User.create({username: "Chubs", password: "password", profile_pic_url: "https://res.cloudinary.com/bbchui/image/upload/v1495517450/IMG_2443_znrmig.jpg"})
 
 
 Review.create({user_id: 1, gym_id: 1, body: "Two courts and 6 to 8 teams usually show. Some experience recommended, but lots of friendly people!", rating: 4})
