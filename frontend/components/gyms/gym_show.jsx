@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import ReviewShowContainer from '../reviews/reviews_show_container';
 import FontAwesome from 'react-fontawesome';
 import SearchContainer from '../search/search_container';
+import Rating from 'react-rating';
 
 class GymShow extends React.Component {
   constructor(props) {
@@ -46,12 +47,15 @@ class GymShow extends React.Component {
   render() {
     let { gym } = this.props;
     let gymId = parseInt(this.props.match.params.gymId);
-    // let currentUser;
-    // if (this.props.currentUser !== null) {
-    //   currentUser = this.props.currentUser;
-    // }
     if (!gymId) {
       return null;
+    }
+    let { reviews } = this.props.gym;
+    let averageRating;
+    let reviewCount;
+    if (reviews) {
+      averageRating = reviews.reduce((sum, el) => sum += el.rating, 0) / reviews.length;
+      reviewCount = reviews.length;
     }
     return(
       <div>
@@ -75,7 +79,16 @@ class GymShow extends React.Component {
         <section className="show-header">
           <div className="show-title">
             <h1 className="show-gym-name"> { gym.name } </h1>
-            <span> ***** # of Reviews </span>
+            <span>
+              <Rating
+              className="stars"
+              initialRate={averageRating}
+              readonly
+              empty="fa fa-star-o fa-lg"
+              full="fa fa-star fa-lg"
+              fractions={2}/>
+              &nbsp;{reviewCount} Reviews
+             </span>
             <span> Price: { gym.price } </span>
           </div>
 
