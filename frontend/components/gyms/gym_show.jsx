@@ -100,7 +100,6 @@ class GymShow extends React.Component {
                 className="fa fa-star"
                 name="star"
                 size='lg'
-                spin
                   />
                Write a Review
             </button>
