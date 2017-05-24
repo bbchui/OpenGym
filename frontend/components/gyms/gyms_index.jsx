@@ -7,7 +7,7 @@ import SearchContainer from '../search/search_container';
 class GymsIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.noSearchInput = this.noSearchInput.bind(this);
+    this.SearchInput = this.SearchInput.bind(this);
   }
 
   // componentDidMount() {
@@ -20,8 +20,6 @@ class GymsIndex extends React.Component {
       this.props.getAllGyms(nextProps.query)
     }
   }
-
-  //function for filter gyms
 
   sessionForm() { //header function
     return(
@@ -41,7 +39,7 @@ class GymsIndex extends React.Component {
     );
   }
 
-  noSearchInput() {
+  SearchInput() {
     const { gyms } = this.props;
     return (
       <section className="search-results-section">
@@ -79,7 +77,7 @@ class GymsIndex extends React.Component {
         </section>
 
         <div>
-          {this.noSearchInput()}
+          {this.SearchInput()}
         </div>
 
       </div>

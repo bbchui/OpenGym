@@ -1,7 +1,7 @@
 class Api::GymsController < ApplicationController
   def index
     if params[:query]
-      @gyms = Gym.where('city LIKE ?', "%#{params[:query]}%")
+      @gyms = Gym.where('lower(city) LIKE ?', "%#{params[:query]}%")
     elsif params[:query] == ""
       @gyms = Gym.all.limit(10)
     else
