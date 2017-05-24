@@ -100,11 +100,15 @@ form.home-search {
   height: 41px;
   border: none;
   border-radius: 0 4px 4px 0;
-  background-color: #59C4C5;
+  background-color: #389798;
   .fa-2x {
     font-size: 25px;
     color: white;
   }
+}
+
+.home-search button:hover {
+  background: #246869;
 }
 
 input.home-search {

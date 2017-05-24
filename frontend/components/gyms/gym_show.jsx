@@ -4,6 +4,7 @@ import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
 import ReviewShowContainer from '../reviews/reviews_show_container';
 import FontAwesome from 'react-fontawesome';
+import SearchContainer from '../search/search_container';
 
 class GymShow extends React.Component {
   constructor(props) {
@@ -55,11 +56,13 @@ class GymShow extends React.Component {
     return(
       <div>
         <section className="top-of-page">
-          <div className="width-check">
-            <div>
-              <Link to={`/`}>HomePage</Link>
+          <div className="page-width">
+            <div className="search-bar">
+              <Link to={`/`}>
+                OpenGym
+              </Link>
                 <div>
-                  Searchbar
+                  <SearchContainer />
                 </div>
             </div>
 

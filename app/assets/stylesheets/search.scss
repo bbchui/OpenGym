@@ -7,13 +7,58 @@
   margin-bottom: 25px;
 }
 
-div.width-check {
+div.page-width {
   width: 900px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   margin: auto;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+
+  a {
+    padding-right: 15px;
+  }
+}
+
+form.else-search {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  background: white;
+  font-weight: 800;
+  font-size: 14px;
+  color: #292626;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+
+input.else-search {
+  font-size: 14px;
+  height: 1.75em;
+  border: 1px solid white;
+  width: 50%;
+  padding: 0px 10px;
+  flex-grow: 1;
+  outline: none;
+}
+
+.else-search button {
+  flex: 0.25;
+  height: 33px;
+  border: none;
+  background-color: #389798;
+  .fa-2x {
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.else-search button:hover {
+  background: #246869;
 }
 
 div.index-map {

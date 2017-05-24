@@ -4,6 +4,7 @@ import Rating from 'react-rating';
 import SessionFormContainer from '../session/session_form_container';
 import GymReview from '../gyms/gym_review';
 import SampleReviews from './sample_reviews';
+import SearchContainer from '../search/search_container';
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -82,11 +83,13 @@ class ReviewForm extends React.Component {
     return(
       <div className='review-form-page'>
         <section className="top-of-page">
-          <div className="width-check">
-            <div>
-              <Link to={`/`}>HomePage</Link>
+          <div className="page-width">
+            <div className="search-bar">
+              <Link to={`/`}>
+                OpenGym
+              </Link>
                 <div>
-                  Searchbar
+                  <SearchContainer />
                 </div>
             </div>
 

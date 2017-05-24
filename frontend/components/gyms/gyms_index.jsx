@@ -16,7 +16,6 @@ class GymsIndex extends React.Component {
   // }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
     if (nextProps == this.props) {
       this.props.getAllGyms(nextProps.query)
     }
@@ -63,9 +62,11 @@ class GymsIndex extends React.Component {
     return (
       <div>
         <section className="top-of-page">
-          <div className="width-check">
-            <div>
-              <Link to={`/`}>HomePage</Link>
+          <div className="page-width">
+            <div className="search-bar">
+              <Link to={`/`}>
+                OpenGym
+              </Link>
                 <div>
                   <SearchContainer />
                 </div>
