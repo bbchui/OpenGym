@@ -37,11 +37,32 @@ class GymShow extends React.Component {
     );
   }
 
-  //map function?
-
   handleCreate(e) {
     e.preventDefault();
     this.props.history.push(`/gyms/${this.props.gym.id}/reviews/new`);
+  }
+
+  reviewButton() {
+    if (this.props.currentUser) {
+      return (
+        <button
+          onClick={this.handleCreate}
+          className="show-review">
+          <FontAwesome className="fa fa-star"
+            name="star"
+            size='lg'/>
+           Write a Review </button>
+      )
+    } else {
+      return (
+        <button
+          className="cant-review" disabled>
+          <FontAwesome className="fa fa-star"
+            name="star"
+            size='lg'/>
+          Log In To Review! </button>
+      )
+    }
   }
 
   //need to DRY same top-of-page as index
@@ -94,16 +115,7 @@ class GymShow extends React.Component {
           </div>
 
           <div className="show-buttons">
-            <button
-              onClick={this.handleCreate}
-              className="show-review">
-              <FontAwesome
-                className="fa fa-star"
-                name="star"
-                size='lg'
-                  />
-               Write a Review
-            </button>
+            {this.reviewButton()}
             <button className="add-photo"> Add Photos </button>
           </div>
         </section>
