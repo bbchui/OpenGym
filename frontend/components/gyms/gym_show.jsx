@@ -6,6 +6,7 @@ import ReviewShowContainer from '../reviews/reviews_show_container';
 import FontAwesome from 'react-fontawesome';
 import SearchContainer from '../search/search_container';
 import Rating from 'react-rating';
+import GymMap from '../map/gym_map';
 
 class GymShow extends React.Component {
   constructor(props) {
@@ -109,7 +110,7 @@ class GymShow extends React.Component {
 
         <section className="show-images">
           <div className="map-area">
-            <img className="map-photo" src="http://res.cloudinary.com/bbchui/image/upload/v1495220103/Screen_Shot_2017-05-19_at_11.54.06_AM_kn6xuw.png"/>
+            <GymMap gym={gym}/>
             <span className="address"> { gym.address } </span>
             <span className="address"> { gym.city }, { gym.state } { gym.zip } </span>
             <span> { gym.phone } </span>

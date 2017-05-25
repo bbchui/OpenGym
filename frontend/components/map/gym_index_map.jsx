@@ -28,7 +28,9 @@ class GymIndexMap extends React.Component {
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
-    this.MarkerManager.updateMarkers(this.props.gyms)
+    this.MarkerManager.updateMarkers(this.props.gyms);
+
+    this.props.gyms.forEach(gym => this.gymInfo(gym));
   }
 
   componentWillReceiveProps(nextProps) {
@@ -56,38 +58,26 @@ class GymIndexMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map)
     this.MarkerManager.updateMarkers(nextProps.gyms);
 
-    nextProps.gyms.forEach(gym => {
-      let content =
-        `<div>${gym.name}</div>
-      <div>${gym.address}</div>
-      <div>${gym.city}, ${gym.state} ${gym.zip}</div>`;
-
-      let window = new google.maps.InfoWindow({
-        content: content
-      });
-
-      var marker = new google.maps.Marker({
-        position: { lat: gym.lat, lng: gym.lng},
-        map: this.map
-      });
-
-      marker.addListener('click', () => window.open(this.map, marker));
-    });
+    nextProps.gyms.forEach(gym => this.gymInfo(gym));
 
   }
 
-  gymInfo(marker) {
-    let gymId = marker.gymId;
-    let gym = this.props.gyms[gymId];
+  gymInfo(gym) {
     let content =
       `<div>${gym.name}</div>
     <div>${gym.address}</div>
-    <div>${gym.city}, ${gym.state} ${gym.zip}</div>`
+    <div>${gym.city}, ${gym.state} ${gym.zip}</div>`;
 
     let window = new google.maps.InfoWindow({
       content: content
     });
 
+    var marker = new google.maps.Marker({
+      position: { lat: gym.lat, lng: gym.lng},
+      map: this.map
+    });
+
+    marker.addListener('click', () => window.open(this.map, marker));
   }
 
   render() {
