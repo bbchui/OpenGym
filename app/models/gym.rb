@@ -13,8 +13,8 @@ class Gym < ApplicationRecord
 
   def self.in_bounds(bounds)
     Gym.where("lat > ?", bounds[:southwest][:lat])
-       .where("lat < ?", bounds[:northeast][:lat])
-       .where("lng > ?", bounds[:southwest][:lng])
-       .where("lng < ?", bounds[:northeast][:lng])
+        .where("lat < ?", bounds[:northeast][:lat])
+        .where("lng > ?", bounds[:southwest][:lng])
+        .where("lng < ?", bounds[:northeast][:lng])
   end
 end

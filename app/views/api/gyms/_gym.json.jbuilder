@@ -9,6 +9,8 @@ json.extract! gym,
                   :price,
                   :hours,
                   :phone,
+                  :lat,
+                  :lng,
                   :website_url,
                   :image_url
 json.reviews gym.reviews

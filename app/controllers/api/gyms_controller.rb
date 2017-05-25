@@ -52,6 +52,8 @@ class Api::GymsController < ApplicationController
                                 :price,
                                 :hours,
                                 :phone,
+                                :lat,
+                                :lng,
                                 :website_url,
                                 :image_url)
   end

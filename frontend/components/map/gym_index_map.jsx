@@ -3,15 +3,13 @@ import { withRouter } from 'react-router-dom';
 import MarkerManager from '../../util/marker_manager';
 
 
-class Map extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+class GymIndexMap extends React.Component {
+
 
   componentDidMount() {
     const mapOptions = {
       center: { lat: 37.7758, lng: -122.435 },
-      zoom: 13
+      zoom: 11
     };
 
     // wrap the mapDOMNode in a Google Map
@@ -22,7 +20,6 @@ class Map extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.MarkerManager.updateMarkers(nextProps.gyms);
-    console.log("else");
   }
 
   render() {
@@ -33,4 +30,4 @@ class Map extends React.Component {
   }
 }
 
-export default Map;
+export default GymIndexMap;

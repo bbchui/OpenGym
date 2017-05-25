@@ -3,7 +3,7 @@ import GymSearchItem from './gyms_search_item';
 import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
-import Map from '../map/map';
+import GymIndexMap from '../map/gym_index_map';
 
 class GymsIndex extends React.Component {
   constructor(props) {
@@ -16,11 +16,12 @@ class GymsIndex extends React.Component {
   //   console.log(this.props.query)
   // }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps == this.props) {
-      this.props.getAllGyms(nextProps.query)
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   console.log(nextProps, this.props);
+  //   if (nextProps == this.props) {
+  //     this.props.getAllGyms(nextProps.query)
+  //   }
+  // }
 
   sessionForm() { //header function
     return(
@@ -50,7 +51,7 @@ class GymsIndex extends React.Component {
           <ul className="search-results-list">
             {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
           </ul>
-          <div className="map">Map Goes Here</div>
+          <div className="map"><GymIndexMap gyms={gyms} /></div>
         </div>
       </section>
     )
@@ -81,7 +82,7 @@ class GymsIndex extends React.Component {
           {this.SearchInput()}
         </div>
 
-        <Map />
+
       </div>
     );
   }

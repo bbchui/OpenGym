@@ -10,6 +10,8 @@
                         :price,
                         :hours,
                         :phone,
+                        :lng,
+                        :lat,
                         :website_url,
                         :reviews
     json.image_url asset_path(gym.image_url)
