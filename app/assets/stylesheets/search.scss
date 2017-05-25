@@ -66,11 +66,6 @@ div.index-map {
   justify-content: space-between;
 }
 
-div.map {
-  width: 200px;
-  height: 300px;
-  border: 1px solid black;
-}
 
 nav.other-login-buttons {
   display: flex;
@@ -98,4 +93,5 @@ nav.other-login-buttons > div {
 
 .search-results-header {
   padding-left: 40px;
+  padding-bottom: 25px;
 }

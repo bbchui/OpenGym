@@ -43,15 +43,17 @@ class GymsIndex extends React.Component {
 
   SearchInput() {
     const { gyms } = this.props;
+    let name;
+    gyms[0] ? name = gyms[0].city : "San Francisco";
     return (
       <section className="search-results-section">
         <h2 className="search-results-header">
-          Browsing Gyms in San Francisco</h2>
+          Browsing Gyms near {name}</h2>
         <div className="index-map">
           <ul className="search-results-list">
             {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
           </ul>
-          <div className="map"><GymIndexMap gyms={gyms} /></div>
+          <div className="map-style"><GymIndexMap gyms={gyms} /></div>
         </div>
       </section>
     )
