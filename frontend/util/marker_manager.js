@@ -28,7 +28,6 @@ export default class Markermanager{
     });
 
     marker.setMap(this.map);
-    marker.addListener('click', () => this.handleClick(gym));
     this.markers[gym.id] = marker;
   }
 
