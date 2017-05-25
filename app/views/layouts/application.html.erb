@@ -2,13 +2,23 @@
 <html>
   <head>
     <title>OpenGym Volleyball</title>
-    <script src="https://use.fontawesome.com/de3dbd3328.js"></script>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBGzD2V58XXZuo4vQkXksUHJJVjEaKjYi4"%>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico|Titillium+Web" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://use.fontawesome.com/de3dbd3328.js"></script>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBGzD2V58XXZuo4vQkXksUHJJVjEaKjYi4"%>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico|Titillium+Web" rel="stylesheet">
+
+    <script type="text/javascript" src=http://widget.cloudinary.com/global/all.js>
+    </script>
+    <script type="text/javascript">
+      window.CLOUDINARY_OPTIONS = {
+        cloud_name: "<%=ENV['CLOUD_NAME']%>",
+        upload_preset: "<%=ENV['UPLOAD_PRESET']%>"
+      };
+    </script>
+
   </head>
 
   <body>
