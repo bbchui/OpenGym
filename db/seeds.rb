@@ -20,7 +20,7 @@ Gym.create({
   website_url: "www.noevalleyreccenter.com",
   lat: 37.742782,
   lng: -122.428548,
-  image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154268/noevallyreccenter_taj19i.jpg"
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154268/noevallyreccenter_taj19i.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495747028/UN-volleyball-sm_tfftxa.jpg"]
   })
 
 Gym.create({
@@ -36,7 +36,7 @@ Gym.create({
   lat: 37.792512,
   lng: -122.392094,
   website_url: "https://www.ymcasf.org/locations/embarcadero-ymca",
-  image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154315/YMCA-Embarcadero_einwv7.jpg"
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154315/YMCA-Embarcadero_einwv7.jpg"]
   })
 
 Gym.create({
@@ -52,7 +52,7 @@ Gym.create({
   lat: 37.783499,
   lng: -122.477945,
   website_url: "https://sfrecpark.org/destination/richmond-rec-center/",
-  image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154403/RichmondRC_exfdnb.jpg"
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154403/RichmondRC_exfdnb.jpg"]
   })
 
 Gym.create({
@@ -68,7 +68,7 @@ Gym.create({
   lat: 38.542989,
   lng: -121.759205,
   website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
-  image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154404/UC_Davis_Arc_inmzz9.jpg"
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154404/UC_Davis_Arc_inmzz9.jpg"]
   })
 
 
@@ -85,7 +85,7 @@ Gym.create({
     lat: 37.794500,
     lng: -122.411657,
     website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
-    image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg"
+    image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg"]
     })
 
   Gym.create({
@@ -100,7 +100,7 @@ Gym.create({
     phone: "(650) 330-2200",
     lat: 37.453286,
     lng: -122.177768,
-    image_url: "https://res.cloudinary.com/bbchui/image/upload/v1495154492/MenloPark_rntth6.jpg"
+    image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154492/MenloPark_rntth6.jpg"]
     })
 
 

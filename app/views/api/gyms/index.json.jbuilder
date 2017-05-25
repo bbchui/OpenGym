@@ -13,7 +13,7 @@
                         :lng,
                         :lat,
                         :website_url,
-                        :reviews
-    json.image_url asset_path(gym.image_url)
+                        :reviews,
+                        :image_url
   end
 end

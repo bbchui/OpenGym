@@ -6,7 +6,7 @@ const GymFeatureItem = ({gym}) => {
   let averageRating = gym.reviews.reduce((sum, el) => sum += el.rating, 0) / gym.reviews.length;
   return  (
       <li className="gym-info-featured">
-        <img className="featured" src={gym.image_url} alt="Image Not Working" />
+        <img className="featured" src={gym.image_url[0]} alt="Image Not Working" />
         <Link className="featured-gym-name" to={`/gyms/${gym.id}`}>
           { gym.name }
         </Link>

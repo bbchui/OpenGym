@@ -55,7 +55,7 @@ class Api::GymsController < ApplicationController
                                 :lat,
                                 :lng,
                                 :website_url,
-                                :image_url)
+                                :image_url => [])
   end
 
 end
