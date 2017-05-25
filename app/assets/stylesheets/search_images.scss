@@ -41,6 +41,7 @@ div.gym-index-info {
 div.gym-index-info > div {
   display: flex;
   flex-direction: column;
+  padding-left: 10px
 }
 
 img.searched {
@@ -48,7 +49,6 @@ img.searched {
   height: 100px;
   object-fit: cover;
   border-radius: 5px;
-  padding-right: 10px;
 }
 
 .searched-gym-name {
