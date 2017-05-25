@@ -7,7 +7,7 @@ const GymSearchItem = ({gym}) => {
 
   return (
     <li className="gym-info-searched">
-      <img className="searched" src={gym.image_url[0]} alt="Image Not Working" />
+      <img className="searched" height="100" width="100" src={gym.image_url[0]} alt="Image Not Working" />
 
       <div className="gym-index-info">
         <div className="left-search">
