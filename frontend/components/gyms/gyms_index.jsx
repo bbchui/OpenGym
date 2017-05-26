@@ -8,7 +8,7 @@ import GymIndexMap from '../map/gym_index_map';
 class GymsIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.SearchInput = this.SearchInput.bind(this);
+    // this.SearchInput = this.SearchInput.bind(this);
   }
 
   // componentDidMount() {
@@ -41,26 +41,27 @@ class GymsIndex extends React.Component {
     );
   }
 
-  SearchInput() {
-    const { gyms } = this.props;
-    let name;
-    gyms[0] ? name = gyms[0].city : "San Francisco";
-    return (
-      <section className="search-results-section">
-        <h2 className="search-results-header">
-          Browsing Gyms near {name}</h2>
-        <div className="index-map">
-          <ul className="search-results-list">
-            {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
-          </ul>
-          <div className="map-style"><GymIndexMap gyms={gyms} /></div>
-        </div>
-      </section>
-    )
-  }
+  // SearchInput() {
+  //   const { gyms } = this.props;
+  //   let name;
+  //   gyms[0] ? name = gyms[0].city : "San Francisco";
+  //   return (
+  //     <section className="search-results-section">
+  //       <h2 className="search-results-header">
+  //         Browsing Gyms near {name}</h2>
+  //       <div className="index-map">
+  //         <ul className="search-results-list">
+  //           {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
+  //         </ul>
+  //         <div className="map-style"><GymIndexMap gyms={gyms} /></div>
+  //       </div>
+  //     </section>
+  //   )
+  // }
 
   render() {
     const { gyms } = this.props
+      gyms[0] ? name = gyms[0].city : "San Francisco";
     return (
       <div>
         <section className="top-of-page">
@@ -81,7 +82,16 @@ class GymsIndex extends React.Component {
         </section>
 
         <div>
-          {this.SearchInput()}
+          <section className="search-results-section">
+            <h2 className="search-results-header">
+              Browsing Gyms near {name}</h2>
+            <div className="index-map">
+              <ul className="search-results-list">
+                {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
+              </ul>
+              <div className="map-style"><GymIndexMap gyms={gyms} /></div>
+            </div>
+          </section>
         </div>
 
 

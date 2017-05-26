@@ -65,22 +65,23 @@ class GymShow extends React.Component {
     }
   }
 
-  randomImage(images) {
-    // if (images.length < 4) {
-    //   return images
-    // }
-    for (var i = images.length; i > 0; i--) {
-      let j = Math.floor(Math.random() * i);
-      [images[i - 1], images[j]] = [images[j], images[i - 1]];
-    }
-    return (
-      <div>
-      <img className="showpage-photo" src={images[0]} alt="Image Not Working" />
-      <img className="showpage-photo" src={images[1]} alt="Image Not Working" />
-      <img className="showpage-photo" src={images[0]} alt="Image Not Working" />
-      </div>
-    )
-  }
+  // randomImage(images) {
+  //   if (images.length < 4) {
+  //     images
+  //   } else {
+  //     for (var i = images.length; i > 0; i--) {
+  //       let j = Math.floor(Math.random() * i);
+  //       [images[i - 1], images[j]] = [images[j], images[i - 1]];
+  //     }
+  //   }
+  //   return (
+  //     <div>
+  //     <img className="showpage-photo" src={images[0]} alt="Image Not Working" />
+  //     <img className="showpage-photo" src={images[1]} alt="Image Not Working" />
+  //     <img className="showpage-photo" src={images[2]} alt="Image Not Working" />
+  //     </div>
+  //   )
+  // }
   //need to DRY same top-of-page as index
   render() {
     let { gym } = this.props;
@@ -146,7 +147,9 @@ class GymShow extends React.Component {
             </a>
           </div>
           <div className="show-photos-section">
-            {this.randomImage(gym.image_url)}
+            <img className="showpage-photo" src={gym.image_url[0]} alt="Image Not Working" />
+            <img className="showpage-photo" src={gym.image_url[1]} alt="Image Not Working" />
+            <img className="showpage-photo" src={gym.image_url[2]} alt="Image Not Working" />
           </div>
         </section>
 
