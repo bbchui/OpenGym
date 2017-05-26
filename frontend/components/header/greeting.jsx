@@ -30,7 +30,7 @@ class Greeting extends React.Component {
       <div className="login">
           <nav className="login-buttons">
             <div>
-              <button className="home-review">Write a Review</button>
+
             </div>
             <div>
               <button onClick={logout}>Log Out</button>
@@ -40,7 +40,7 @@ class Greeting extends React.Component {
     );
   }
 
-
+      // <button className="home-review">Write a Review</button>
           // <div className="searchbar">
           //   Welcome{this.currUser()} Searchbar goes here!
           //   <Link to='/gyms'>Search...Not Really</Link>
@@ -53,6 +53,7 @@ class Greeting extends React.Component {
 
         <div className='homepage'>
           {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()};
+          <div className="header-logo">OpenGym</div>
           <SearchContainer />
         </div>
 
