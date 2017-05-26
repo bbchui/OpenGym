@@ -87,6 +87,7 @@ textarea {
   outline: none;
   font-size: 15px;
   padding-top: 10px;
+  margin-left: 20px;
 }
 
 form.review-form {
@@ -98,8 +99,7 @@ form.review-form {
 
 label.review-form {
   width: 535px;
-  margin: auto;
-  margin-top: 10px;
+  margin: 10px auto;
   .new-stars {
     color: #ffcc00;
   }

@@ -53,7 +53,10 @@ class Greeting extends React.Component {
 
         <div className='homepage'>
           {this.props.currentUser ? this.greeting(this.props.currentUser, this.props.logout) : this.sessionForm()};
-          <div className="header-logo">OpenGym</div>
+          <div className="header-logo"><strong>OpenGym</strong>
+            <br/><br/>
+            Find a Volleyball Open Gym Near You!
+          </div>
           <SearchContainer />
         </div>
 

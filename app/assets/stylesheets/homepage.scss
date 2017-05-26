@@ -101,7 +101,7 @@ div.modal-formtype {
 
 form.home-search {
   position: relative;
-  top: 27%;
+  top: 24%;
   width: 600px;
   margin: auto;
   display: flex;
@@ -147,8 +147,7 @@ nav.login-buttons {
   margin: auto;
 }
 
-.header-logo {
-  font-size: 110px;
+div.header-logo {
   width: 900px;
   margin: auto;
   text-align: center;
@@ -156,4 +155,8 @@ nav.login-buttons {
   position: relative;
   top: 23%;
   color: white;
+  font-size: 25px;
+  strong {
+    font-size: 110px;
+  }
 }

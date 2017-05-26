@@ -67,7 +67,7 @@ class GymsIndex extends React.Component {
         <section className="top-of-page">
           <div className="page-width">
             <div className="search-bar">
-              <Link to={`/`}>
+              <Link to={`/`} className="top-logo">
                 OpenGym
               </Link>
                 <div>
