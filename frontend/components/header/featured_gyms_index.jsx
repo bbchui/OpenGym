@@ -10,6 +10,14 @@ class FeaturedGymsIndex extends React.Component {
     this.props.getAllGyms("");
   }
 
+  featuredGyms(gyms) {
+    for (var i = gyms.length; i > 0; i--) {
+      let j = Math.floor(Math.random() * i);
+      [gyms[i - 1], gyms[j]] = [gyms[j], gyms[i - 1]];
+    }
+    return gyms
+  }
+
 
   render() {
     const { gyms } = this.props;
@@ -17,7 +25,7 @@ class FeaturedGymsIndex extends React.Component {
       <section>
         <h2 className='featured'>Featured Gyms</h2>
         <ul className='featured-gyms'>
-          {gyms.map(gym => <GymFeatureItem key={gym.id} gym={gym}/>)}
+          {this.featuredGyms(gyms).map(gym => <GymFeatureItem key={gym.id} gym={gym}/>)}
         </ul>
       </section>
     )

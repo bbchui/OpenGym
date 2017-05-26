@@ -15,6 +15,10 @@ ul.featured-gyms {
   // margin: auto;
 }
 
+ul.featured-gyms li:nth-of-type(1n+7) {
+  display: none;
+}
+
 li.gym-info-featured {
   display: flex;
   flex-direction: column;

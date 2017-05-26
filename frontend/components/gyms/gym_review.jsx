@@ -8,7 +8,7 @@ const GymReview = ({gym}) => {
   }
   return (
     <li className='review-summary'>
-        <img src={gym.image_url} alt="Image Not Working"
+        <img src={gym.image_url[0]} alt="Image Not Working"
           />
       <div>
         <Link to={`/gyms/${gym.id}`}> { gym.name } </Link>
