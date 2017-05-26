@@ -5,7 +5,7 @@ const ModalStyle = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(255, 255, 255, 0.75)'
+    backgroundColor   : 'rgba(0, 0, 0, 0.6)'
   },
   content : {
     position                   : 'fixed',
@@ -17,9 +17,9 @@ const ModalStyle = {
     background                 : '#59C4C5',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
-    borderRadius               : '25px',
+    // borderRadius               : '25px',
     outline                    : 'none',
-    padding                    : '17px',
+    padding                    : '22px 44px',
     opacity                    : "0",
     transition                 : 'opacity 0.75s',
     transform                  : 'translate(-50%, -50%)'

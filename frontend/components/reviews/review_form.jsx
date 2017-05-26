@@ -107,7 +107,7 @@ class ReviewForm extends React.Component {
           </ul>
           <h4>Your review</h4>
             <form className='review-form'>
-              <label>
+              <label className="review-form">
                 <Rating
                   className="new-stars"
                   initialRate={this.state.rating}

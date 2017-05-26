@@ -58,10 +58,12 @@ class SessionForm extends React.Component {
 		if (this.state.formType === 'Sign Up') {
 			return(
 				<div>
+					<br/>
 					<button className="signup"
 						onClick={this.handleGuestLogin}>
 						Log in as Guest
 					</button>
+					<br/>
 				</div>
 			)
 		} else {
@@ -97,6 +99,14 @@ class SessionForm extends React.Component {
 		}
 	}
 
+	logClassName() {
+		if (this.state.formType === "Sign Up") {
+			return "signup"
+		} else {
+			return "login"
+		}
+	}
+
   render() {
     return(
 			<div className="login">
@@ -115,7 +125,7 @@ class SessionForm extends React.Component {
 			    onRequestClose={this.onModalClose}
 					onAfterOpen={this.onTransition}>
 			    <form className="login-form">
-			      <div className="modal-welcome">Welcome to OpenGym!
+			      <div className="modal-welcome">Welcome to <strong className="logo">OpenGym!</strong>
 								<br/>
 								<div className="modal-formtype"> Enter Your Username and Password</div>
 						</div>
@@ -142,14 +152,13 @@ class SessionForm extends React.Component {
 						</div>
 			      <br/>
 
-			      <button className="signup"
+			      <button className={this.logClassName()}
 							onClick={this.handleSubmit}>
 							{this.state.formType}
 						</button>
-						<br/>
 						{this.loginGuest()}
-						<br />
-						<button className="signup" onClick={this.onModalClose}>Close
+						<br/>
+						<button className={this.logClassName()} onClick={this.onModalClose}>Close
 						</button>
 			    </form>
 

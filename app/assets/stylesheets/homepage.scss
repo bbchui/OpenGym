@@ -11,13 +11,26 @@ div.login {
   background: transparent;
 }
 
-button.signup {
-  display: flex;
+button.login {
   background: transparent;
-  padding: 8px 50px;
+  padding: 8px 0;
   font-size: inherit;
   border-radius: 5px;
-  border-color: white;
+  border-color: #1d758a;
+  width: 200px;
+}
+
+button.login:hover {
+  background-color: #00C8F8;
+}
+
+button.signup {
+  background: transparent;
+  padding: 8px 0;
+  font-size: inherit;
+  border-radius: 5px;
+  border-color: #1d758a;
+  width: 200px;
 }
 
 button.signup:hover {
@@ -53,10 +66,15 @@ div.modal-welcome {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  font-family: 'Pacifico', cursive;
-  color: white;
+  font-family: 'Josefin Slab', serif;
+  color: black;
   font-size: 32px;
-  text-shadow: 2px 2px black;
+  // text-shadow: 2px 2px black;
+}
+
+strong.logo {
+  font-size: 50px;
+  padding-top: 10px
 }
 
 label.modal {
@@ -76,8 +94,9 @@ input.modal {
 
 div.modal-formtype {
   font-family: 'Titillium Web', sans-serif;
-  text-shadow: none;
   font-size: 20px;
+  margin-top: -20px;
+  margin-bottom: -5px;
 }
 
 form.home-search {
