@@ -66,7 +66,7 @@ class GymIndexMap extends React.Component {
 
 
     let content =
-      `<a href={/#/gyms/${gym.id}}>${gym.name}</a>
+      `<a href=/#/gyms/${gym.id}>${gym.name}</a>
       <div>${gym.address}</div>
       <div>${gym.city}, ${gym.state} ${gym.zip}</div>`;
 
