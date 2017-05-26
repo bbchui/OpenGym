@@ -71,17 +71,13 @@ class GymIndexMap extends React.Component {
   }
 
   gymInfo(gym) {
-
-
     let content =
       `<a href=/#/gyms/${gym.id}>${gym.name}</a>
       <div>${gym.address}</div>
       <div>${gym.city}, ${gym.state} ${gym.zip}</div>`;
-
     let window = new google.maps.InfoWindow({
       content: content
     });
-
     var marker = new google.maps.Marker({
       position: { lat: gym.lat, lng: gym.lng},
       map: this.map
