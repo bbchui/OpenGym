@@ -73,36 +73,81 @@ Gym.create({
   })
 
 
-  Gym.create({
-    name: "Betty Ong Rec Center",
-    address: "1199 Mason Street",
-    city: "San Francisco",
-    state: "CA",
-    zip: "94108",
-    level: "Beginner-Intermediate",
-    price: "Free",
-    hours: "Wednesday 6:30 - 9pm",
-    phone: "(415) 359-9103",
-    lat: 37.794500,
-    lng: -122.411657,
-    website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
-    image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755329/betong_bwqnih.jpg", "https://res.cloudinary.com/bbchui/image/upload/a_auto_left/v1495755341/betong1_zwgaxi.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755342/betong2_mhnexf.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755345/betong3_xjlwzw.jpg", "https://res.cloudinary.com/bbchui/image/upload/a_auto_right/v1495755348/betong4_oijaod.jpg"]
-    })
+Gym.create({
+  name: "Betty Ong Rec Center",
+  address: "1199 Mason Street",
+  city: "San Francisco",
+  state: "CA",
+  zip: "94108",
+  level: "Beginner-Intermediate",
+  price: "Free",
+  hours: "Wednesday 6:30 - 9pm",
+  phone: "(415) 359-9103",
+  lat: 37.794500,
+  lng: -122.411657,
+  website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755329/betong_bwqnih.jpg", "https://res.cloudinary.com/bbchui/image/upload/a_auto_left/v1495755341/betong1_zwgaxi.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755342/betong2_mhnexf.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755345/betong3_xjlwzw.jpg", "https://res.cloudinary.com/bbchui/image/upload/a_auto_right/v1495755348/betong4_oijaod.jpg"]
+  })
 
-  Gym.create({
-    name: "Arrillaga Family Recreation Center",
-    address: "610 Laurel St",
-    city: "Menlo Park",
-    state: "CA",
-    zip: "94025",
-    level: "Intermediate-Expert",
-    price: "$3 per visit",
-    hours: "Sunday 6:30 - 9:30pm",
-    phone: "(650) 330-2200",
-    lat: 37.453286,
-    lng: -122.177768,
-    image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154492/MenloPark_rntth6.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755961/menlo_wagf4f.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755962/menlo1_rdxdgp.jpg"]
-    })
+Gym.create({
+  name: "Arrillaga Family Recreation Center",
+  address: "610 Laurel St",
+  city: "Menlo Park",
+  state: "CA",
+  zip: "94025",
+  level: "Intermediate-Expert",
+  price: "$3 per visit",
+  hours: "Sunday 6:30 - 9:30pm",
+  phone: "(650) 330-2200",
+  lat: 37.453286,
+  lng: -122.177768,
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154492/MenloPark_rntth6.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755961/menlo_wagf4f.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755962/menlo1_rdxdgp.jpg"]
+  })
+
+Gym.create({
+  name: "Sports House",
+  address: "3151 Edison Way",
+  city: "Redwood City",
+  state: "CA",
+  zip: "94063",
+  level: "Intermediate-Expert",
+  price: "$7 per visit",
+  hours: "Friday 7pm - 10:30pm",
+  phone: "(650) 362-4100",
+  lat: 37.480728,
+  lng: -122.202492,
+  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495786531/sporthouse_uxzmam.png", "http://res.cloudinary.com/bbchui/image/upload/v1495786645/sporthouse1_c1pd6b.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495786646/sporthouse2_kyl79c.jpg"]
+  })
+
+Gym.create({
+  name: "City Beach",
+  address: "2911 Mead Ave",
+  city: "Santa Clara",
+  state: "CA",
+  zip: "95051",
+  level: "Intermediate",
+  price: "$6 per visit",
+  hours: "Friday 6pm - 9pm",
+  phone: "(408) 654-9330",
+  website_url: "citybeach.com",
+  lat: 37.372460,
+  lng: -121.978984,
+  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495787332/citybeach_tzcjh9.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495787332/citybeach1_wvlhwi.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495787334/citybeach2_folaxd.jpg"]
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 User.create({username: "brandon", password: "password", profile_pic_url: "https://res.cloudinary.com/bbchui/image/upload/v1495515243/IMG_2662_raa2dq.png"})
@@ -112,22 +157,13 @@ User.create({username: "Chubs", password: "password", profile_pic_url: "https://
 
 
 Review.create({user_id: 1, gym_id: 1, body: "Two courts and 6 to 8 teams usually show. Some experience recommended, but lots of friendly people!", rating: 4})
-
-
 Review.create({user_id: 1, gym_id: 4, body: "This place is a lot of fun!", rating: 4})
-
 Review.create({user_id: 2, gym_id: 1, body: "Good competition and there's two courts to play on!", rating: 5})
-
 Review.create({user_id: 3, gym_id: 1, body: "Great community, good crowd", rating: 4})
-
 Review.create({user_id: 1, gym_id: 2, body: "It gets a bit crowded because there's only 1 court", rating: 3})
-
 Review.create({user_id: 2, gym_id: 2, body: "Friendly people but wait time is very long", rating: 3})
-
 Review.create({user_id: 3, gym_id: 2, body: "Great place to go if you have membership!", rating: 4})
-
 Review.create({user_id: 1, gym_id: 2, body: "Great place!", rating: 4})
-
 Review.create({user_id: 4, gym_id: 3, body: "*boing boing* *nibble nibble*", rating: 5})
 Review.create({user_id: 4, gym_id: 4, body: "*boing boing* *nibble nibble*", rating: 5})
 Review.create({user_id: 4, gym_id: 5, body: "*boing boing* *nibble nibble*", rating: 5})
