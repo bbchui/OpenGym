@@ -27,7 +27,7 @@ const GymSearchItem = ({gym}) => {
             fractions={2}/>&nbsp;&nbsp;{ gym.reviews.length } reviews
            </span>
            <br/>
-           <span> { gym.price } </span>
+           <span> Price: { gym.price } </span>
         </div>
 
         <div className="right-search">

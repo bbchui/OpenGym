@@ -147,7 +147,7 @@ class GymShow extends React.Component {
             <span className="address"> { gym.address } </span>
             <span className="address"> { gym.city }, { gym.state } { gym.zip } </span>
             <span> { gym.phone } </span>
-            <a href={`http://${gym.website_url}`} className="show-link">
+            <a href={`https://${gym.website_url}`} className="show-link">
               {gym.website_url}
             </a>
           </div>

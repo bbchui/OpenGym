@@ -116,7 +116,7 @@ Gym.create({
   phone: "(650) 362-4100",
   lat: 37.480728,
   lng: -122.202492,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495786531/sporthouse_uxzmam.png", "http://res.cloudinary.com/bbchui/image/upload/v1495786645/sporthouse1_c1pd6b.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495786646/sporthouse2_kyl79c.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495786531/sporthouse_uxzmam.png", "https://res.cloudinary.com/bbchui/image/upload/v1495786645/sporthouse1_c1pd6b.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495786646/sporthouse2_kyl79c.jpg"]
   })
 
 Gym.create({
@@ -132,7 +132,7 @@ Gym.create({
   website_url: "citybeach.com",
   lat: 37.372460,
   lng: -121.978984,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495787332/citybeach_tzcjh9.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495787332/citybeach1_wvlhwi.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495787334/citybeach2_folaxd.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495787332/citybeach_tzcjh9.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495787332/citybeach1_wvlhwi.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495787334/citybeach2_folaxd.jpg"]
   })
 
 Gym.create({
@@ -145,10 +145,10 @@ Gym.create({
   price: "Membership Required",
   hours: "Thursday 8:00pm - 11:00pm",
   phone: "(301) 226-4400",
-  website_url: "http://recwell.umd.edu/",
+  website_url: "https://recwell.umd.edu/",
   lat: 38.993841,
   lng: -76.945174,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495819878/umd_gvzr0w.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495819852/umd1_yoawmg.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495819853/umd2_lmtfnj.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495819878/umd_gvzr0w.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495819852/umd1_yoawmg.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495819853/umd2_lmtfnj.jpg"]
 })
 
 Gym.create({
@@ -161,10 +161,10 @@ Gym.create({
   price: "Free, $2 Donations appreciated",
   hours: "Monday 7:00pm - 9:00pm, Saturday 6:00pm - 9:00pm",
   phone: "(408) 356-5126",
-  website_url: "http://www.calvarylg.com/",
+  website_url: "https://www.calvarylg.com/",
   lat: 37.231698,
   lng: -121.964325,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495820352/calvary_gaj2xj.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495820352/calvary1_gledvr.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495820353/calvary2_fbzpjo.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495820352/calvary_gaj2xj.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495820352/calvary1_gledvr.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495820353/calvary2_fbzpjo.jpg"]
 })
 
 Gym.create({
@@ -177,10 +177,10 @@ Gym.create({
   price: "$10",
   hours: "Saturday 7:00pm - 11:00pm",
   phone: "(212) 673-2650",
-  website_url: "http://www.sewardparkhs.com/",
+  website_url: "https://www.sewardparkhs.com/",
   lat: 40.717468,
   lng: -73.989575,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495821179/sphs_orx7cl.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495821180/sphs1_jcci9c.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495821181/sphs2_lpx1kq.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495821179/sphs_orx7cl.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495821180/sphs1_jcci9c.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495821181/sphs2_lpx1kq.jpg"]
 })
 
 Gym.create({
@@ -193,10 +193,10 @@ Gym.create({
   price: "$10",
   hours: "Monday 6:00pm - 9:30pm",
   phone: "(212) 964-0350",
-  website_url: "http://www.ps2m.info/",
+  website_url: "https://www.ps2m.info/",
   lat: 40.713308,
   lng: -73.992011,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495821820/PS2_yrh4p3.png", "http://res.cloudinary.com/bbchui/image/upload/v1495822329/ps22_r5jspc.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495822327/ps21_gw7l9a.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495821820/PS2_yrh4p3.png", "https://res.cloudinary.com/bbchui/image/upload/v1495822329/ps22_r5jspc.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495822327/ps21_gw7l9a.jpg"]
 })
 
 Gym.create({
@@ -212,7 +212,7 @@ Gym.create({
   website_url: "https://www.edline.net/pages/Cerritos_High_School",
   lat: 33.865607,
   lng: -118.064896,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495824110/cerritos_ibfwpo.png", "https://cloudinary.com/console/media_library#/dialog/image/upload/cerritos2_hih6yd", "http://res.cloudinary.com/bbchui/image/upload/v1495829997/logo1_hv4eab.png"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495824110/cerritos_ibfwpo.png", "https://cloudinary.com/console/media_library#/dialog/image/upload/cerritos2_hih6yd", "https://res.cloudinary.com/bbchui/image/upload/v1495829997/logo1_hv4eab.png"]
 })
 
 Gym.create({
@@ -228,7 +228,7 @@ Gym.create({
   website_url: "cityofalhambra.org",
   lat: 34.087266,
   lng: -118.115580,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495825213/almansor_qbqqxl.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495825214/almansor1_wkapbr.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495825214/almansor2_krg8pn.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495825213/almansor_qbqqxl.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495825214/almansor1_wkapbr.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495825214/almansor2_krg8pn.jpg"]
 })
 
 Gym.create({
@@ -244,7 +244,7 @@ Gym.create({
   website_url: "https://www.sandiego.gov/park-and-recreation/centers/recctr/standley",
   lat: 32.851411,
   lng: -117.210245,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495825794/standley_frmqfk.png", "http://res.cloudinary.com/bbchui/image/upload/v1495825795/standley1_kb8u6h.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495825797/standley2_y7kh1p.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495825794/standley_frmqfk.png", "https://res.cloudinary.com/bbchui/image/upload/v1495825795/standley1_kb8u6h.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495825797/standley2_y7kh1p.jpg"]
 })
 
 Gym.create({
@@ -257,10 +257,10 @@ Gym.create({
   price: "$7",
   hours: "Wednesday 8:00pm - 11:00pm, Sunday 4:00pm - 7:00pm",
   phone: "(530) 757-5400",
-  website_url: "http://dshs.djusd.net/",
+  website_url: "https://dshs.djusd.net/",
   lat: 38.556636,
   lng: -121.750537,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495826891/davis_zqvuae.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495826902/davis2_unbrsf.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495826895/imron_hdt3g0.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495826891/davis_zqvuae.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495826902/davis2_unbrsf.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495826895/imron_hdt3g0.jpg"]
 })
 
 Gym.create({
@@ -275,7 +275,7 @@ Gym.create({
   phone: "(916) 405-5600",
   lat: 38.429672,
   lng: -121.418767,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495827551/wackford_quv8fr.png", "http://res.cloudinary.com/bbchui/image/upload/v1495828015/wackford1_twlagj.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495826895/imron_hdt3g0.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495827551/wackford_quv8fr.png", "https://res.cloudinary.com/bbchui/image/upload/v1495828015/wackford1_twlagj.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495826895/imron_hdt3g0.jpg"]
 })
 
 Gym.create({
@@ -290,7 +290,7 @@ Gym.create({
   phone: "(415) 242-1070",
   lat: 37.757331,
   lng: -122.486655,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495828488/sunset_psyeva.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495828495/sunset2_crda8t.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495828492/sunset1_nohq6w.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495828488/sunset_psyeva.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495828495/sunset2_crda8t.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495828492/sunset1_nohq6w.jpg"]
 })
 
 Gym.create({
@@ -305,7 +305,7 @@ Gym.create({
   phone: "(415) 831-6810",
   lat: 37.764283,
   lng: -122.436256,
-  image_url: ["http://res.cloudinary.com/bbchui/image/upload/v1495828862/eureka_ayvwem.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495828863/eureka1_mhdbzh.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495828865/eureka2_ciu0es.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495828862/eureka_ayvwem.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495828863/eureka1_mhdbzh.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495828865/eureka2_ciu0es.jpg"]
 })
 
 
@@ -314,10 +314,10 @@ Gym.create({
 
 User.create({username: "Brandon", password: "password", profile_pic_url: "https://res.cloudinary.com/bbchui/image/upload/v1495515243/IMG_2662_raa2dq.png"})
 User.create({username: "Guest", password: "password"})
-User.create({username: "Ranelle", password: "password", profile_pic_url: "http://res.cloudinary.com/bbchui/image/upload/v1495818301/ranelle_msxj09.jpg"})
+User.create({username: "Ranelle", password: "password", profile_pic_url: "https://res.cloudinary.com/bbchui/image/upload/v1495818301/ranelle_msxj09.jpg"})
 User.create({username: "Chubs", password: "password", profile_pic_url: "https://res.cloudinary.com/bbchui/image/upload/v1495517450/IMG_2443_znrmig.jpg"})
-User.create({username: "Janice", password: "password", profile_pic_url: "http://res.cloudinary.com/bbchui/image/upload/v1495818425/Janice_jscgwj.jpg"})
-User.create({username: "Happy Hour?", password: "password", profile_pic_url: "http://res.cloudinary.com/bbchui/image/upload/v1495818842/happyhour_ix7cqy.jpg"})
+User.create({username: "Janice", password: "password", profile_pic_url: "https://res.cloudinary.com/bbchui/image/upload/v1495818425/Janice_jscgwj.jpg"})
+User.create({username: "Happy Hour?", password: "password", profile_pic_url: "https://res.cloudinary.com/bbchui/image/upload/v1495818842/happyhour_ix7cqy.jpg"})
 
 
 Review.create({user_id: 1, gym_id: 1, body: "Two courts and 6 to 8 teams usually show. Some experience recommended, but lots of friendly people!", rating: 4})
