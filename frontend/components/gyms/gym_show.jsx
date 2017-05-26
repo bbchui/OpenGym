@@ -42,6 +42,9 @@ class GymShow extends React.Component {
     this.props.history.push(`/gyms/${this.props.gym.id}/reviews/new`);
   }
 
+
+
+  //Add photo replaces div under write a review
   reviewButton() {
     if (this.props.currentUser) {
       return (
@@ -132,7 +135,9 @@ class GymShow extends React.Component {
 
           <div className="show-buttons">
             {this.reviewButton()}
-            <button className="add-photo"> Add Photos </button>
+            <div>
+
+            </div>
           </div>
         </section>
 

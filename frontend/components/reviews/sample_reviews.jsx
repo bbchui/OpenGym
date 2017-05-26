@@ -3,11 +3,18 @@ import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 
 const SampleReviews = ({review}) => {
+  let pic;
+  if (review.profile_pic_url) {
+    pic = review.profile_pic_url;
+  } else {
+    pic = review.image_url;
+  }
+
   return(
     <li className="review-sample">
       <div>
         <img className="sample-image"
-            src={review.image_url}
+            src={pic}
             alt="Image Not Working" />
         <div> { review.username } </div>
       </div>

@@ -24,8 +24,8 @@ class Greeting extends React.Component {
       return "!"
     }
   }
-
   greeting(currentUser, logout) {
+    // write a review goes between the div
     return (
       <div className="login">
           <nav className="login-buttons">
@@ -40,12 +40,6 @@ class Greeting extends React.Component {
     );
   }
 
-      // <button className="home-review">Write a Review</button>
-          // <div className="searchbar">
-          //   Welcome{this.currUser()} Searchbar goes here!
-          //   <Link to='/gyms'>Search...Not Really</Link>
-          //   <SearchContainer />
-          // </div>
 
   render() {
     return(

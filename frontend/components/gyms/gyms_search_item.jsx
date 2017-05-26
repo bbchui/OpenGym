@@ -7,7 +7,9 @@ const GymSearchItem = ({gym}) => {
 
   return (
     <li className="gym-info-searched">
-      <img className="searched" height="100" width="100" src={gym.image_url[0]} alt="Image Not Working" />
+      <div height="100" width="100">
+        <img className="searched" src={gym.image_url[0]} alt="Image Not Working" />
+      </div>
 
       <div className="gym-index-info">
         <div className="left-search">
