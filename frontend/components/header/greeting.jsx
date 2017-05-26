@@ -19,7 +19,7 @@ class Greeting extends React.Component {
 
   currUser() {
     if (this.props.currentUser) {
-      return ` ${this.props.currentUser.username}!`
+      return ` $<strong>{this.props.currentUser.username}!</strong>`
     } else {
       return "!"
     }

@@ -111,7 +111,7 @@ class SessionForm extends React.Component {
     return(
 			<div className="login">
 			  <nav className={this.getPath()}>
-					{this.writeReview()}
+					<div></div>
 					<div>
 				    <button onClick={this.onModalOpen('Log In')} >Log In</button>
 				    <button onClick={this.onModalOpen('Sign Up')}>Sign Up</button>

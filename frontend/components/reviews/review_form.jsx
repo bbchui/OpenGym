@@ -68,7 +68,7 @@ class ReviewForm extends React.Component {
     return (
       <div className="login">
           <nav className="other-login-buttons">
-            <div>Welcome {this.props.currentUser.username}!</div>
+            <div>Welcome <strong>{this.props.currentUser.username}</strong>!</div>
             <button onClick={logout}>Log Out</button>
           </nav>
       </div>
