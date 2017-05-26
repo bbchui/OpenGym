@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import MarkerManager from '../../util/marker_manager';
 
 
@@ -63,10 +63,12 @@ class GymIndexMap extends React.Component {
   }
 
   gymInfo(gym) {
+
+
     let content =
-      `<div>${gym.name}</div>
-    <div>${gym.address}</div>
-    <div>${gym.city}, ${gym.state} ${gym.zip}</div>`;
+      `<a href={/#/gyms/${gym.id}}>${gym.name}</a>
+      <div>${gym.address}</div>
+      <div>${gym.city}, ${gym.state} ${gym.zip}</div>`;
 
     let window = new google.maps.InfoWindow({
       content: content

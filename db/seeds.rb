@@ -20,7 +20,7 @@ Gym.create({
   website_url: "www.noevalleyreccenter.com",
   lat: 37.742782,
   lng: -122.428548,
-  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154268/noevallyreccenter_taj19i.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495747028/UN-volleyball-sm_tfftxa.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495753394/noe-valley-gym_oz7j3f.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154268/noevallyreccenter_taj19i.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495747028/UN-volleyball-sm_tfftxa.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495753394/noe-valley-gym_oz7j3f.jpg"]
   })
 
 Gym.create({
@@ -37,7 +37,7 @@ Gym.create({
   lng: -122.392094,
   website_url: "https://www.ymcasf.org/locations/embarcadero-ymca",
   image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154315/YMCA-Embarcadero_einwv7.jpg",
-  "http://res.cloudinary.com/bbchui/image/upload/v1495754252/ymca-gym_frfaka.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495754254/ymca-gym1_z0cyup.jpg"]
+  "https://res.cloudinary.com/bbchui/image/upload/v1495754252/ymca-gym_frfaka.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495754254/ymca-gym1_z0cyup.jpg"]
   })
 
 Gym.create({
@@ -53,7 +53,7 @@ Gym.create({
   lat: 37.783499,
   lng: -122.477945,
   website_url: "https://sfrecpark.org/destination/richmond-rec-center/",
-  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154403/RichmondRC_exfdnb.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495755065/richrec_rdkdhf.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755106/richrec1_hb5mkt.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154403/RichmondRC_exfdnb.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755065/richrec_rdkdhf.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755106/richrec1_hb5mkt.jpg"]
   })
 
 Gym.create({
@@ -69,7 +69,7 @@ Gym.create({
   lat: 38.542989,
   lng: -121.759205,
   website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
-  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154404/UC_Davis_Arc_inmzz9.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495755220/arc_s9cmh4.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495755218/arc1_xiz4it.jpg"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154404/UC_Davis_Arc_inmzz9.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755220/arc_s9cmh4.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755218/arc1_xiz4it.jpg"]
   })
 
 
@@ -86,7 +86,7 @@ Gym.create({
     lat: 37.794500,
     lng: -122.411657,
     website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
-    image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495755329/betong_bwqnih.jpg", "http://res.cloudinary.com/bbchui/image/upload/a_auto_left/v1495755341/betong1_zwgaxi.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495755342/betong2_mhnexf.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495755345/betong3_xjlwzw.jpg", "http://res.cloudinary.com/bbchui/image/upload/a_auto_right/v1495755348/betong4_oijaod.jpg"]
+    image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755329/betong_bwqnih.jpg", "https://res.cloudinary.com/bbchui/image/upload/a_auto_left/v1495755341/betong1_zwgaxi.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755342/betong2_mhnexf.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755345/betong3_xjlwzw.jpg", "https://res.cloudinary.com/bbchui/image/upload/a_auto_right/v1495755348/betong4_oijaod.jpg"]
     })
 
   Gym.create({
@@ -101,7 +101,7 @@ Gym.create({
     phone: "(650) 330-2200",
     lat: 37.453286,
     lng: -122.177768,
-    image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154492/MenloPark_rntth6.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495755961/menlo_wagf4f.jpg", "http://res.cloudinary.com/bbchui/image/upload/v1495755962/menlo1_rdxdgp.jpg"]
+    image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154492/MenloPark_rntth6.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755961/menlo_wagf4f.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755962/menlo1_rdxdgp.jpg"]
     })
 
 
