@@ -40,7 +40,7 @@ class Search extends React.Component {
         Find
         <input type="search"
           className={this.homeRender()}
-          placeholder="Search a City"
+          placeholder="Search by City"
           value={this.state.query}
           onChange={this.update} />
         <button>

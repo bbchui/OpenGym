@@ -12,9 +12,9 @@ class GymIndexMap extends React.Component {
       center = { lat: this.props.gyms[0].lat,
                   lng: this.props.gyms[0].lng};
       zoom = 14;
-    } else if (Object.keys(nextProps.gyms).length === 2) {
-      center = { lat: nextProps.gyms[0].lat,
-                  lng: nextProps.gyms[0].lng};
+    } else if (Object.keys(this.props.gyms).length === 2) {
+      center = { lat: this.props.gyms[0].lat,
+                  lng: this.props.gyms[0].lng};
       zoom = 13;
     } else if (this.props.gyms[0]) {
       center = { lat: this.props.gyms[0].lat,

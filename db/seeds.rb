@@ -212,7 +212,7 @@ Gym.create({
   website_url: "https://www.edline.net/pages/Cerritos_High_School",
   lat: 33.865607,
   lng: -118.064896,
-  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495824110/cerritos_ibfwpo.png", "https://cloudinary.com/console/media_library#/dialog/image/upload/cerritos2_hih6yd", "https://res.cloudinary.com/bbchui/image/upload/v1495829997/logo1_hv4eab.png"]
+  image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495824110/cerritos_ibfwpo.png", "https://res.cloudinary.com/bbchui/image/upload/v1495829907/cerritos2_hih6yd.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495829997/logo1_hv4eab.png"]
 })
 
 Gym.create({

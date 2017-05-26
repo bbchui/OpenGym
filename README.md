@@ -1,24 +1,8 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# OpenGym
 
-Things you may want to cover:
+[OpenGym Live][opengym]
 
-* Ruby version
+[opengym]: https://opengymvolleyball.herokuapp.com/#/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+OpenGym is a web application inspired by Yelp designed to help users find volleyball open gyms within the city of search. The application is built utilizing Ruby on Rails, PostgresSQL database, and React/Redux.
