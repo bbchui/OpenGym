@@ -17,4 +17,14 @@ class Gym < ApplicationRecord
   #       .where("lng > ?", bounds[:southwest][:lng])
   #       .where("lng < ?", bounds[:northeast][:lng])
   # end
+
+  # def self.find_by_query(city, state)
+  #   if city == ""
+  #     gyms = Gym.where(city: 'San Francisco').limit(10)
+  #   else
+  #     gyms = Gym
+  #       .where('lower(city) LIKE ?', "%#{params[:query]}%".downcase)
+  #       .where('lower(state) LIKE ?', "%#{params[:query]}".downcase)
+  #   end
+  # end
 end
