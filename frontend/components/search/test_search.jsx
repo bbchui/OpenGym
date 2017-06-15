@@ -9,6 +9,7 @@ class TestSearch extends React.Component {
     this.handleLocationInput = this.handleLocationInput.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.clearSearch = this.clearSearch.bind(this);
   }
 
   componentDidMount() {
@@ -17,19 +18,25 @@ class TestSearch extends React.Component {
       const place = autocomplete.getPlace().name;
       this.handleAutocomplete(place);
     });
-    google.maps.event.addDomListener(document.getElementById('txtPlaces'), 'keydown', function(e) {
-      if (e.keyCode === 13) {
-        e.preventDefault();
-      }
-    });
+    // google.maps.event.addDomListener(document.getElementById('txtPlaces'), 'keydown', function(e) {
+    //   if (e.keyCode === 13) {
+    //     e.preventDefault();
+    //   }
+    // });
   }
 
   handleAutocomplete(place) {
     this.setState({query: place});
+    this.handleFormSubmit();
+    this.clearSearch();
   }
+
+  clearSearch() {
+    this.setState({query: ""})
+  }
+
   handleLocationInput(event) {
     this.setState({query: event.currentTarget.value.split(',')[0]});
-    console.log(this.state.query);
   }
 
   handleFormSubmit(e) {
@@ -57,9 +64,8 @@ class TestSearch extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit} className={this.homeRender()}>
-        <input onChange={this.update}
-          onBlur={this.handleLocationInput}
+      <form className={this.homeRender()}>
+        <input
           type="text"
           id="txtPlaces"
           placeholder="Search by City"
