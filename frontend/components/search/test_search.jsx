@@ -18,11 +18,11 @@ class TestSearch extends React.Component {
       const place = autocomplete.getPlace().name;
       this.handleAutocomplete(place);
     });
-    // google.maps.event.addDomListener(document.getElementById('txtPlaces'), 'keydown', function(e) {
-    //   if (e.keyCode === 13) {
-    //     e.preventDefault();
-    //   }
-    // });
+    google.maps.event.addDomListener(document.getElementById('txtPlaces'), 'keydown', function(e) {
+      if (e.keyCode === 13) {
+        e.preventDefault();
+      }
+    });
   }
 
   handleAutocomplete(place) {
@@ -41,11 +41,11 @@ class TestSearch extends React.Component {
 
   handleFormSubmit(e) {
     // e.preventDefault();
-    // console.log(e.keycCode, this.state.query, "here");
     this.props.getAllGyms(this.state.query)
       .then(() => {
         if (this.props.location.hash !== "/gyms") {
-          this.props.history.push('/gyms')
+        //   this.props.history.push('/gyms')
+          window.location.hash = "/gyms"
         }
       });
   }
