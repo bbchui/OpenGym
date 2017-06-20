@@ -8,13 +8,14 @@ class TestSearch extends React.Component {
     this.handleAutocomplete = this.handleAutocomplete.bind(this);
     this.handleLocationInput = this.handleLocationInput.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.update = this.update.bind(this);
+    // this.getBounds = this.getBounds.bind(this);
     this.clearSearch = this.clearSearch.bind(this);
   }
 
   componentDidMount() {
     const autocomplete = new google.maps.places.Autocomplete(document.getElementById('txtPlaces'), {types: ['(cities)'], componentRestrictions: {country: "us"}});
     autocomplete.addListener('place_changed', () => {
+      // console.log(autocomplete.getPlace());
       const place = autocomplete.getPlace().name;
       this.handleAutocomplete(place);
     });
@@ -26,11 +27,21 @@ class TestSearch extends React.Component {
   }
 
   handleAutocomplete(place) {
+    this.props.fetchBounds(place).then(() => {
+      console.log(this.props.bounds);
+      // debugger
+      this.props.getAllGyms("debugger", this.props.bounds)
+    })
+
     this.setState({query: place});
     this.handleFormSubmit();
     // this.clearSearch();
     // debugger
   }
+
+  // getBounds(place) {
+  //   this.props.fetchBounds(place)
+  // }
 
   clearSearch() {
     this.setState({query: ""})
@@ -40,10 +51,10 @@ class TestSearch extends React.Component {
     this.setState({query: event.currentTarget.value.split(',')[0]});
   }
 
-  setBounds(e) {
-    this.props.fetchBounds
-    this.setState({location: e.currentTarget.value})
-  }
+  // setBounds(e) {
+  //   this.props.fetchBounds
+  //   this.setState({location: e.currentTarget.value})
+  // }
 
   handleFormSubmit(e) {
     // e.preventDefault();
@@ -64,9 +75,9 @@ class TestSearch extends React.Component {
     }
   }
 
-  update(e) {
-    this.setState({ query: e.currentTarget.value });
-  }
+  // update(e) {
+  //   this.setState({ query: e.currentTarget.value });
+  // }
 
   render() {
     return (

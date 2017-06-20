@@ -4,6 +4,7 @@ import { allGyms } from '../../reducers/selector';
 import { logout } from '../../actions/session_actions';
 import Search from './search';
 import TestSearch from './test_search';
+import { fetchBounds } from '../../actions/map_actions';
 
 const mapStateToProps = (state) => ({
   gyms: allGyms(state),
@@ -13,7 +14,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   getAllGyms: (query, bounds) => dispatch(getAllGyms(query, bounds)),
-  fetchBounds: (location) => dispatch(fetchBounds(location)),
+  fetchBounds: (bounds) => dispatch(fetchBounds(bounds)),
   logout: () => dispatch(logout())
 })
 

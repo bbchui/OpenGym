@@ -4,15 +4,16 @@ export const RECEIVE_BOUNDS = 'RECEIVE_BOUNDS';
 
 export const receiveBounds = bounds => ({
   type: RECEIVE_BOUNDS,
-  bounds
+  bounds: bounds
 });
 
-export const fetchBounds = location => dispatch => {
-  // debugger
+export const fetchBounds = bounds => dispatch => {
+
   return (
-  MapApiUtil.fetchBounds(location)
+  MapApiUtil.fetchBounds(bounds)
     .then(cityData => {
       dispatch(receiveBounds(cityData.results[0].geometry.bounds))
+      // debugger
     })
   );
 }

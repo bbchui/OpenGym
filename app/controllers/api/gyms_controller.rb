@@ -1,14 +1,19 @@
 class Api::GymsController < ApplicationController
   def index
     # debugger
-    if params[:query] == ""
-      @gyms = Gym.where(city: 'San Francisco').limit(10)
-    elsif params[:query]
-      @gyms = Gym.where('lower(city) LIKE ?', "%#{params[:query]}%".downcase)
-    else
-      # @gyms = Gym.where(city: 'San Francisco').limit(1)
-      @gyms = Gym.limit(1)
+    # if params[:query] == ""
+    #   @gyms = Gym.where(city: 'San Francisco').limit(10)
+    # elsif params[:query]
+    #   @gyms = Gym.where('lower(city) LIKE ?', "%#{params[:query]}%".downcase)
+    # else
+    #   # @gyms = Gym.where(city: 'San Francisco').limit(1)
+    #   @gyms = Gym.limit(1)
+    # end
+    if params[:bounds]
+      @gyms = Gym.in_bounds(params[:bounds])
+      debugger
     end
+    # debugger
     render :index
   end
 

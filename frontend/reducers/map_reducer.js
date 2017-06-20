@@ -1,10 +1,10 @@
 import { merge } from 'lodash';
 import { RECEIVE_BOUNDS } from '../actions/map_actions';
 
-const nycBounds = { northeast: { lat: 40.9175771, lng: -73.70027209999999 },
-                    southwest: { lat: 40.4773991, lng: -74.25908989999999 } }
+const sfBounds = { northeast: { lat: 37.9298239, lng: -122.28178 },
+                    southwest: { lat: 37.6398299, lng: -123.173825 } }
 
-const MapReducer = (oldState = nycBounds, action) => {
+const MapReducer = (oldState = sfBounds, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_BOUNDS:
