@@ -21,7 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.getAllGyms = getAllGyms;
   window.getSingleGym = getSingleGym;
+<<<<<<< HEAD
   window.fetchBounds = fetchBounds;
+=======
+  window.fetchBounds = fetchBounds
+>>>>>>> b0609f15759ec8bfd79d8c6edebd80938abe69bc
 
   const root = document.getElementById('root');
 
