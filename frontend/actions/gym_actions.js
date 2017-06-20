@@ -13,8 +13,8 @@ export const receiveSingleGym = gym => ({
   gym
 });
 
-export const getAllGyms = (query) => dispatch => (
-  GymApiUtil.getAllGyms(query)
+export const getAllGyms = (query, bounds) => dispatch => (
+  GymApiUtil.getAllGyms(query, bounds)
     .then(_gyms => dispatch(receiveAllGyms(_gyms)))
 );
 

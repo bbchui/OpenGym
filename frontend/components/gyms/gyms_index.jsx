@@ -61,6 +61,7 @@ class GymsIndex extends React.Component {
 
   render() {
     const { gyms } = this.props
+    // debugger
       gyms[0] ? name = gyms[0].city : "San Francisco";
     return (
       <div>

@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 class TestSearch extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {query: ""};
+    this.state = {query: "", location: ""};
     this.handleAutocomplete = this.handleAutocomplete.bind(this);
     this.handleLocationInput = this.handleLocationInput.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -28,7 +28,8 @@ class TestSearch extends React.Component {
   handleAutocomplete(place) {
     this.setState({query: place});
     this.handleFormSubmit();
-    this.clearSearch();
+    // this.clearSearch();
+    // debugger
   }
 
   clearSearch() {
@@ -37,6 +38,11 @@ class TestSearch extends React.Component {
 
   handleLocationInput(event) {
     this.setState({query: event.currentTarget.value.split(',')[0]});
+  }
+
+  setBounds(e) {
+    this.props.fetchBounds
+    this.setState({location: e.currentTarget.value})
   }
 
   handleFormSubmit(e) {
