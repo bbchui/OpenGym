@@ -11,12 +11,12 @@ class Gym < ApplicationRecord
 
   has_many :reviews
 
-  # def self.in_bounds(bounds)
-  #   Gym.where("lat > ?", bounds[:southwest][:lat])
-  #       .where("lat < ?", bounds[:northeast][:lat])
-  #       .where("lng > ?", bounds[:southwest][:lng])
-  #       .where("lng < ?", bounds[:northeast][:lng])
-  # end
+  def self.in_bounds(bounds)
+    Gym.where("lat > ?", bounds[:southwest][:lat])
+        .where("lat < ?", bounds[:northeast][:lat])
+        .where("lng > ?", bounds[:southwest][:lng])
+        .where("lng < ?", bounds[:northeast][:lng])
+  end
 
   # def self.find_by_query(city, state)
   #   if city == ""

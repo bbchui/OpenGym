@@ -7,11 +7,13 @@ import TestSearch from './test_search';
 
 const mapStateToProps = (state) => ({
   gyms: allGyms(state),
+  bounds: state.bounds,
   currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-  getAllGyms: (query) => dispatch(getAllGyms(query)),
+  getAllGyms: (query, bounds) => dispatch(getAllGyms(query, bounds)),
+  fetchBounds: (location) => dispatch(fetchBounds(location)),
   logout: () => dispatch(logout())
 })
 

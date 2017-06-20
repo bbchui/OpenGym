@@ -1,5 +1,6 @@
 class Api::GymsController < ApplicationController
   def index
+    # debugger
     if params[:query] == ""
       @gyms = Gym.where(city: 'San Francisco').limit(10)
     elsif params[:query]
