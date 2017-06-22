@@ -5,9 +5,8 @@ import MarkerManager from '../../util/marker_manager';
 
 class GymIndexMap extends React.Component {
   componentDidMount() {
-    console.log(this.props);
-    let center;
-    let zoom;
+    let center = { lat: 37.7758, lng: -122.435 }
+    let zoom = 10;
     // if (Object.keys(this.props.gyms).length === 1) {
     //   center = { lat: this.props.gyms[0].lat,
     //               lng: this.props.gyms[0].lng};
@@ -24,6 +23,14 @@ class GymIndexMap extends React.Component {
     //   center = { lat: 37.7758, lng: -122.435 }
     //   zoom = 10;
     // }
+    if (Object.keys(this.props.gyms).length === 1) {
+      center = { lat: this.props.gyms[0].lat,
+                  lng: this.props.gyms[0].lng};
+      zoom = 12;
+    } else if (this.props.bounds) {
+      center = this.props.bounds.location;
+      zoom = 11;
+    }
 
     const mapOptions = {
       center: center,
@@ -38,23 +45,28 @@ class GymIndexMap extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+
     let center;
     let zoom;
-    if (Object.keys(nextProps.gyms).length === 1) {
-      center = { lat: nextProps.gyms[0].lat,
-                  lng: nextProps.gyms[0].lng};
-      zoom = 14;
-    }  else if (Object.keys(nextProps.gyms).length === 2) {
-      center = { lat: nextProps.gyms[0].lat,
-                  lng: nextProps.gyms[0].lng};
-      zoom = 13;
-    } else if (nextProps.gyms[0]) {
-      center = { lat: nextProps.gyms[0].lat,
-                  lng: nextProps.gyms[0].lng}
+    // if (Object.keys(nextProps.gyms).length === 1) {
+    //   center = { lat: nextProps.gyms[0].lat,
+    //               lng: nextProps.gyms[0].lng};
+    //   zoom = 14;
+    // }  else if (Object.keys(nextProps.gyms).length === 2) {
+    //   center = { lat: nextProps.gyms[0].lat,
+    //               lng: nextProps.gyms[0].lng};
+    //   zoom = 13;
+    // } else if (nextProps.gyms[0]) {
+    //   center = { lat: nextProps.gyms[0].lat,
+    //               lng: nextProps.gyms[0].lng}
+    //   zoom = 11;
+    // } else {
+    //   center = { lat: 37.7758, lng: -122.435 }
+    //   zoom = 10;
+    // }
+    if (nextProps.bounds) {
+      center = nextProps.bounds.location;
       zoom = 11;
-    } else {
-      center = { lat: 37.7758, lng: -122.435 }
-      zoom = 10;
     }
 
     const mapOptions = {

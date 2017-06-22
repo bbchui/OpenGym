@@ -21,6 +21,7 @@ class TestSearch extends React.Component {
       // const bounds = new google.maps.LatLngBounds();
       // bounds.extend(place.geometry.location)
       // console.log(bounds);
+      this.props.fetchBounds(place.name)
       this.handleAutocomplete(place);
     });
     google.maps.event.addDomListener(document.getElementById('txtPlaces'), 'keydown', function(e) {
@@ -31,14 +32,14 @@ class TestSearch extends React.Component {
   }
 
   handleAutocomplete(place) {
+    // this.props.fetchBounds();
     if (place.geometry) {
-      let bounds = {southwest: { lat: place.geometry.viewport.f.b - 5,
-        lng: place.geometry.viewport.b.b - 5},
-        northeast: { lat: place.geometry.viewport.f.f + 5,
-          lng: place.geometry.viewport.b.f + 5 }
+      let bounds = {southwest: { lat: place.geometry.viewport.f.b - 0.1,
+        lng: place.geometry.viewport.b.b - 0.1},
+        northeast: { lat: place.geometry.viewport.f.f + 0.1,
+          lng: place.geometry.viewport.b.f + 0.1 }
         }
         this.setState({query: place.name, bounds: bounds});
-        this.props.fetchBounds();
     } else {
       this.setState({query: place.name})
     }
