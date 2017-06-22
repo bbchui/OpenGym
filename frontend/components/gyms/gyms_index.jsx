@@ -9,11 +9,11 @@ class GymsIndex extends React.Component {
   constructor(props) {
     super(props);
     // this.SearchInput = this.SearchInput.bind(this);
+    // console.log(props);
   }
 
   // componentDidMount() {
-  //   this.props.getAllGyms(this.props.query);
-  //   console.log(this.props.query)
+  //   console.log(this.props);
   // }
 
   // componentWillReceiveProps(nextProps) {
@@ -60,7 +60,8 @@ class GymsIndex extends React.Component {
   // }
 
   render() {
-    const { gyms } = this.props
+    const { gyms } = this.props;
+    const { bounds } = this.props;
     // debugger
       gyms[0] ? name = gyms[0].city : "San Francisco";
     return (
@@ -90,7 +91,7 @@ class GymsIndex extends React.Component {
               <ul className="search-results-list">
                 {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
               </ul>
-              <div className="map-style"><GymIndexMap gyms={gyms} /></div>
+              <div className="map-style"><GymIndexMap gyms={gyms} bounds={bounds} /></div>
             </div>
           </section>
         </div>

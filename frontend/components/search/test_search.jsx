@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom';
+import GymSearchItem from '../gyms/gyms_search_item';
+import SessionFormContainer from '../session/session_form_container';
 
 class TestSearch extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {query: "", bounds: ""};
+    this.state = {query: "", bounds: undefined};
     this.handleAutocomplete = this.handleAutocomplete.bind(this);
     this.handleLocationInput = this.handleLocationInput.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -16,6 +18,9 @@ class TestSearch extends React.Component {
     autocomplete.addListener('place_changed', () => {
       // const place = autocomplete.getPlace().name;
       const place = autocomplete.getPlace();
+      // const bounds = new google.maps.LatLngBounds();
+      // bounds.extend(place.geometry.location)
+      // console.log(bounds);
       this.handleAutocomplete(place);
     });
     google.maps.event.addDomListener(document.getElementById('txtPlaces'), 'keydown', function(e) {
@@ -26,12 +31,17 @@ class TestSearch extends React.Component {
   }
 
   handleAutocomplete(place) {
-    let bounds = {southwest: { lat: place.geometry.viewport.f.b,
-                                lng: place.geometry.viewport.b.b },
-                  northeast: { lat: place.geometry.viewport.f.f,
-                                lng: place.geometry.viewport.b.f }
+    if (place.geometry) {
+      let bounds = {southwest: { lat: place.geometry.viewport.f.b - 5,
+        lng: place.geometry.viewport.b.b - 5},
+        northeast: { lat: place.geometry.viewport.f.f + 5,
+          lng: place.geometry.viewport.b.f + 5 }
+        }
+        this.setState({query: place.name, bounds: bounds});
+        this.props.fetchBounds();
+    } else {
+      this.setState({query: place.name})
     }
-    this.setState({query: place.name, bounds: bounds});
 
     // console.log(place.geometry.viewport.b.b, place.geometry.viewport.f.b);
     // this.props.fetchBounds(place.name).then(() => {
@@ -74,17 +84,18 @@ class TestSearch extends React.Component {
 
   render() {
     return (
-      <form className={this.homeRender()}>
-        <input
-          type="text"
-          id="txtPlaces"
-          placeholder="Search by City"
-          className={this.homeRender()} />
-        <button>
-          <i className="fa fa-search fa-2x" aria-hidden="true"></i>
-        </button>
-      </form>
-
+      <div>
+        <form className={this.homeRender()}>
+          <input
+            type="text"
+            id="txtPlaces"
+            placeholder="Search by City"
+            className={this.homeRender()} />
+          <button>
+            <i className="fa fa-search fa-2x" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
     )
   }
 }
