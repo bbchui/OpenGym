@@ -64,7 +64,11 @@ class GymIndexMap extends React.Component {
     //   center = { lat: 37.7758, lng: -122.435 }
     //   zoom = 10;
     // }
-    if (nextProps.bounds) {
+    if (Object.keys(nextProps.gyms).length === 1) {
+      center = { lat: nextProps.gyms[0].lat,
+                  lng: nextProps.gyms[0].lng};
+      zoom = 12;
+    } else if (nextProps.bounds) {
       center = nextProps.bounds.location;
       zoom = 11;
     }

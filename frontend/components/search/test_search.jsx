@@ -11,6 +11,7 @@ class TestSearch extends React.Component {
     this.handleLocationInput = this.handleLocationInput.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.clearSearch = this.clearSearch.bind(this);
+    this.update = this.update.bind(this);
   }
 
   componentDidMount() {
@@ -32,40 +33,37 @@ class TestSearch extends React.Component {
   }
 
   handleAutocomplete(place) {
-    // this.props.fetchBounds();
+    // this.props.fetchBounds()
     if (place.geometry) {
-      let bounds = {southwest: { lat: place.geometry.viewport.f.b - 0.1,
-        lng: place.geometry.viewport.b.b - 0.1},
-        northeast: { lat: place.geometry.viewport.f.f + 0.1,
-          lng: place.geometry.viewport.b.f + 0.1 }
+      let bounds = {southwest: { lat: place.geometry.viewport.f.b - 0.09,
+        lng: place.geometry.viewport.b.b - 0.09},
+        northeast: { lat: place.geometry.viewport.f.f + 0.09,
+          lng: place.geometry.viewport.b.f + 0.09 }
         }
         this.setState({query: place.name, bounds: bounds});
     } else {
-      this.setState({query: place.name})
+      this.setState({query: this.state.query})
     }
 
-    // console.log(place.geometry.viewport.b.b, place.geometry.viewport.f.b);
-    // this.props.fetchBounds(place.name).then(() => {
-    //   this.props.getAllGyms(this.props.query, this.props.bounds)
-    // })
-    // this.props.getAllGyms(this.state.query, this.state.bounds)
-
     this.handleFormSubmit();
-    // this.clearSearch();
-    // debugger
+
   }
 
-
   clearSearch() {
-    this.setState({query: ""})
+    this.setState({query: "", bounds: undefined});
   }
 
   handleLocationInput(event) {
     this.setState({query: event.currentTarget.value.split(',')[0]});
   }
 
+  update(e) {
+    this.setState({ query: e.currentTarget.value });
+  }
+
   handleFormSubmit(e) {
     // e.preventDefault();
+    console.log(this.state.query, this.state.bounds);
     this.props.getAllGyms(this.state.query, this.state.bounds)
       .then(() => {
         if (this.props.location.hash !== "/gyms") {
@@ -73,6 +71,7 @@ class TestSearch extends React.Component {
           window.location.hash = "/gyms"
         }
       });
+    this.clearSearch();
   }
 
   homeRender() {
@@ -91,6 +90,7 @@ class TestSearch extends React.Component {
             type="text"
             id="txtPlaces"
             placeholder="Search by City"
+            onChange={this.update}
             className={this.homeRender()} />
           <button>
             <i className="fa fa-search fa-2x" aria-hidden="true"></i>
