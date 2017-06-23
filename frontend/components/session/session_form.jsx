@@ -99,6 +99,8 @@ class SessionForm extends React.Component {
 		}
 	}
 
+
+
 	logClassName() {
 		if (this.state.formType === "Sign Up") {
 			return "signup"
@@ -113,7 +115,7 @@ class SessionForm extends React.Component {
 			  <nav className={this.getPath()}>
 					<div></div>
 					<div>
-				    <button onClick={this.onModalOpen('Log In')} >Log In</button>
+				    <button id={this.getPath()} onClick={this.onModalOpen('Log In')} >Log In</button>
 				    <button onClick={this.onModalOpen('Sign Up')}>Sign Up</button>
 					</div>
 			  </nav>
