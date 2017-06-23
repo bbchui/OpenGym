@@ -64,20 +64,20 @@ class GymsIndex extends React.Component {
     if (this.props.bounds.address_components && this.props.gyms.length < 1) {
       return (
         <h2 className="search-results-header">
-          No Open Gyms in {this.props.bounds.address_components[0].long_name}
+          <div>No Open Gyms in {this.props.bounds.address_components[0].long_name}</div>
         </h2>
       );
     }
     else if (this.props.bounds.address_components) {
       return (
         <h2 className="search-results-header">
-          Browsing Gyms near {this.props.bounds.address_components[0].long_name}
+          <div>Browsing Gyms near {this.props.bounds.address_components[0].long_name}</div>
         </h2>
       );
     } else {
       return(
         <h2 className="search-results-header">
-          Search for Open Gyms!
+          <div>Search for Open Gyms!</div>
         </h2>
       );
     }
@@ -109,9 +109,9 @@ class GymsIndex extends React.Component {
           </div>
         </section>
 
+        {this.searchName()}
         <div>
           <section className="search-results-section">
-            {this.searchName()}
             <div className="index-map">
               <ul className="search-results-list">
                 {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}

@@ -117,46 +117,48 @@ class GymShow extends React.Component {
           </div>
         </section>
 
-        <section className="show-header">
-          <div className="show-title">
-            <h1 className="show-gym-name"> { gym.name } </h1>
-            <span>
-              <Rating
-              className="stars"
-              initialRate={averageRating}
-              readonly
-              empty="fa fa-star-o fa-lg"
-              full="fa fa-star fa-lg"
-              fractions={2}/>
-              &nbsp;{reviewCount} Reviews
-             </span>
-            <span> Price: { gym.price } </span>
-          </div>
-
-          <div className="show-buttons">
-            {this.reviewButton()}
-            <div>
-
+        <div className="show-background">
+          <section className="show-header">
+            <div className="show-title">
+              <h1 className="show-gym-name"> { gym.name } </h1>
+              <span>
+                <Rating
+                className="stars"
+                initialRate={averageRating}
+                readonly
+                empty="fa fa-star-o fa-lg"
+                full="fa fa-star fa-lg"
+                fractions={2}/>
+                &nbsp;{reviewCount} Reviews
+               </span>
+              <span> Price: { gym.price } </span>
             </div>
-          </div>
-        </section>
 
-        <section className="show-images">
-          <div className="map-area">
-            <GymMap gym={gym}/>
-            <span className="address"> { gym.address } </span>
-            <span className="address"> { gym.city }, { gym.state } { gym.zip } </span>
-            <span> { gym.phone } </span>
-            <a href={`${gym.website_url}`} className="show-link">
-              {gym.website_url}
-            </a>
-          </div>
-          <div className="show-photos-section">
-            <img className="showpage-photo" src={gym.image_url[0]} alt="Image Not Working" />
-            <img className="showpage-photo" src={gym.image_url[1]} alt="Image Not Working" />
-            <img className="showpage-photo" src={gym.image_url[2]} alt="Image Not Working" />
-          </div>
-        </section>
+            <div className="show-buttons">
+              {this.reviewButton()}
+              <div>
+
+              </div>
+            </div>
+          </section>
+
+          <section className="show-images">
+            <div className="map-area">
+              <GymMap gym={gym}/>
+              <span className="address"> { gym.address } </span>
+              <span className="address"> { gym.city }, { gym.state } { gym.zip } </span>
+              <span> { gym.phone } </span>
+              <a href={`${gym.website_url}`} className="show-link">
+                {gym.website_url}
+              </a>
+            </div>
+            <div className="show-photos-section">
+              <img className="showpage-photo" src={gym.image_url[0]} alt="Image Not Working" />
+              <img className="showpage-photo" src={gym.image_url[1]} alt="Image Not Working" />
+              <img className="showpage-photo" src={gym.image_url[2]} alt="Image Not Working" />
+            </div>
+          </section>
+        </div>
 
         <div className="review-hours">
           <section className="review-section">

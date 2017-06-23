@@ -46,6 +46,7 @@ button.signup:hover {
   font-weight: bold;
   color: #ffffff;
   border: 2px solid #fff;
+  outline: none;
 }
 
 #login-buttons {
@@ -56,6 +57,7 @@ button.signup:hover {
   font-weight: bold;
   color: #ffffff;
   border: none;
+  outline: none;
 }
 
 #login-buttons:hover {
@@ -156,7 +158,7 @@ input.home-search {
   height: 1em;
   border: 1px solid white;
   width: 50%;
-  padding: 10px 15px 10px 5px;
+  padding: 10px 15px 9px 5px;
   flex-grow: 1;
   outline: none;
 }
