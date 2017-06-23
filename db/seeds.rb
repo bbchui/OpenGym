@@ -17,7 +17,7 @@ Gym.create({
   price: "Free",
   hours: "Wednesday: 6:00pm - 8:30pm, Friday: 6:00pm - 8:30pm",
   phone: "(415) 970-8061",
-  website_url: "www.noevalleyreccenter.com",
+  website_url: "http://www.noevalleyreccenter.com/",
   lat: 37.742782,
   lng: -122.428548,
   image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154268/noevallyreccenter_taj19i.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495747028/UN-volleyball-sm_tfftxa.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495753394/noe-valley-gym_oz7j3f.jpg"]
@@ -85,7 +85,7 @@ Gym.create({
   phone: "(415) 359-9103",
   lat: 37.794500,
   lng: -122.411657,
-  website_url: "https://cru.ucdavis.edu/content/1-activities-and-recreation-center-arc.htm",
+  website_url: "http://sfrecpark.org/destination/betty-ong-rec-center/",
   image_url: ["https://res.cloudinary.com/bbchui/image/upload/v1495154455/Betty_Ong_Gym_q3psqr.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755329/betong_bwqnih.jpg", "https://res.cloudinary.com/bbchui/image/upload/a_auto_left/v1495755341/betong1_zwgaxi.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755342/betong2_mhnexf.jpg", "https://res.cloudinary.com/bbchui/image/upload/v1495755345/betong3_xjlwzw.jpg", "https://res.cloudinary.com/bbchui/image/upload/a_auto_right/v1495755348/betong4_oijaod.jpg"]
   })
 

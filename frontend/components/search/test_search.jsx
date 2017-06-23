@@ -83,12 +83,13 @@ class TestSearch extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={this.homeRender()}>
         <form className={this.homeRender()}>
+          Search
           <input
             type="text"
             id="txtPlaces"
-            placeholder="Search by City"
+            placeholder="by City"
             onChange={this.update}
             className={this.homeRender()} />
           <button>

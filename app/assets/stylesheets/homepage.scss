@@ -115,8 +115,8 @@ div.modal-formtype {
 }
 
 form.home-search {
-  position: relative;
-  top: 24%;
+  // position: relative;
+  // top: 24%;
   width: 600px;
   margin: auto;
   display: flex;
@@ -127,11 +127,12 @@ form.home-search {
   border-radius: 3px;
   background: white;
   padding-left: 10px;
+  align-items: baseline;
 }
 
 .home-search button {
   flex: 0.25;
-  height: 41px;
+  height: 42px;
   border: none;
   border-radius: 0 4px 4px 0;
   background-color: #389798;
@@ -145,12 +146,17 @@ form.home-search {
   background: #246869;
 }
 
+div.home-search {
+  position: relative;
+  top: 22%;
+}
+
 input.home-search {
   font-size: 18px;
-  height: 2.25em;
+  height: 1em;
   border: 1px solid white;
   width: 50%;
-  padding: 10px 15px;
+  padding: 10px 15px 10px 5px;
   flex-grow: 1;
   outline: none;
 }
@@ -168,7 +174,7 @@ div.header-logo {
   text-align: center;
   font-family: 'Josefin Slab', serif;
   position: relative;
-  top: 23%;
+  top: 20%;
   color: white;
   font-size: 25px;
   strong {
