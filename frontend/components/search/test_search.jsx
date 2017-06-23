@@ -63,7 +63,6 @@ class TestSearch extends React.Component {
 
   handleFormSubmit(e) {
     // e.preventDefault();
-    console.log(this.state.query, this.state.bounds);
     this.props.getAllGyms(this.state.query, this.state.bounds)
       .then(() => {
         if (this.props.location.hash !== "/gyms") {

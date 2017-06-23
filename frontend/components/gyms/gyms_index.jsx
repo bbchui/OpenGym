@@ -8,6 +8,7 @@ import GymIndexMap from '../map/gym_index_map';
 class GymsIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.searchName = this.searchName.bind(this);
     // this.SearchInput = this.SearchInput.bind(this);
     // console.log(props);
   }
@@ -59,11 +60,29 @@ class GymsIndex extends React.Component {
   //   )
   // }
 
+  searchName() {
+    if (this.props.bounds.address_components) {
+      return (
+        <h2 className="search-results-header">
+          Browsing Gyms near {this.props.bounds.address_components[0].long_name}
+        </h2>
+      );
+    } else {
+      return(
+        <h2 className="search-results-header">
+          Search for Open Gyms!
+        </h2>
+      );
+    }
+  }
+
+
+
   render() {
     const { gyms } = this.props;
     const { bounds } = this.props;
     // debugger
-      gyms[0] ? name = gyms[0].city : "San Francisco";
+      // gyms[0] ? name = gyms[0].city : "San Francisco";
     return (
       <div>
         <section className="top-of-page">
@@ -85,8 +104,7 @@ class GymsIndex extends React.Component {
 
         <div>
           <section className="search-results-section">
-            <h2 className="search-results-header">
-              Browsing Gyms near {name}</h2>
+            {this.searchName()}
             <div className="index-map">
               <ul className="search-results-list">
                 {gyms.map(gym => <GymSearchItem key={gym.id} gym={gym}/>)}
