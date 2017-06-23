@@ -61,7 +61,14 @@ class GymsIndex extends React.Component {
   // }
 
   searchName() {
-    if (this.props.bounds.address_components) {
+    if (this.props.bounds.address_components && this.props.gyms.length < 1) {
+      return (
+        <h2 className="search-results-header">
+          No Open Gyms near {this.props.bounds.address_components[0].long_name}
+        </h2>
+      );
+    }
+    else if (this.props.bounds.address_components) {
       return (
         <h2 className="search-results-header">
           Browsing Gyms near {this.props.bounds.address_components[0].long_name}
