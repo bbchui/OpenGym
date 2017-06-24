@@ -29,9 +29,9 @@ class GymShow extends React.Component {
   greeting(currentUser, logout) {
     return (
       <div className="login">
-          <nav className="other-login-buttons">
-            <div>Welcome <strong>{this.props.currentUser.username}</strong>!</div>
-            <button margin-top="15px" onClick={logout}>Log Out</button>
+          <nav className="logout-buttons">
+            <div>Welcome <br></br> <strong>{this.props.currentUser.username}</strong>!</div>
+            <button margin-top="15px" className="logout-button" onClick={logout}>Log Out</button>
           </nav>
       </div>
     );

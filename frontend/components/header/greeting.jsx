@@ -33,7 +33,7 @@ class Greeting extends React.Component {
 
             </div>
             <div>
-              <button onClick={logout}>Log Out</button>
+              <button className="other-login-buttons" onClick={logout}>Log Out</button>
             </div>
           </nav>
       </div>

@@ -75,6 +75,7 @@ nav.other-login-buttons {
 
 nav.other-login-buttons > div {
   padding-top: 5px;
+  white-space: nowrap;
 }
 
 .other-login-buttons button {
@@ -110,4 +111,28 @@ nav.other-login-buttons > div {
   font-family: 'Josefin Slab', serif;
   text-decoration: none;
   font-size: 28px;
+}
+
+nav.logout-buttons {
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
+  width: 220px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+button.logout-button {
+  padding: 10px 30px;
+  border-radius: 4px;
+  margin: 10px 0px 10px 10px;
+  background-color: #48a4a5;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+}
+
+.logout-buttons button:hover {
+  background-color: #388081;
 }
