@@ -57,14 +57,12 @@ class SessionForm extends React.Component {
 	loginGuest() {
 		if (this.state.formType === 'Sign Up') {
 			return(
-				<div>
-					<br/>
+
 					<button className="signup"
 						onClick={this.handleGuestLogin}>
 						Log in as Guest
 					</button>
-					<br/>
-				</div>
+
 			)
 		} else {
 			return <div></div>
@@ -127,9 +125,9 @@ class SessionForm extends React.Component {
 			    onRequestClose={this.onModalClose}
 					onAfterOpen={this.onTransition}>
 			    <form className="login-form">
-			      <div className="modal-welcome">Welcome to <strong className="logo">OpenGym!</strong>
-								<br/>
-								<div className="modal-formtype"> Enter Your Username and Password</div>
+			      <div className="modal-welcome"><strong className="logo">OpenGym</strong>
+
+
 						</div>
 
 			      <label className="modal">
@@ -139,7 +137,7 @@ class SessionForm extends React.Component {
 								value={this.state.username}
 								placeholder="Username"
 			          onChange={this.update("username")} />
-
+							<i class="fa fa-user-o" aria-hidden="true"></i>
 			      </label>
 			      <label className="modal">
 							<br/>
@@ -158,6 +156,7 @@ class SessionForm extends React.Component {
 							onClick={this.handleSubmit}>
 							{this.state.formType}
 						</button>
+						<br/>
 						{this.loginGuest()}
 						<br/>
 						<button className={this.logClassName()} onClick={this.onModalClose}>Close
@@ -172,3 +171,5 @@ class SessionForm extends React.Component {
 
 
 export default withRouter(SessionForm);
+
+// <div className="modal-formtype"> Enter Your Username and Password</div>
