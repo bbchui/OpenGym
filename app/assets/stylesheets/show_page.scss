@@ -30,7 +30,6 @@ div.show-buttons {
 button.show-review {
   width: 160px;
   height: 36px;
-  align-items: center;
   font-size: 16px;
   font-weight: bold;
   background: #59C4C5;
@@ -38,6 +37,13 @@ button.show-review {
   display: flex;
   justify-content: space-between;
   border: 0.5px solid black;
+  align-items: center;
+  margin-top: 1px;
+  outline: none;
+}
+
+button.show-review:hover {
+  background: #48a4a5
 }
 
 button.cant-review {
