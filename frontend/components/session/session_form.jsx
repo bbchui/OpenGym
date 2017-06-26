@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import {withRouter} from 'react-router-dom';
 import ModalStyle from './modal_style';
+import FontAwesome from 'react-fontawesome';
 
 class SessionForm extends React.Component {
 	constructor(props) {
@@ -137,8 +138,12 @@ class SessionForm extends React.Component {
 								value={this.state.username}
 								placeholder="Username"
 			          onChange={this.update("username")} />
-							<i class="fa fa-user-o" aria-hidden="true"></i>
-			      </label>
+							<FontAwesome className="icon-one"
+			            name="user-o"
+			            size='lg'
+									style={{position: 'absolute', top: '113px', left: '240px', color: '#757575'}}/>
+						</label>
+
 			      <label className="modal">
 							<br/>
 			        <input type="password"
@@ -146,6 +151,10 @@ class SessionForm extends React.Component {
 								value={this.state.password}
 								placeholder="Password"
 			          onChange={this.update("password")} />
+								<FontAwesome className="icon-one"
+				            name="lock"
+				            size='lg'
+										style={{position: 'absolute', top: '170px', left: '242px', color: '#757575'}}/>
 			      </label>
 						<div>
 							{this.renderErrors()}
