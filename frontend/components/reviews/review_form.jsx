@@ -146,7 +146,14 @@ class ReviewForm extends React.Component {
           <div className="other-reviews">
             <h4>Reviews for {this.props.gym.name}</h4>
             <ul>
-              {Object.keys(reviews).map((key, idx) => <SampleReviews key={idx} review={reviews[key]} /> )}
+              {Object.keys(reviews).map((key, idx) => {
+                if (this.props.currentUser.id !== reviews[key].user_id) {
+                  return(
+                  <SampleReviews key={idx} review={reviews[key]} />
+                  )}
+                }
+              )}
+
             </ul>
           </div>
         </section>
