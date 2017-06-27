@@ -7,6 +7,7 @@ import FontAwesome from 'react-fontawesome';
 import SearchContainer from '../search/search_container';
 import Rating from 'react-rating';
 import GymMap from '../map/gym_map';
+import LoginFormContainer from '../session/login_form_container';
 
 class GymShow extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class GymShow extends React.Component {
       <div className="login">
           <nav className="logout-buttons">
             <div>Welcome <br></br> <strong>{this.props.currentUser.username}</strong>!</div>
-            <button margin-top="15px" className="logout-button" onClick={logout}>Log Out</button>
+            <button className="logout-button" onClick={logout}>Log Out</button>
           </nav>
       </div>
     );
@@ -57,14 +58,9 @@ class GymShow extends React.Component {
            Write a Review </button>
       )
     } else {
-      return (
-        <button
-          className="cant-review" disabled>
-          <FontAwesome className="fa fa-star"
-            name="star"
-            size='lg'/>
-          Log In To Review! </button>
-      )
+        return (
+          <LoginFormContainer/>
+        )
     }
   }
 

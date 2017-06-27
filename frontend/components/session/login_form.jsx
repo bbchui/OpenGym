@@ -63,20 +63,76 @@ class LoginForm extends React.Component {
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`errors-${i}`}>{error}</li>
-        ))};
+        ))}
       </ul>
     );
   }
 
   render() {
     return(
-      <div>
+      <div className="login">
+        <button
+          onClick={this.onModalOpen()}
+          className="cant-review">
+          <FontAwesome className="fa fa-star"
+            name="star"
+            size='lg'/>
+          Login to Review </button>
+
         <Modal
           style={ModalStyle}
           contentLabel="Modal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
           onAfterOpen={this.onTransition}>
+
+          <form className="login-form">
+			      <div className="modal-welcome"><strong className="logo">OpenGym</strong>
+
+
+						</div>
+
+			      <label className="modal">
+							<br/>
+			        <input type="text"
+								className="modal"
+								value={this.state.username}
+								placeholder="Username"
+			          onChange={this.update("username")} />
+							<FontAwesome className="icon-one"
+			            name="user-o"
+			            size='lg'
+									style={{position: 'absolute', top: '151px', left: '318px', color: '#757575'}}/>
+						</label>
+
+			      <label className="modal">
+							<br/>
+			        <input type="password"
+								className="modal"
+								value={this.state.password}
+								placeholder="Password"
+			          onChange={this.update("password")} />
+								<FontAwesome className="icon-one"
+				            name="lock"
+				            size='lg'
+										style={{position: 'absolute', top: '207px', left: '319px', color: '#757575'}}/>
+			      </label>
+						<div>
+							{this.renderErrors()}
+						</div>
+			      <br/>
+
+			      <button className="login"
+							onClick={this.handleSubmit}>
+							Login
+						</button>
+						<br/>
+						{this.loginGuest()}
+						<br/>
+						<button className="login" onClick={this.onModalClose}>Close
+						</button>
+			    </form>
+
         </Modal>
       </div>
     )

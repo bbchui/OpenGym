@@ -50,14 +50,21 @@ button.cant-review {
   width: 160px;
   height: 36px;
   align-items: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   background: #59C4C5;
   color: white;
   display: flex;
   justify-content: space-between;
   border: 0.5px solid black;
+  outline: none;
+  margin-top: 17px;
 }
+
+button.cant-review:hover {
+  background: #48a4a5
+}
+
 
 button.add-photo {
   width: 110px;
