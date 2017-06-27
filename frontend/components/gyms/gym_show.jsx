@@ -14,6 +14,7 @@ class GymShow extends React.Component {
     super(props);
     this.handleCreate = this.handleCreate.bind(this);
     this.sessionForm = this.sessionForm.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   componentDidMount() {
@@ -43,24 +44,53 @@ class GymShow extends React.Component {
     this.props.history.push(`/gyms/${this.props.gym.id}/reviews/new`);
   }
 
+  handleEdit(e) {
+    let reviewId = false;
+    Object.keys(this.props.reviews).forEach(el => {
+      if (this.props.reviews[el].user_id === this.props.currentUser.id) {
+        reviewId = this.props.reviews[el].id
+      }
+    });
+    e.preventDefault();
+    this.props.history.push(`/gyms/${this.props.gym.id}/reviews/${reviewId}/edit`);
+  }
+
 
 
   //Add photo replaces div under write a review
   reviewButton() {
+    let reviewId = false;
     if (this.props.currentUser) {
+      Object.keys(this.props.reviews).forEach(el => {
+        if (this.props.reviews[el].user_id === this.props.currentUser.id) {
+          reviewId = true
+        }
+      });
+    }
+    if (this.props.currentUser && reviewId) {
       return (
         <button
-          onClick={this.handleCreate}
-          className="show-review">
+          onClick={this.handleEdit}
+          className="edit-review">
           <FontAwesome className="fa fa-star"
             name="star"
             size='lg'/>
-           Write a Review </button>
-      )
+          Edit Your Review </button>
+      );
+    } else if (this.props.currentUser) {
+        return (
+          <button
+            onClick={this.handleCreate}
+            className="show-review">
+            <FontAwesome className="fa fa-star"
+              name="star"
+              size='lg'/>
+             Write a Review </button>
+         );
     } else {
         return (
           <LoginFormContainer/>
-        )
+        );
     }
   }
 
