@@ -1,7 +1,7 @@
 import merge from 'lodash/merge';
-import { RECEIVE_ALL_REVIEWS, RECEIVE_ONE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
+import { RECEIVE_ALL_REVIEWS, RECEIVE_ONE_REVIEW, REMOVE_REVIEW, RECEIVE_REVIEW_ERRORS, CLEAR_REVIEW_ERRORS } from '../actions/review_actions';
 
-const _defaultReview = {};
+const _defaultReview = {errors: []};
 
 const ReviewReducer = (oldState = _defaultReview, action) => {
   Object.freeze(oldState);
@@ -17,6 +17,11 @@ const ReviewReducer = (oldState = _defaultReview, action) => {
       let newState2 = merge({}, oldState);
       delete newState2[action.review.id];
       return newState2;
+    case RECEIVE_REVIEW_ERRORS:
+      const errors = action.errors;
+      return merge({}, oldState, {errors});
+    case CLEAR_REVIEW_ERRORS:
+      return merge({}, oldState, {errors: []});
     default:
       return oldState;
   }

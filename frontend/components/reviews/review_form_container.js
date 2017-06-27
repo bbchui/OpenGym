@@ -1,16 +1,19 @@
 import { connect } from 'react-redux';
-import { getAllReviews, updateReview, createReview, deleteReview } from '../../actions/review_actions';
+import { getAllReviews, updateReview, createReview, deleteReview, clearErrors } from '../../actions/review_actions';
 import { logout } from '../../actions/session_actions';
 import ReviewForm from './review_form';
 import { getSingleGym } from '../../actions/gym_actions';
 import { allReviews } from '../../reducers/selector';
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, ownProps) => {
+return ({
   gym: state.gym,
   gymId: ownProps.gymId,
   reviews: state.reviews,
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  review_errors: state.reviews.errors
 });
+}
 
 const mapDispatchToProps = dispatch => ({
   getAllReviews: (id) => dispatch(getAllReviews(id)),
@@ -18,6 +21,7 @@ const mapDispatchToProps = dispatch => ({
   createReview: (review) => dispatch(createReview(review)),
   deleteReview: (review) => dispatch(deleteReview(review)),
   getSingleGym: (gym) => dispatch(getSingleGym(gym)),
+  clearErrors: () => dispatch(clearErrors()),
   logout: () => dispatch(logout())
 });
 

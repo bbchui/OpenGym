@@ -21,6 +21,7 @@ class ReviewForm extends React.Component {
     this.update = this.update.bind(this);
     this.getPath = this.getPath.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount() {
@@ -29,10 +30,11 @@ class ReviewForm extends React.Component {
     this.props.getAllReviews(this.props.match.params.gymId);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   const {reviews} = this.props;
-  //   const {match} = this.props;
-  // }
+  componentWillReceiveProps(nextProps) {
+
+    // const {reviews} = this.props;
+    // const {match} = this.props;
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -68,6 +70,18 @@ class ReviewForm extends React.Component {
     return(
       <SessionFormContainer />
     );
+  }
+
+  renderErrors() {
+    if (this.props.review_errors) {
+      return(
+        <ul>
+          {this.props.review_errors.map((error, i) => (
+            <li key={`errors-${i}`}>{error}</li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   greeting(currentUser, logout) {
@@ -134,6 +148,11 @@ class ReviewForm extends React.Component {
                   />
               </label>
             </form>
+
+            <div>
+              {this.renderErrors()}
+            </div>
+
             <button className="review"
               onClick={this.handleSubmit}>
               {this.getPath()} Review
@@ -147,7 +166,7 @@ class ReviewForm extends React.Component {
             <h4>Reviews for {this.props.gym.name}</h4>
             <ul>
               {Object.keys(reviews).map((key, idx) => {
-                if (this.props.currentUser.id !== reviews[key].user_id) {
+                if (this.props.currentUser.id !== reviews[key].user_id && key !== "errors") {
                   return(
                   <SampleReviews key={idx} review={reviews[key]} />
                   )}
