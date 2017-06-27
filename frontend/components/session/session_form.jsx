@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
 	}
 
 	loginGuest() {
-		if (this.state.formType === 'Sign Up') {
+		if (this.state.formType === 'Sign Up' || this.state.formType === 'Log In') {
 			return(
 
 					<button className="signup"
@@ -141,7 +141,7 @@ class SessionForm extends React.Component {
 							<FontAwesome className="icon-one"
 			            name="user-o"
 			            size='lg'
-									style={{position: 'absolute', top: '113px', left: '240px', color: '#757575'}}/>
+									style={{position: 'absolute', top: '151px', left: '318px', color: '#757575'}}/>
 						</label>
 
 			      <label className="modal">
@@ -154,7 +154,7 @@ class SessionForm extends React.Component {
 								<FontAwesome className="icon-one"
 				            name="lock"
 				            size='lg'
-										style={{position: 'absolute', top: '170px', left: '242px', color: '#757575'}}/>
+										style={{position: 'absolute', top: '207px', left: '319px', color: '#757575'}}/>
 			      </label>
 						<div>
 							{this.renderErrors()}

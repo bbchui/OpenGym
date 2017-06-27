@@ -12,16 +12,17 @@ div.login {
 }
 
 button.login {
-  background: transparent;
+  background: #59C4C5;
   padding: 8px 0;
   font-size: inherit;
-  border-radius: 5px;
-  border-color: #1d758a;
-  width: 200px;
+  border-radius: 3px;
+  border: none ;
+  width: 290px;
+  color: white;
 }
 
 button.login:hover {
-  background-color: #00C8F8;
+  background-color: #48a4a5;
 }
 
 button.signup {
@@ -30,7 +31,8 @@ button.signup {
   font-size: inherit;
   border-radius: 3px;
   border: none ;
-  width: 110%;
+  width: 290px;
+  color: white;
 }
 
 button.signup:hover {
@@ -103,9 +105,10 @@ label.modal {
 }
 
 input.modal {
-  width: 100%;
+  width: 275px;
   height: 1.75em;
   font-size: 18px;
+  color: #484848;
   padding-left: 10px;
 }
 
