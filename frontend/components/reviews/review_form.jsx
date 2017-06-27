@@ -20,6 +20,7 @@ class ReviewForm extends React.Component {
     this.updateRating = this.updateRating.bind(this);
     this.update = this.update.bind(this);
     this.getPath = this.getPath.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   componentDidMount() {
@@ -42,6 +43,11 @@ class ReviewForm extends React.Component {
       this.props.createReview(this.state)
       .then((res) => this.props.history.push(`/gyms/${this.state.gym_id}`));
     }
+  }
+
+  handleLogout(e) {
+    e.preventDefault();
+    this.props.logout().then(() => this.props.history.push(`/gyms/${this.state.gym_id}`));
   }
 
   getPath() {

@@ -326,8 +326,8 @@ Review.create({user_id: 1, gym_id: 4, body: "This place is a lot of fun!", ratin
 Review.create({user_id: 5, gym_id: 2, body: "It gets a bit crowded because there's only 1 court", rating: 3})
 Review.create({user_id: 3, gym_id: 1, body: "Good competition and there's two courts to play on!", rating: 5})
 Review.create({user_id: 3, gym_id: 2, body: "Great community, good crowd", rating: 4})
-Review.create({user_id: 2, gym_id: 2, body: "Friendly people but wait time is very long", rating: 3})
-Review.create({user_id: 3, gym_id: 2, body: "Great place to go if you have membership!", rating: 4})
+Review.create({user_id: 3, gym_id: 10, body: "Friendly people but wait time is very long", rating: 3})
+Review.create({user_id: 3, gym_id: 8, body: "Great place to go if you have membership!", rating: 4})
 Review.create({user_id: 6, gym_id: 1, body: "What should we do after open gym???", rating: rand(5) + 1})
 
 
@@ -336,10 +336,10 @@ Review.create({user_id: 6, gym_id: 1, body: "What should we do after open gym???
 # Review.create({user_id: 4, gym_id: 5, body: "*boing boing* *nibble nibble*", rating: 5})
 # Review.create({user_id: 4, gym_id: 6, body: "*boing boing* *nibble nibble*", rating: 5})
 
+
 Gym.count.times do |x|
   Review.create({user_id: 4, gym_id: x + 1, body: "*boing boing* *nibble nibble*", rating: 5})
 end
-
 
 Gym.count.times do |x|
   Review.create({user_id: 2, gym_id: x + 1, body: "Volleyball is fun everywhere!", rating: rand(5) + 1})
