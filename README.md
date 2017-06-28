@@ -21,9 +21,11 @@ OpenGym is a web application inspired by Yelp designed to help users find volley
 
 OpenGym search results are filtered by the name of the city entered in the search field. The more specific the search, the more accurate the results. The google map is then populated with markers which will have links that can direct you to the Gym information page for you to learn more about the Gym or to leave a review.
 
-```
+```Ruby
 def index
-  if params[:query]
+  if params[:bounds]
+    @gyms = Gym.in_bounds(params[:bounds])
+  elsif params[:query]
     @gyms = Gym.where('lower(city) LIKE ?', "%#{params[:query]}%".downcase)
   else
     @gyms = Gym.where(city: 'San Francisco').limit(10)
@@ -31,11 +33,11 @@ def index
 end
 
 ```
-In the back-end, the search engine will search through all the gyms with the city similar or exactly like the entered search query.
+In the back-end, the search engine will search through all the gyms within the bounds of the search results or with the city similar or exactly like the entered search query.
 
 ![Search Results](docs/screenshots/search_results.png)
 
-```
+```Javascript
 gymInfo(gym) {
   let content =
     `<a href=/#/gyms/${gym.id}>${gym.name}</a>
@@ -53,7 +55,7 @@ gymInfo(gym) {
 }
 ```
 
-In the front-end, using Google Maps Api, the results from the search will be populated on the Map as well on page which the name, location, and rating of the gym.
+In the front-end, using Google Maps Api, the results from the search will be populated on the Map with pointers (marker) as well on page which the name, location, and rating of the gym.
 
 ### Gym Information
 

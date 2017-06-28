@@ -143,10 +143,31 @@ div.show-photos-section {
 }
 
 .showpage-photo {
+  z-index: 0;
+  position: relative;
   width: 200px;
   height: 200px;
   object-fit: cover;
-  padding: 1px;
+  // padding: 1px;
+  transition: all .2s ease-in-out;
+}
+
+.showpage-photo.image2 {
+  z-index: 1;
+  transform: scale(1.15);
+}
+
+.showpage-photo:hover {
+  z-index: 9;
+  transform: scale(1.15);
+}
+
+.show-photos-section:hover img.showpage-photo.image2 {
+  transform: scale(1);
+}
+
+.show-photos-section:hover img.showpage-photo.image2:hover {
+  transform: scale(1.15);
 }
 
 div.review-hours {

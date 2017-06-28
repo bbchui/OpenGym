@@ -3,6 +3,8 @@ class Api::GymsController < ApplicationController
     # debugger
     if params[:bounds]
       @gyms = Gym.in_bounds(params[:bounds])
+    elsif params[:query] == "featured"
+      @gyms = Gym.limit(6).order("RANDOM()")
     elsif params[:query] == ""
       @gyms = Gym.where(city: 'San Francisco').limit(10)
     elsif params[:query]

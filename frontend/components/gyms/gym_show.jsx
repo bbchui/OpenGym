@@ -15,6 +15,7 @@ class GymShow extends React.Component {
     this.handleCreate = this.handleCreate.bind(this);
     this.sessionForm = this.sessionForm.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
+    this.state = {isActive1: "", isActive2: "active", isActive3: ""};
   }
 
   componentDidMount() {
@@ -94,6 +95,14 @@ class GymShow extends React.Component {
     }
   }
 
+  onHover(prop) {
+    return e => this.setState({[prop]: "active"})
+  }
+
+  onLeave(prop) {
+    return e => this.setState({[prop]: ""})
+  }
+
   //need to DRY same top-of-page as index
   render() {
     let { gym } = this.props;
@@ -162,9 +171,9 @@ class GymShow extends React.Component {
               </a>
             </div>
             <div className="show-photos-section">
-              <img className="showpage-photo" src={gym.image_url[0]} alt="Image Not Working" />
-              <img className="showpage-photo" src={gym.image_url[1]} alt="Image Not Working" />
-              <img className="showpage-photo" src={gym.image_url[2]} alt="Image Not Working" />
+              <img className="showpage-photo image1" src={gym.image_url[0]} alt="Image Loading" />
+              <img className="showpage-photo image2" src={gym.image_url[1]} alt="Image Loading" />
+              <img className="showpage-photo image3" src={gym.image_url[2]} alt="Image Loading" />
             </div>
           </section>
         </div>
