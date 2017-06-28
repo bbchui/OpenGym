@@ -1,7 +1,7 @@
 import { merge } from 'lodash/merge';
 import { RECEIVE_USER } from '../actions/user_actions';
 
-const _defaultState = { currentUser: null, errors: [] }
+const _defaultState = { user: null, errors: [] }
 
 const UserReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
