@@ -1,13 +1,14 @@
-import { merge } from 'lodash/merge';
+import merge  from 'lodash/merge';
 import { RECEIVE_USER } from '../actions/user_actions';
 
-const _defaultState = { user: null, errors: [] }
+const _defaultState = { user: null}
 
-const UserReducer = (oldState = {}, action) => {
+const UserReducer = (oldState = _defaultState, action) => {
+  debugger
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_USER:
-      return merge({}, oldState, { [action.user.id]: action.user })
+      return merge({}, action.user)
     default:
       return oldState
   }
