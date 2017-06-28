@@ -154,12 +154,12 @@ div.show-photos-section {
 
 .showpage-photo.image2 {
   z-index: 1;
-  transform: scale(1.15);
+  transform: scale(1.25);
 }
 
 .showpage-photo:hover {
   z-index: 9;
-  transform: scale(1.15);
+  transform: scale(1.25);
 }
 
 .show-photos-section:hover img.showpage-photo.image2 {
@@ -167,7 +167,7 @@ div.show-photos-section {
 }
 
 .show-photos-section:hover img.showpage-photo.image2:hover {
-  transform: scale(1.15);
+  transform: scale(1.25);
 }
 
 div.review-hours {
