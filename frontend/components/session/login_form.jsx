@@ -102,11 +102,11 @@ class LoginForm extends React.Component {
 							<FontAwesome className="icon-one"
 			            name="user-o"
 			            size='lg'
-									style={{position: 'absolute', top: '151px', left: '318px', color: '#757575'}}/>
+									style={{position: 'absolute', top: '141px', left: '318px', color: '#757575'}}/>
 						</label>
 
 			      <label className="modal">
-							<br/>
+
 			        <input type="password"
 								className="modal"
 								value={this.state.password}
@@ -115,7 +115,7 @@ class LoginForm extends React.Component {
 								<FontAwesome className="icon-one"
 				            name="lock"
 				            size='lg'
-										style={{position: 'absolute', top: '207px', left: '319px', color: '#757575'}}/>
+										style={{position: 'absolute', top: '190px', left: '320px', color: '#757575'}}/>
 			      </label>
 						<div>
 							{this.renderErrors()}
@@ -126,9 +126,9 @@ class LoginForm extends React.Component {
 							onClick={this.handleSubmit}>
 							Login
 						</button>
-						<br/>
+
 						{this.loginGuest()}
-						<br/>
+
 						<button className="login" onClick={this.onModalClose}>Close
 						</button>
 			    </form>

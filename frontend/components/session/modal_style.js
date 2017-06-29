@@ -21,7 +21,7 @@ const ModalStyle = {
     WebkitOverflowScrolling    : 'touch',
     // borderRadius               : '25px',
     outline                    : 'none',
-    padding                    : '60px 60px',
+    padding                    : '50px 60px',
     opacity                    : "0",
     transition                 : 'opacity 0.75s',
     transform                  : 'translate(-50%, -50%)'

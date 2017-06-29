@@ -13,9 +13,9 @@ class GymsIndex extends React.Component {
     // console.log(props);
   }
 
-  // componentDidMount() {
-  //   console.log(this.props);
-  // }
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
 
   // componentWillReceiveProps(nextProps) {
   //   console.log(nextProps, this.props);

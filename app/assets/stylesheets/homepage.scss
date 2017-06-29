@@ -19,6 +19,8 @@ button.login {
   border: none ;
   width: 290px;
   color: white;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 button.login:hover {
@@ -33,6 +35,8 @@ button.signup {
   border: none ;
   width: 290px;
   color: white;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 button.signup:hover {
@@ -110,6 +114,8 @@ input.modal {
   font-size: 18px;
   color: #484848;
   padding-left: 10px;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 div.modal-formtype {

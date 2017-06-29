@@ -128,7 +128,6 @@ class SessionForm extends React.Component {
 			    <form className="login-form">
 			      <div className="modal-welcome"><strong className="logo">OpenGym</strong>
 
-
 						</div>
 
 			      <label className="modal">
@@ -141,11 +140,10 @@ class SessionForm extends React.Component {
 							<FontAwesome className="icon-one"
 			            name="user-o"
 			            size='lg'
-									style={{position: 'absolute', top: '151px', left: '318px', color: '#757575'}}/>
+									style={{position: 'absolute', top: '141px', left: '318px', color: '#757575'}}/>
 						</label>
 
 			      <label className="modal">
-							<br/>
 			        <input type="password"
 								className="modal"
 								value={this.state.password}
@@ -154,20 +152,21 @@ class SessionForm extends React.Component {
 								<FontAwesome className="icon-one"
 				            name="lock"
 				            size='lg'
-										style={{position: 'absolute', top: '207px', left: '319px', color: '#757575'}}/>
+										style={{position: 'absolute', top: '190px', left: '320px', color: '#757575'}}/>
 			      </label>
 						<div>
 							{this.renderErrors()}
 						</div>
-			      <br/>
+						<br/>
+
 
 			      <button className={this.logClassName()}
 							onClick={this.handleSubmit}>
 							{this.state.formType}
 						</button>
-						<br/>
+
 						{this.loginGuest()}
-						<br/>
+
 						<button className={this.logClassName()} onClick={this.onModalClose}>Close
 						</button>
 			    </form>
