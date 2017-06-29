@@ -32,7 +32,82 @@ section.user-profile > div > div {
   font-weight: bold;
 }
 
-.profile-reviews {
+span.profile-reviews {
   padding-left: 80px;
   padding-top: 6px;
+}
+
+section.profile-reviews {
+  padding-top: 60px;
+  width: 900px;
+  margin: auto;
+  display: flex;
+}
+
+div.username-profile {
+  width: 215px;
+}
+
+div.profile-reviews-list {
+  width: 685px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -41px;
+}
+
+ul.profile {
+  width: 685px;
+}
+
+span.review-profile {
+  font-size: 20px;
+  font-weight: bold;
+  color: #59C4C5;
+  border-bottom: 1px solid #e3e3e3;
+  width: 685px;
+  padding-bottom: 20px;
+}
+
+li.profile {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 10px 0;
+}
+
+.profile-review-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+}
+
+div.picture-address {
+  display: flex;
+}
+
+.profile-gym-name {
+  text-decoration: none;
+  color: #59C4C5;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 1px;
+}
+
+div.profile-review-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+div.profile-review-info > span {
+  padding-bottom: 3px;
+}
+
+div.profile-review-body {
+  font-size: 12px;
+}
+
+div.profile-review-comment {
+  font-size: 12px
 }

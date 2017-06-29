@@ -74,13 +74,20 @@ class UserProfile extends React.Component {
         </section>
 
         <section className="profile-reviews">
-          <ul>
-            {reviews.map((review, idx) => {
-              return(
-                <UserReviews key={idx+"userReviews"} review={review} />
-                )
-            })}
-          </ul>
+          <div className="username-profile">
+            {user.username}'s Profile
+          </div>
+          <div className="profile-reviews-list">
+            <span className="review-profile">Reviews</span>
+            <ul className="profile">
+              {reviews.map((review, idx) => {
+                return(
+                  <UserReviews key={idx+"userReviews"} review={review} />
+                  )
+              })}
+            </ul>
+            
+        </div>
         </section>
 
 
