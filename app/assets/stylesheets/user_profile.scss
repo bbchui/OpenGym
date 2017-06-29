@@ -111,3 +111,13 @@ div.profile-review-body {
 div.profile-review-comment {
   font-size: 12px
 }
+
+div.split-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-review-edit {
+  text-decoration: none;
+  color: #59C4C5;
+}

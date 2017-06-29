@@ -38,7 +38,8 @@ class UserProfile extends React.Component {
     let reviewsCount = user.reviews ? user.reviews.length : undefined;
     let pic = user.profile_pic_url ? user.profile_pic_url : user.image_url
     let reviews = user.reviews ? user.reviews : [];
-
+    let currentUser = this.props.currentUser ? this.props.currentUser : null;
+    
     return(
       <div>
         <section className="top-of-page">
@@ -83,7 +84,7 @@ class UserProfile extends React.Component {
             <ul className="profile">
               {reviews.map((review, idx) => {
                 return(
-                  <UserReviews key={idx+"userReviews"} review={review} />
+                  <UserReviews key={idx+"userReviews"} review={review} user={currentUser}/>
                   )
               })}
             </ul>
