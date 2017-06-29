@@ -2,6 +2,8 @@ import React from 'react';
 import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
+import Rating from 'react-rating';
+import UserReviews from './user_reviews';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -31,7 +33,11 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    let { user } = this.props;
+    let reviewsCount = user.reviews ? user.reviews.length : undefined;
+    let pic = user.profile_pic_url ? user.profile_pic_url : user.image_url
+    let reviews = user.reviews ? user.reviews : [];
+
     return(
       <div>
         <section className="top-of-page">
@@ -48,12 +54,43 @@ class UserProfile extends React.Component {
           </div>
         </section>
 
-        <div>
-          here
-        </div>
+        <section className="user-profile">
+          <div>
+            <img className="user-profile" src={pic} alt="Image Loading" />
+            <div>
+              <span className="profile-name">{user.username}</span>
+              <span className="profile-reviews">
+                <Rating
+                className="stars"
+                initialRate={1}
+                start={0}
+                stop={1}
+                readonly
+                empty="fa fa-star-o fa-lg"
+                full="fa fa-star fa-lg"/>
+              &nbsp; {reviewsCount} Reviews</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="profile-reviews">
+          <ul>
+            {reviews.map((review, idx) => {
+              return(
+                <UserReviews key={idx+"userReviews"} review={review} />
+                )
+            })}
+          </ul>
+        </section>
+
+
       </div>
     )
   }
 }
 
 export default UserProfile;
+
+// {Object.keys(reviews).map((key, idx) => {
+//   <UserReviews key={idx+"userReviews"} review={reviews[key]} />
+// })}

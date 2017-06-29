@@ -1,0 +1,38 @@
+section.user-profile {
+  width: 100%;
+  margin: auto;
+  padding-top: 25px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  height: 150px;
+}
+
+section.user-profile > div {
+  width: 900px;
+  margin: auto;
+  display: flex;
+}
+img.user-profile {
+  width: 190px;
+  height: 190px;
+  border-radius: 5px;
+}
+
+section.user-profile > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  padding-left: 50px;
+  padding-top: 20px;
+  font-size: 40px;
+  font-family: 'Yrsa', serif;
+  font-weight: bold;
+}
+
+.profile-reviews {
+  padding-left: 80px;
+  padding-top: 6px;
+}
