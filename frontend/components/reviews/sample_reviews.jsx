@@ -16,7 +16,9 @@ const SampleReviews = ({review}) => {
         <img className="sample-image"
             src={pic}
             alt="Image Not Working" />
-        <div> { review.username } </div>
+          <Link className="review-sample-username" to={`/users/${review.user_id}`}>
+          { review.username }
+        </Link>
       </div>
       <div className="review-body">
         <Rating

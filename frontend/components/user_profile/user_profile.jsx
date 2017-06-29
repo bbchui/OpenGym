@@ -86,9 +86,10 @@ class UserProfile extends React.Component {
                   )
               })}
             </ul>
-            
+
         </div>
         </section>
+        <br/>
 
 
       </div>

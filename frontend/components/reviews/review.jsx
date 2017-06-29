@@ -23,7 +23,9 @@ const Review = (props) => {
       <li className="review-list">
         <div className="review-profile">
           <img className="review-profile-pic" src={pic} alt="Image Not Working" />
-          <div> { props.review.username } </div>
+            <Link className="showpage-review-name" to={`/users/${props.review.user_id}`}>
+              { props.review.username }
+            </Link>
           {link}
         </div>
         <div className="review-body">

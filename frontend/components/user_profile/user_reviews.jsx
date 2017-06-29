@@ -3,16 +3,9 @@ import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 
 const UserReviews = ({review}) => {
-  // let pic = review.gym.image_url[0];
-  // let gym = review.gym.name;
-  // let address = review.gym.address;
-  // let rating = review.review.rating;
-  // let date = review.review.date;
-  // let body = review.review.body;
   let city = review.gym.city;
   let state = review.gym.state;
   let zip = review.gym.zip;
-  let price = review.gym.price
 
   return(
     <li className="profile">
