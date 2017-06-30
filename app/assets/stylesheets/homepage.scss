@@ -1,5 +1,5 @@
 .homepage {
-  background-image: url("https://cdn.shutterstock.com/shutterstock/videos/9861461/thumb/1.jpg?i10c=img.resize(height:72)");
+  background-image: url("https://res.cloudinary.com/bbchui/image/upload/v1498774338/splash_prsfou.jpg");
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -191,4 +191,54 @@ div.header-logo {
   strong {
     font-size: 110px;
   }
+}
+
+.splash-buttons {
+  display: flex
+}
+
+.button-image {
+  width: 35px;
+  height: 35px;
+}
+
+#profile-button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 45px;
+  height: 36px;
+  margin: 20px 0 10px 0;
+}
+
+#profile-button:hover {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+}
+
+ul.dropdown {
+  /*visibility: hidden;*/
+  position: absolute;
+  top: -150px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  transition: transform 0.5s;
+  z-index: 1;
+}
+
+ul.dropdown a.dropdown {
+  background: white;
+  font-size: 14px;
+}
+
+ul.dropdown a:hover {
+  background: GhostWhite;
+}
+
+ul.dropdown.active {
+  display: flex;
+  transform: translate(0,200px);
 }

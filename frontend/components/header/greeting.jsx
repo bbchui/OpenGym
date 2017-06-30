@@ -1,14 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import SessionFormContainer from '../session/session_form_container';
-import {withRouter} from 'react-router-dom';
 import FeaturedGymsIndex from './featured_gyms_index';
 import SearchContainer from '../search/search_container';
 
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { active: ''};
+    this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
+  }
+
+  toggleDropdown() {
+    if (this.state.active === 'active') {
+      this.setState({ active: '' });
+    } else {
+      this.setState({ active: 'active'});
+    }
+  }
+
+  closeDropdown(e) {
+    setTimeout(() => this.setState({ active: ''}), 200);
   }
 
   sessionForm() {
@@ -26,14 +40,22 @@ class Greeting extends React.Component {
   }
   greeting(currentUser, logout) {
     // write a review goes between the div
+    let pic = currentUser.profile_pic_url ? currentUser.profile_pic_url : currentUser.image_url
     return (
       <div className="login">
           <nav className="login-buttons">
             <div>
 
             </div>
-            <div>
+            <div className="splash-buttons">
               <button className="other-login-buttons" onClick={logout}>Log Out</button>
+              <button id="profile-button" onClick={this.toggleDropdown} onBlur={this.closeDropdown}>
+                <img className="button-image" src={pic}/>
+              </button>
+              <ul className={`dropdown ${this.state.active}`}>
+                <Link className="dropdown" to={`/users/${this.props.currentUser.id}`}>My Profile</Link>
+              </ul>
+
             </div>
           </nav>
       </div>
@@ -61,4 +83,4 @@ class Greeting extends React.Component {
 }
 
 
-export default Greeting;
+export default withRouter(Greeting);
