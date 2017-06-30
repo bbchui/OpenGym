@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import SessionFormContainer from '../session/session_form_container';
 import FeaturedGymsIndex from './featured_gyms_index';
 import SearchContainer from '../search/search_container';
+import Rating from 'react-rating';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class Greeting extends React.Component {
   }
   greeting(currentUser, logout) {
     // write a review goes between the div
-    let pic = currentUser.profile_pic_url ? currentUser.profile_pic_url : currentUser.image_url
+    let pic = currentUser.profile_pic_url ? currentUser.profile_pic_url : currentUser.image_url;
     return (
       <div className="login">
           <nav className="login-buttons">
@@ -53,7 +54,25 @@ class Greeting extends React.Component {
                 <img className="button-image" src={pic}/>
               </button>
               <ul className={`dropdown ${this.state.active}`}>
-                <Link className="dropdown" to={`/users/${this.props.currentUser.id}`}>My Profile</Link>
+                <div className="dropdown">
+                  <img src={pic}/>
+                  <div>
+                    <Link to={`/users/${this.props.currentUser.id}`}>{currentUser.username}</Link>
+                    <span>
+                      <Rating
+                        className="stars"
+                        initialRate={1}
+                        start={0}
+                        stop={1}
+                        readonly
+                        empty="fa fa-star-o fa-lg"
+                        full="fa fa-star fa-lg"/>
+                      {currentUser.reviews.length} Reviews
+                    </span>
+                  </div>
+                </div>
+                <Link className="dropdown" to={`/users/${this.props.currentUser.id}`}>
+                  My Profile</Link>
               </ul>
 
             </div>

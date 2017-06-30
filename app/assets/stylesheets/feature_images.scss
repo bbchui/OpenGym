@@ -37,11 +37,16 @@ img.featured {
 }
 
 .featured-gym-name {
+  text-decoration: none;
   font-weight: bold;
   color: #59C4C5;
   padding-top: 15px;
   padding-bottom: 10px;
   font-size: 18px;
+}
+
+.featured-gym-name:hover {
+  text-decoration: underline;
 }
 
 .featured-gym-name:visited {
