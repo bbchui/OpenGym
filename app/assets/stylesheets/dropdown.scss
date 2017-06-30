@@ -1,0 +1,153 @@
+.splash-buttons {
+  display: flex;
+  position: relative;
+}
+
+.button-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 2px;
+}
+
+#profile-button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 35px;
+  margin: 20px 0 10px 0;
+  display: flex;
+  border-radius: 2px;
+  background: #59C4C5;
+}
+
+#profile-button:hover {
+  background-color: #51b3b4;
+  // border-bottom: 1px solid white;
+  // border-radius: 0;
+}
+
+ul.dropdown {
+  visibility: hidden;
+  position: absolute;
+  top: 68px;
+  // left: 110px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  transition: transform 0.5s;
+  z-index: 1;
+  min-width: 136px;
+  padding: 0 12px 12px 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+ul.dropdown a.dropdown {
+  background: white;
+  font-size: 14px;
+
+  .dropdown-user {
+    padding-right: 8px;
+    vertical-align: -5%;
+    font-size: 1.25em;
+  }
+
+  .dropdown-logout {
+    padding-right: 5px;
+    vertical-align: -5%;
+    font-size: 1.25em;
+  }
+}
+
+ul.dropdown a:hover {
+  // background: GhostWhite;
+  // background: red;
+}
+
+ul.dropdown.active {
+  display: flex;
+  visibility: visible;
+  // transform: translate(0,0);
+
+}
+
+a.dropdown {
+  text-decoration: none;
+  color: #59C4C5;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 2px;
+}
+
+a.dropdown:hover {
+  text-decoration: underline;
+}
+
+
+
+div.dropdown {
+  display: flex;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+
+  div {
+    a {
+      text-decoration: none;
+      padding-left: 5px;
+      color: #59C4C5;
+      font-size: 13px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  span {
+    font-size: 12px;
+    padding: 2px 0 0 2px;
+    .fa-lg {
+      vertical-align: 0;
+      padding-right: 2px;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.arrow-up {
+  position: relative;
+  top: -10px;
+  left: 117px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.arrow-down {
+  position: relative;
+  top: 17px;
+  right: -3.5px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid white;
+}

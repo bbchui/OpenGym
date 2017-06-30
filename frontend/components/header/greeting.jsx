@@ -5,6 +5,7 @@ import SessionFormContainer from '../session/session_form_container';
 import FeaturedGymsIndex from './featured_gyms_index';
 import SearchContainer from '../search/search_container';
 import Rating from 'react-rating';
+import FontAwesome from 'react-fontawesome';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -52,10 +53,13 @@ class Greeting extends React.Component {
               <button className="other-login-buttons" onClick={logout}>Log Out</button>
               <button id="profile-button" onClick={this.toggleDropdown} onBlur={this.closeDropdown}>
                 <img className="button-image" src={pic}/>
+                <div className="arrow-down"></div>
               </button>
               <ul className={`dropdown ${this.state.active}`}>
+                <div className="arrow-up"></div>
                 <div className="dropdown">
-                  <img src={pic}/>
+                  <Link to={`/users/${this.props.currentUser.id}`}><img src={pic}/></Link>
+
                   <div>
                     <Link to={`/users/${this.props.currentUser.id}`}>{currentUser.username}</Link>
                     <span>
@@ -72,7 +76,19 @@ class Greeting extends React.Component {
                   </div>
                 </div>
                 <Link className="dropdown" to={`/users/${this.props.currentUser.id}`}>
-                  My Profile</Link>
+                  <FontAwesome
+                    className="dropdown-user"
+                    name='user'
+                    size='lg'
+                  />
+                  About Me</Link>
+                <a className="dropdown" onClick={logout}>
+                  <FontAwesome
+                    className="dropdown-logout"
+                    name='sign-out'
+                    size='lg'
+                  />
+                  Log Out</a>
               </ul>
 
             </div>
