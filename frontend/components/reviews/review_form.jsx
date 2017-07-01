@@ -5,6 +5,8 @@ import SessionFormContainer from '../session/session_form_container';
 import GymReview from '../gyms/gym_review';
 import SampleReviews from './sample_reviews';
 import SearchContainer from '../search/search_container';
+import DropDownContainer from '../header/dropdown_container';
+
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -88,8 +90,8 @@ class ReviewForm extends React.Component {
     return (
       <div className="login">
           <nav className="logout-buttons">
-            <div>Welcome <br></br> <strong>{this.props.currentUser.username}</strong>!</div>
             <button className="logout-button" onClick={logout}>Log Out</button>
+            <DropDownContainer />
           </nav>
       </div>
     );

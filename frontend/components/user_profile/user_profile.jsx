@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
 import Rating from 'react-rating';
 import UserReviews from './user_reviews';
+import DropDownContainer from '../header/dropdown_container';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -26,8 +27,8 @@ class UserProfile extends React.Component {
     return (
       <div className="login">
           <nav className="logout-buttons">
-            <div>Welcome <br></br> <strong>{this.props.currentUser.username}</strong>!</div>
             <button className="logout-button" onClick={logout}>Log Out</button>
+            <DropDownContainer />
           </nav>
       </div>
     );
@@ -39,7 +40,7 @@ class UserProfile extends React.Component {
     let pic = user.profile_pic_url ? user.profile_pic_url : user.image_url
     let reviews = user.reviews ? user.reviews : [];
     let currentUser = this.props.currentUser ? this.props.currentUser : null;
-    
+
     return(
       <div>
         <section className="top-of-page">

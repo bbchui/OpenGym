@@ -7,7 +7,7 @@ const UserReviews = ({review, user}) => {
   let state = review.gym.state;
   let zip = review.gym.zip;
   let edit = null;
-  if (user.id === review.review.user_id) {
+  if (user && user.id === review.review.user_id) {
     edit = <Link to={`/gyms/${review.gym.id}/reviews/${review.review.id}/edit`} className="profile-review-edit">
       Edit Review
     </Link>

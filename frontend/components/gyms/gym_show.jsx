@@ -8,6 +8,7 @@ import SearchContainer from '../search/search_container';
 import Rating from 'react-rating';
 import GymMap from '../map/gym_map';
 import LoginFormContainer from '../session/login_form_container';
+import DropDownContainer from '../header/dropdown_container';
 
 class GymShow extends React.Component {
   constructor(props) {
@@ -33,8 +34,8 @@ class GymShow extends React.Component {
     return (
       <div className="login">
           <nav className="logout-buttons">
-            <div>Welcome <br></br> <strong>{this.props.currentUser.username}</strong>!</div>
             <button className="logout-button" onClick={logout}>Log Out</button>
+            <DropDownContainer />
           </nav>
       </div>
     );

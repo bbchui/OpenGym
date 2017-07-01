@@ -4,6 +4,7 @@ import SessionFormContainer from '../session/session_form_container';
 import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
 import GymIndexMap from '../map/gym_index_map';
+import DropDownContainer from '../header/dropdown_container';
 
 class GymsIndex extends React.Component {
   constructor(props) {
@@ -35,8 +36,8 @@ class GymsIndex extends React.Component {
     return (
       <div className="login">
           <nav className="logout-buttons">
-            <div>Welcome <br></br> <strong>{this.props.currentUser.username}</strong>!</div>
             <button className="logout-button" onClick={logout}>Log Out</button>
+            <DropDownContainer />
           </nav>
       </div>
     );
