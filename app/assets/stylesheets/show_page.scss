@@ -126,10 +126,16 @@ div.show-photos-section {
 }
 
 a.show-link {
+  text-decoration: none;
+  color: #0073bb;
   max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+a.show-link:hover {
+  text-decoration: underline;
 }
 
 div.show-photos-section {
