@@ -7,8 +7,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "default_avatar.png"
-  
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "default_avatar1.jpg"
+
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   after_initialize :ensure_session_token
