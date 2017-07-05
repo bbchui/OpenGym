@@ -9,6 +9,8 @@ import Rating from 'react-rating';
 import GymMap from '../map/gym_map';
 import LoginFormContainer from '../session/login_form_container';
 import DropDownContainer from '../header/dropdown_container';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
 
 class GymShow extends React.Component {
   constructor(props) {
@@ -56,8 +58,6 @@ class GymShow extends React.Component {
     e.preventDefault();
     this.props.history.push(`/gyms/${this.props.gym.id}/reviews/${reviewId}/edit`);
   }
-
-
 
   //Add photo replaces div under write a review
   reviewButton() {

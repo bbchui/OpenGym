@@ -34,6 +34,7 @@
     "babel-preset-react": "^6.24.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-dropzone": "^3.13.3",
     "react-fontawesome": "^1.6.1",
     "react-modal": "^1.7.7",
     "react-rating": "^0.7.1",
@@ -42,6 +43,7 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
+    "superagent": "^3.5.2",
     "webpack": "^2.5.1"
   }
 }
