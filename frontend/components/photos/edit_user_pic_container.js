@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import UserProfile from './user_profile';
+import EditUserPic from './edit_user_pic';
 import { logout } from '../../actions/session_actions';
 import { fetchUser, updateUser } from '../../actions/user_actions';
 
@@ -17,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps)
-  (UserProfile);
+  (EditUserPic);

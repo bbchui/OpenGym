@@ -8,6 +8,7 @@ import Homepage from './header/homepage';
 import GymShowContainer from './gyms/gym_show_container';
 import ReviewFormContainer from './reviews/review_form_container';
 import UserProfileContainer from './user_profile/user_profile_container';
+import EditUserPicContainer from './photos/edit_user_pic_container';
 
 const App = () => (
   <div>
@@ -15,6 +16,7 @@ const App = () => (
     <Route exact path='/gyms' component={GymIndexContainer} />
     <Route exact path='/gyms/:gymId' component={GymShowContainer} />
     <Route exact path='/users/:userId' component={UserProfileContainer} />
+    <Route exact path='/users/:userId/edit' component={EditUserPicContainer} />
     <ProtectedRoute path='/gyms/:gymId/reviews/new' component={ReviewFormContainer} />
     <ProtectedRoute path='/gyms/:gymId/reviews/:reviewId/edit' component={ReviewFormContainer} />
   </div>
