@@ -99,7 +99,7 @@ class EditUserPic extends React.Component {
           <div>
             <Link to={`/users/${this.props.currentUser.id}`}>
               {this.props.currentUser.username}
-            </Link> &nbsp;&nbsp; > &nbsp;&nbsp; Profile photos
+            </Link> &nbsp;&nbsp;>&nbsp;&nbsp; Profile photos
           </div>
           <strong>Edit Photo</strong>
         </section>
@@ -110,7 +110,13 @@ class EditUserPic extends React.Component {
             multiple={false}
             accept="image/*"
             onDrop={this.onImageDrop.bind(this)}>
-            <p>Drop an image or click to select a file to upload.</p>
+            <span>
+              Drag and drop your photos here
+            </span>
+            <div>
+              <span>OR</span>
+            </div>
+            <button>Browse Files</button>
           </Dropzone>
           <div>
             <img src={this.state.profile_pic_url} />

@@ -5,11 +5,21 @@
   margin: auto;
   font-size: 12px;
   margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
 
   a {
     text-decoration: none;
     color: #59C4C5;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  strong {
+    margin-top: 8px;
+    font-size: 20px;
+    color: #48a4a5
   }
 }
 
@@ -21,9 +31,54 @@
 }
 
 .user-dropzone {
-  width: 700px;
+  width: 100%;
   margin: auto;
-  border: 1px dashed #eee;
-  height: 300px;
-  margin-top: 50px;
+  border: 3px dashed #BBB;
+  border-radius: 5px;
+  height: 200px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 25px;
+  }
+
+  div {
+    width: 80%;
+    text-align: center;
+    line-height: 0.1em;
+    border-bottom: 1px solid #ddd;
+
+    span {
+      padding-top: none;
+      font-size: 12px;
+      font-weight: normal;
+      padding: 0 30px;
+      background: white;
+    }
+  }
+
+  button {
+    margin-bottom: 25px;
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    background: #59C4C5;
+    color: white;
+    align-items: center;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+
+  button:hover {
+    background: #60cccd;
+  }
 }
