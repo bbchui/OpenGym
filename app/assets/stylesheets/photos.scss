@@ -28,12 +28,26 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+
+  img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+#bordergoaway {
+  border: none;
+}
+
+div.photo-areas {
+  display: flex;
+  justify-content: center;
 }
 
 .user-dropzone {
   width: 100%;
   margin: auto;
-  border: 3px dashed #BBB;
+  border: 2px dashed #BBB;
   border-radius: 5px;
   height: 200px;
   margin-top: 30px;

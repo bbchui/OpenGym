@@ -23,8 +23,20 @@ const Protected = ({component: Component, path, loggedIn}) => (
               pathname: `/gyms/${props.match.params.gymId}`
             }}/>
         )
-      )} />
-  );
+    )} />
+);
+
+const Protected2 = ({component: Component, path, loggedIn}) => (
+  <Route path={path} render={(props) => (
+      loggedIn ? (
+        <Component {...props} />
+        ):(
+          <Redirect to={{
+              pathname: `/users/${props.match.params.userId}`
+            }}/>
+        )
+    )} />
+);
 
 const mapStateToProps = state => {
   return {loggedIn: Boolean(state.session.currentUser)};
@@ -32,3 +44,4 @@ const mapStateToProps = state => {
 
 export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
 export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));
+export const ProtectedRoute2 = withRouter(connect(mapStateToProps, null)(Protected2));

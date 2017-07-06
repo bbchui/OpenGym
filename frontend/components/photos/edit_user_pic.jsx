@@ -13,15 +13,15 @@ const CLOUDINARY_UPLOAD_URL =	'https://api.cloudinary.com/v1_1/bbchui/upload';
 class EditUserPic extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {profile_pic_url: ''};
+    this.state = {profile_pic_url: '', userId: this.props.currentUser.id};
     this.onImageDrop = this.onImageDrop.bind(this);
     this.handleImageUpload = this.handleImageUpload.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     window.scrollTo(0,0);
     this.props.fetchUser(this.props.match.params.userId);
-    console.log(this.props);
   }
 
   onImageDrop(files) {
@@ -72,6 +72,19 @@ class EditUserPic extends React.Component {
     );
   }
 
+  showImage() {
+    if (this.state.profile_pic_url === '') {
+      return null;
+    } else {
+      return(
+        <div>
+          <img id="bordergoaway" src={this.state.profile_pic_url} />
+          <button onClick={this.handleSubmit}>Update Profile Picture</button>
+        </div>
+      )
+    }
+  }
+
   render() {
     let { user } = this.props;
     let reviewsCount = user.reviews ? user.reviews.length : undefined;
@@ -111,15 +124,15 @@ class EditUserPic extends React.Component {
             accept="image/*"
             onDrop={this.onImageDrop.bind(this)}>
             <span>
-              Drag and drop your photos here
+              Drag and drop your photo here
             </span>
             <div>
               <span>OR</span>
             </div>
             <button>Browse Files</button>
           </Dropzone>
-          <div>
-            <img src={this.state.profile_pic_url} />
+          <div className="photo-areas">
+            {this.showImage()}
           </div>
         </section>
       </div>
