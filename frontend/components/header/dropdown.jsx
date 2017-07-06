@@ -6,10 +6,17 @@ import { Link, Redirect, withRouter } from 'react-router-dom';
 class DropDown extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: '' };
+    this.state = { active: '', user: this.props.currentUser };
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
   }
+
+  componentDidMount() {
+    if (this.props.user && this.props.user.user !== null) {
+      this.setState({ user: this.props.user })
+    }
+  }
+
 
   toggleDropdown() {
     if (this.state.active === 'active') {
@@ -24,7 +31,8 @@ class DropDown extends React.Component {
   }
 
   render() {
-    let pic = this.props.currentUser.profile_pic_url ? this.props.currentUser.profile_pic_url : this.props.currentUser.image_url;
+    // let pic = this.props.currentUser.profile_pic_url ? this.props.currentUser.profile_pic_url : this.props.currentUser.image_url;
+    let pic = this.state.user.profile_pic_url ? this.state.user.profile_pic_url : this.state.user.image_url;
 
     return (
       <div className="splash-buttons">

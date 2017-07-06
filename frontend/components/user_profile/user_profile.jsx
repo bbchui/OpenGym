@@ -18,6 +18,12 @@ class UserProfile extends React.Component {
     this.props.fetchUser(this.props.match.params.userId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location.pathname !== this.props.location.pathname){
+      this.props.fetchUser(nextProps.match.params.userId);
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.history.push(`/users/${this.props.currentUser.id}/edit`)
@@ -43,7 +49,7 @@ class UserProfile extends React.Component {
       <div className="login">
           <nav className="logout-buttons">
             <button className="logout-button" onClick={logout}>Log Out</button>
-            <DropDownContainer />
+            <DropDownContainer user={this.props.user}/>
           </nav>
       </div>
     );
