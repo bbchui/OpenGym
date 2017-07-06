@@ -140,3 +140,24 @@ button.logout-button {
 .logout-buttons button:hover {
   background-color: #388081;
 }
+
+.quick-search-home {
+  width: 400px;
+  margin: auto;
+  // display: flex;
+  button {
+    background: transparent;
+    border: none;
+    color: white;
+    // width: 100px;
+    // height: 3.5em;
+    outline: none;
+    font-weight: 600;
+    margin-left: 28px;
+  }
+
+  button:hover {
+    text-decoration: underline;
+    background: none;
+  }
+}

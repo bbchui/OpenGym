@@ -12,6 +12,11 @@ class TestSearch extends React.Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.clearSearch = this.clearSearch.bind(this);
     this.update = this.update.bind(this);
+    this.quickSearch = this.quickSearch.bind(this);
+    this.sanFran = this.sanFran.bind(this);
+    this.newYork = this.newYork.bind(this);
+    this.davis = this.davis.bind(this);
+    this.sanDiego = this.sanDiego.bind(this);
   }
 
   componentDidMount() {
@@ -73,6 +78,41 @@ class TestSearch extends React.Component {
     this.clearSearch();
   }
 
+  sanFran() {
+    this.setState({query: "San Francisco"});
+    this.props.fetchBounds("San Francisco").then(() => this.handleFormSubmit());
+  }
+
+  newYork() {
+    this.setState({query: "New York"});
+    this.props.fetchBounds("New York").then(() => this.handleFormSubmit());
+  }
+
+  davis() {
+    this.setState({query: "Davis"});
+    this.props.fetchBounds("Davis").then(() => this.handleFormSubmit());
+  }
+
+  sanDiego() {
+    this.setState({query: "San Diego"});
+    this.props.fetchBounds("San Diego").then(() => this.handleFormSubmit());
+  }
+
+  quickSearch() {
+    if (this.homeRender() === "home-search") {
+      return(
+        <div className="quick-search-home">
+          <button onClick={this.sanFran}>San Francisco</button>
+          <button onClick={this.newYork}>New York City</button>
+          <button onClick={this.sanDiego}>San Diego</button>
+          <button onClick={this.davis}>Davis</button>
+        </div>
+      );
+    } else {
+      null
+    }
+  }
+
   homeRender() {
     if (this.props.location.pathname === "/") {
       return "home-search"
@@ -96,6 +136,7 @@ class TestSearch extends React.Component {
             <i className="fa fa-search fa-2x" aria-hidden="true"></i>
           </button>
         </form>
+        {this.quickSearch()}
       </div>
     )
   }

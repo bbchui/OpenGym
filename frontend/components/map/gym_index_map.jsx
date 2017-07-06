@@ -100,7 +100,10 @@ class GymIndexMap extends React.Component {
       map: this.map
     });
 
+    // marker.addListener('mouseover', () => window.open(this.map, marker));
+    // marker.addListener('mouseout', () => window.close(this.map, marker));
     marker.addListener('click', () => window.open(this.map, marker));
+
   }
 
   render() {
