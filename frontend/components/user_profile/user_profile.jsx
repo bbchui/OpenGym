@@ -9,11 +9,26 @@ import DropDownContainer from '../header/dropdown_container';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.addPhoto = this.addPhoto.bind(this);
   }
 
   componentDidMount() {
     window.scrollTo(0,0);
     this.props.fetchUser(this.props.match.params.userId);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.history.push(`/users/${this.props.currentUser.id}/edit`)
+  }
+
+  addPhoto() {
+    if (this.props.currentUser.id === parseInt(this.props.match.params.userId)) {
+      return(
+        <button className="edit-photo-button" onClick={this.handleSubmit}>Edit Profile Photo</button>
+      )
+    }
   }
 
   sessionForm() { //header function
@@ -73,6 +88,7 @@ class UserProfile extends React.Component {
                 full="fa fa-star fa-lg"/>
               &nbsp; {reviewsCount} Reviews</span>
             </div>
+            {this.addPhoto()}
           </div>
         </section>
 

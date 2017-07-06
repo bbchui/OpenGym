@@ -17,6 +17,7 @@ class EditUserPic extends React.Component {
     this.onImageDrop = this.onImageDrop.bind(this);
     this.handleImageUpload = this.handleImageUpload.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
 
   componentDidMount() {
@@ -72,13 +73,18 @@ class EditUserPic extends React.Component {
     );
   }
 
+  handleCancel(e) {
+    e.preventDefault();
+    this.props.history.push(`/users/${this.props.currentUser.id}`)
+  }
+
   showImage() {
     if (this.state.profile_pic_url === '') {
       return null;
     } else {
       return(
-        <div>
-          <img id="bordergoaway" src={this.state.profile_pic_url} />
+        <div className="update-picture">
+          <img src={this.state.profile_pic_url} />
           <button onClick={this.handleSubmit}>Update Profile Picture</button>
         </div>
       )
@@ -133,6 +139,7 @@ class EditUserPic extends React.Component {
           </Dropzone>
           <div className="photo-areas">
             {this.showImage()}
+            <button onClick={this.handleCancel}>Cancel</button>
           </div>
         </section>
       </div>
