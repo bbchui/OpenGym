@@ -4,10 +4,6 @@ import configureStore from './store/store';
 import Root from './components/root';
 import Modal from 'react-modal';
 
-import { getAllGyms, getSingleGym } from './actions/gym_actions';
-import { fetchBounds } from './util/map_api_util';
-import { fetchUser, updateUser } from './util/user_api_util';
-
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -18,13 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  // delete later
-  window.store = store;
-  window.getAllGyms = getAllGyms;
-  window.getSingleGym = getSingleGym;
-  window.fetchBounds = fetchBounds;
-  window.fetchUser = fetchUser;
-  window.updateUser = updateUser;
 
   const root = document.getElementById('root');
 
