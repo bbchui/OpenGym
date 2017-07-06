@@ -28,7 +28,7 @@ div.show-buttons {
 }
 
 button.show-review {
-  width: 160px;
+  width: 155px;
   height: 36px;
   font-size: 16px;
   font-weight: bold;
@@ -36,10 +36,11 @@ button.show-review {
   color: white;
   display: flex;
   justify-content: space-between;
-  border: 0.5px solid black;
+  border: none;
   align-items: center;
   margin-top: 1px;
-  outline: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
 button.show-review:hover {
@@ -47,7 +48,7 @@ button.show-review:hover {
 }
 
 button.cant-review {
-  width: 160px;
+  width: 155px;
   height: 36px;
   align-items: center;
   font-size: 15px;
@@ -56,8 +57,9 @@ button.cant-review {
   color: white;
   display: flex;
   justify-content: space-between;
-  border: 0.5px solid black;
-  outline: none;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
   margin-top: 17px;
 }
 
@@ -66,7 +68,7 @@ button.cant-review:hover {
 }
 
 button.edit-review {
-  width: 160px;
+  width: 155px;
   height: 36px;
   font-size: 14px;
   font-weight: bold;
@@ -74,10 +76,11 @@ button.edit-review {
   color: white;
   display: flex;
   justify-content: space-between;
-  border: 0.5px solid black;
+  border: none;
   align-items: center;
   margin-top: 1px;
-  outline: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
 button.edit-review:hover {
