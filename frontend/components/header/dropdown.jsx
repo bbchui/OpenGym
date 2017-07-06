@@ -12,7 +12,8 @@ class DropDown extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.user && this.props.user.user !== null) {
+    // console.log(this.props.user, this.props.currentUser);
+    if (this.props.user && this.props.user.user !== null && this.props.user.id === this.props.currentUser.id) {
       this.setState({ user: this.props.user })
     }
   }

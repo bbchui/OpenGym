@@ -30,7 +30,7 @@ class UserProfile extends React.Component {
   }
 
   addPhoto() {
-    if (this.props.currentUser.id === parseInt(this.props.match.params.userId)) {
+    if (this.props.currentUser && this.props.currentUser.id === parseInt(this.props.match.params.userId)) {
       return(
         <button className="edit-photo-button" onClick={this.handleSubmit}>Edit Profile Photo</button>
       )
