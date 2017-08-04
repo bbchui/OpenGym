@@ -3,7 +3,7 @@
 
 [OpenGym Live][opengym]
 
-[opengym]: https://opengymvolleyball.herokuapp.com/#/
+[opengym]: http://www.opengym.life/#/
 
 OpenGym is a web application inspired by Yelp designed to help users find volleyball open gyms within the city of search. The application is built utilizing Ruby on Rails and PostgresSQL database in the back-end, and React/Redux in the front-end.
 
